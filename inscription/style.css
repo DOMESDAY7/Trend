@@ -1,8 +1,12 @@
 body{
     display: grid;
     background-color: black;
-    grid-area: "form"1fr;
+    grid-template: 
+    "form"1fr
+    "sub"0.20fr
+    ;
     height: 100vh;
+    overflow-y: hidden;
     
 }
 
@@ -17,6 +21,7 @@ form{
     width: 30vw;
     height: 50vh;
     border-radius: 20px;
+    padding: 5vh 2vw 5vh 2vw;
 }
 input{
     outline: none;
@@ -34,12 +39,22 @@ img{
     width: 5vw;
     margin-bottom: -2%;
 }
-button[type]{
+.subButton{
     background-color: rgba(99, 99, 99, 0.2);
     color: white;
     border: none;
-    padding: 5%;
+    padding: 20px;
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
+    justify-self: center;
+    align-self: start;
+    cursor: not-allowed;
+    grid-area: sub;
+}
+.message{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 1% 0 1% 0;
+
 }
 
