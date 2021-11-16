@@ -1,5 +1,18 @@
-let subButton=document.querySelector('button[type]');
+const subButton=document.querySelector('button[type]');
 subButton.addEventListener('click',verifLog)
+const bjPseudo=document.querySelector('.bjPseudo')
+let pseudo=document.querySelector('input.pseudo')
+const titlePseudo=document.querySelector('.titlePseudo')
+let attrPseudo=document.querySelector('.pseudo').getAttribute('value')
+
+window.addEventListener('change',(e)=>{
+    if (e.target==pseudo){
+        titlePseudo.textContent= pseudo.value+",";
+        
+    }
+})
+
+
 
 
 function verifLog(){
@@ -10,6 +23,9 @@ function verifLog(){
             }
         })
         .then((resp)=>resp.json)
-        .then()
+        .then((data)=>{
+            console.log(data)
+            data.mdp
+        })
 
 }
