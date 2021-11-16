@@ -4,10 +4,12 @@ const bjPseudo=document.querySelector('.bjPseudo')
 let pseudo=document.querySelector('input.pseudo')
 const titlePseudo=document.querySelector('.titlePseudo')
 let attrPseudo=document.querySelector('.pseudo').getAttribute('value')
-
+pseudo.value=" "
 window.addEventListener('change',(e)=>{
+    
     if (e.target==pseudo){
-        titlePseudo.textContent= pseudo.value+",";
+        
+        titlePseudo.textContent= " "+pseudo.value+",";
         
     }
 })

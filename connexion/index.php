@@ -25,7 +25,7 @@
             }
             ?>
     <form method="POST">
-        <span class="content_bj"><h1 class=bjPseudo>Bonjour  </h1><h1 class="titlePseudo">,</h1></span>
+        <span class="content_bj"><h1 class=bjPseudo>Bonjour        </h1><h1 class="titlePseudo">,</h1></span>
         <img src="../img/profil.svg" alt="">
         <input type="text" name="pseudo" id="" placeholder="Pseudo" class="pseudo">
         <input type="password" name="mdp" id="" placeholder="Mot de passe">
