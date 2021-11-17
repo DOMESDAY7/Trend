@@ -30,7 +30,7 @@ window.addEventListener('submit',function(){
 },false)
 
 
-
+//fonction qui va vérifier si l'utilisateur existe
 function verifLog(){
     fetch (url,
         {
