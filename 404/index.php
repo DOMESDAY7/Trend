@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erreur 404</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Error 404</title>
+    <link rel="stylesheet" href="../404/style.css">
       <!-- montserrat -->
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- overpass -->
@@ -17,7 +17,7 @@
       <h1>Error 404</h1>
       <h2 id="notTrend">This is not a Trend</h2>
       <br>
-      <a href="../accueil"><h2>Back to trend</h2></a>
+      <a href="../home"><h2>Back to trend</h2></a>
     </main>
 
 </body>
