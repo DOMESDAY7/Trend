@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../component/Burger/style.css">
     <!-- Montserrat font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Overpass font -->
@@ -26,6 +26,6 @@
     
     <div class="burgerBG"></div>
 
-    <script src="java.js"></script>
+    <script src="../../component/Burger/java.js"></script>
 </body>
 </html>

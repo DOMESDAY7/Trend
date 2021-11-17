@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -30,8 +30,8 @@
             <h1 class="titlePseudo">,</h1>
         </span>
         <img src="../img/profil.svg" alt="" class="profil">
-        <input type="text" name="pseudo" id="" placeholder="Pseudo" class="pseudo">
-        <input type="password" name="mdp" id="" placeholder="Mot de passe" class="mdp">
+        <input type="text" name="pseudo"  placeholder="Pseudo" class="pseudo" required="require">
+        <input type="password" name="mdp"  placeholder="Mot de passe" class="mdp" required="require"  id="current-password">
         <button type="submit" name="sub">Se connecter</button>
     </form>
     <?php
@@ -46,7 +46,7 @@
                 if (password_verify($mdp,$data_verif["mot_de_passe"] ) ){
                     session_start();
                     $_SESSION["pseudo"]=$pseudo;
-                    header('Location: ./accueil');
+                    header('Location: ./home');
                 
                 }else{
                     header('Location: ./login.php?error=true');

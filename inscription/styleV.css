@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    overflow: hidden;
+}
+main{
+    background-color:#111111;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 30vw;
+    height: 50vh;
+    min-width: 70vmin;
+    min-height: 60vmin;
+    border-radius: 20px;
+    padding: 5vh 2vw 5vh 2vw;
+    grid-area: main;
+    color: white;
+}
+h1{
+    font-family: 'Overpass', sans-serif;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
+div{
+    font-size: 5rem;
+}

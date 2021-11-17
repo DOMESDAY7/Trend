@@ -1,10 +1,5 @@
-const subButton=document.querySelector('button[type]');
-subButton.addEventListener('click',verifLog)
-const bjPseudo=document.querySelector('.bjPseudo')
 let pseudo=document.querySelector('input.pseudo')
-let mdp=document.querySelector('input.mdp')
-const titlePseudo=document.querySelector('.titlePseudo')
-let attrPseudo=document.querySelector('.pseudo').getAttribute('value')
+let titlePseudo=document.querySelector('.titlePseudo')
 let img=document.querySelector('.profil');
 
 window.addEventListener('keyup',(e)=>{
@@ -19,29 +14,3 @@ window.addEventListener('keyup',(e)=>{
         }
     }
 })
-//vérifier au submit si les champs ne sont pas vide
-window.addEventListener('submit',function(){
-    if(pseudo.value.length==0 || mdp.value.length==0){
-        return false;
-
-    }else{
-        return true;
-    }
-},false)
-
-
-//fonction qui va vérifier si l'utilisateur existe
-function verifLog(){
-    fetch (url,
-        {
-            headers:{
-                'Content-type': 'text/JSON'
-            }
-        })
-        .then((resp)=>resp.json)
-        .then((data)=>{
-            console.log(data)
-            data.mdp
-        })
-
-}

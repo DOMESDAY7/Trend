@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../Burger/style.css">
+    <link rel="stylesheet" href="../component/Burger/style.css">
     <!-- Montserrat font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Overpass font -->
@@ -22,9 +22,9 @@
 
     
 <!-- <?php
-    include "../Burger/index.php";
+    include "../component/Burger/index.php";
 ?> -->
 
-    <script src="../Burger/java.js"></script>
+    <script src="../component/Burger/java.js"></script>
 </body>
 </html>
