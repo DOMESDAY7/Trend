@@ -1,0 +1,55 @@
+/* Général */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #000;
+    background-attachment: fixed;
+    
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 100vh;
+}
+
+
+/* Parts of grid */
+
+.lasTrends{
+    grid-area: 1 / 1 / 6 / 4;
+    border: solid red;
+    width: 80%;
+}
+
+.archives{
+    grid-area: 1 / 4 / 6 / 6;
+    border: solid green;
+    width: 20%;
+}
+
+
+
+/* décor lol */
+
+.logoProvisoire{
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 44px;
+
+    position: fixed;
+    top: 1%;
+    left: 2%;
+}
+
+#T{
+    color: #F39200;
+}
+
+#d{
+    color: #FF0000;
+}
