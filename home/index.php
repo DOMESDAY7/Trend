@@ -10,7 +10,7 @@
     <!-- Montserrat font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Overpass font -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600;700&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
@@ -21,22 +21,28 @@
                 <h3 class="titleTrends">Last Trends</h3>
 
                 <div class="exTrend1">
-                    <div class="textsTrend"></div>
+                    <div class="textsTrend">
+                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
+                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
+                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
+                    </div>
                     <div class="imgTrend">
                         <img src="../img/pc.jpg" alt="">
                     </div>
                 </div>
                 <div class="exTrend1"></div>
                 <div class="exTrend1"></div>
+
+                <a href="#">I want to see more</a>
         </div>
     </div>
     <div class="archivesHome"></div>
 
 
     
-<!-- <?php
+<?php
     include "../component/Burger/index.php";
-?> -->
+?>
 
     <script src="../component/Burger/java.js"></script>
 </body>
