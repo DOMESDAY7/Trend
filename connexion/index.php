@@ -26,36 +26,35 @@
             ?>
     <form method="POST">
         <span class="content_bj">
-            <h1 class=bjPseudo>Bonjour </h1>
+            <h1 class=bjPseudo>Bonjour &nbsp</h1>
             <h1 class="titlePseudo">,</h1>
         </span>
-        <img src="../img/profil.svg" alt="">
+        <img src="../img/profil.svg" alt="" class="profil">
         <input type="text" name="pseudo" id="" placeholder="Pseudo" class="pseudo">
         <input type="password" name="mdp" id="" placeholder="Mot de passe">
-        <button type="submit">Se connecter</button>
+        <button type="submit" name="sub">Se connecter</button>
     </form>
     <?php
         $pseudo=$_POST["pseudo"];
         $mdp=$_POST["mdp"];
         $sql_verif="SELECT `login`,`mdp` FROM `utilisateurs` WHERE `login`='$login'";
-
-        $req_count=$link->query($sql_verif);
-        $verif=$req_count->rowCount();
-        if ($verif==1){
-            $data_verif=$req_count->fetch(PDO::FETCH_ASSOC);
-            if (password_verify($mdp,$data_verif["mot_de_passe"] ) ){
-                session_start();
-                $_SESSION["pseudo"]=$pseudo;
-                header('Location: ./accueil');
-            
+        if (isset($_POST["sub"])){
+            $req_count=$link->query($sql_verif);
+            $verif=$req_count->rowCount();
+            if ($verif==1){
+                $data_verif=$req_count->fetch(PDO::FETCH_ASSOC);
+                if (password_verify($mdp,$data_verif["mot_de_passe"] ) ){
+                    session_start();
+                    $_SESSION["pseudo"]=$pseudo;
+                    header('Location: ./accueil');
+                
+                }else{
+                    header('Location: ./login.php?error=true');
+        
+                }
             }else{
-                header('Location: ./login.php?error=mdp');
-                ?>
-        <?php
+                header('Location: ./login.php?error=true');
             }
-        }else{
-            echo"tu existe pas";
-            header('Location: ./login.php?error=login');
         }
     
 
