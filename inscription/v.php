@@ -22,6 +22,7 @@
                 require '../db_connect/server.php';
             }
             $pseudo=$_POST["pseudo"];
+            $pseudo=strtolower($pseudo);
             $mail=$_POST["mail"];
             $mdp=$_POST["mdp"];
             $mdp=password_hash($mdp,PASSWORD_DEFAULT);
@@ -61,6 +62,7 @@
         <main>
         <h1>Congratulations <?php echo $pseudo; ?>! You are registered to Trend </h1><div>🙌</div>
         <h3>We sent you a little welcome email</h3><div>💌</div>
+        <a href="../connexion"><b>Login</b></a>
         </main>
 
     

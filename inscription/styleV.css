@@ -29,3 +29,19 @@ h3{
 div{
     font-size: 5rem;
 }
+a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    border: white solid 1px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 10%;
+    display: inline-block;
+    transition: 0.8s ease;
+    margin: auto;
+}
+a:hover{
+    background-color: white;
+    color:black;
+}
