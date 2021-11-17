@@ -16,8 +16,21 @@
 <body>
     <h1 class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </h1>
 
-    <div class="lasTrends"></div>
-    <div class="archives"></div>
+    <div class="lasTrends">
+        <div class="containerLT">
+                <h3 class="titleTrends">Last Trends</h3>
+
+                <div class="exTrend1">
+                    <div class="textsTrend"></div>
+                    <div class="imgTrend">
+                        <img src="../img/pc.jpg" alt="">
+                    </div>
+                </div>
+                <div class="exTrend1"></div>
+                <div class="exTrend1"></div>
+        </div>
+    </div>
+    <div class="archivesHome"></div>
 
 
     
