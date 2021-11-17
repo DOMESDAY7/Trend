@@ -187,4 +187,15 @@ a{
         width: 950px;
         height: 690px;
     }
+
+    .titleTrends{
+        font-size: 2rem;
+    }
+    
+    .titleTrends::after{
+        width: 114px;
+        height: 2.5px;
+        bottom: 34%;
+        right: -12%;
+    }
 }

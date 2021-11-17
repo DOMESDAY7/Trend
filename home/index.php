@@ -18,7 +18,7 @@
 
     <div class="lasTrends">
         <div class="containerLT">
-                <h3 class="titleTrends">Last Trends</h3>
+                <h3 class="titleTrends">Last trends</h3>
 
                 <div class="exTrend1">
                     <div class="textsTrend">
