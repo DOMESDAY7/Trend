@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #000;
+    background-attachment: fixed;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.explain{
+    text-decoration: underline;
+    font-family: "Overpass";
+    font-size: .9rem;
+    font-weight: 700;
+    font-style: italic;
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.explain:hover{
+    color: #F39200;
+    transition: color .3s ease-in-out;
+}
+
+.burger{
+    width: 500px;
+    height: 100vh;
+    background-color: #242424;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 998;
+
+    transform: translateX(500px);
+    animation: burger .3s ease-in-out alternate-reverse;
+
+}
+
+.show{
+    transform: translateX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.containerTitles{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 85px;
+}
+
+.containerTitles > a{
+    font-family: "Overpass";
+    font-size: 2.375rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(243, 146, 0, 0.5);
+}
+
+.containerTitles > a:hover{
+    font-style: italic;
+    color: #FF0000;
+    text-shadow: 5px 2px 5px #f3920080;
+    transition: all .3s ease-in-out;
+}
+
+.archives{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.rondBurger{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
+
+    position: fixed;
+    top: 3%;
+    right: 1.5%;
+    z-index: 999;
+    
+    cursor: pointer;
+}
+
+.rondBurger:hover{
+    box-shadow: 2px 2px 2px rgba(240, 0, 0, 0.5);
+    transition: all .15s ease-in-out;
+}
+
+.burgerBG{
+    width: 100vw;
+    height: 100vh;
+}
+
+.display{
+    background-color: rgba(53, 53, 53, 0.75);
+    visibility: visible;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes burger {
+    0%{
+        transform: translateX(500px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
