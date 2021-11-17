@@ -26,7 +26,7 @@
             ?>
     <form method="POST">
         <span class="content_bj">
-            <h1 class=bjPseudo>Bonjour &nbsp</h1>
+            <h1 class=bjPseudo>Hello &nbsp</h1>
             <h1 class="titlePseudo">,</h1>
         </span>
         <img src="../img/profil.svg" alt="" class="profil">
