@@ -30,8 +30,26 @@
                         <img src="../img/pc.jpg" alt="">
                     </div>
                 </div>
-                <div class="exTrend1"></div>
-                <div class="exTrend1"></div>
+                <div class="exTrend1">
+                    <div class="textsTrend">
+                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
+                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
+                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
+                    </div>
+                    <div class="imgTrend">
+                        <img src="../img/pc.jpg" alt="">
+                    </div>
+                </div>
+                <div class="exTrend1">
+                    <div class="textsTrend">
+                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
+                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
+                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
+                    </div>
+                    <div class="imgTrend">
+                        <img src="../img/pc.jpg" alt="">
+                    </div>
+                </div>
 
                 <a href="#">I want to see more</a>
         </div>
