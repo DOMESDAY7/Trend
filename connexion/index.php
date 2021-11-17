@@ -31,7 +31,7 @@
         </span>
         <img src="../img/profil.svg" alt="" class="profil">
         <input type="text" name="pseudo" id="" placeholder="Pseudo" class="pseudo">
-        <input type="password" name="mdp" id="" placeholder="Mot de passe">
+        <input type="password" name="mdp" id="" placeholder="Mot de passe" class="mdp">
         <button type="submit" name="sub">Se connecter</button>
     </form>
     <?php
