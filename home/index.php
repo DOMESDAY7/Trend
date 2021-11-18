@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,6 +47,7 @@
                     <?php $cpt++; } ?>
                         <a href="#">I want to see more</a>
                 </div>
+                
         </div>
         <div class="archivesHome"></div>
     </main>

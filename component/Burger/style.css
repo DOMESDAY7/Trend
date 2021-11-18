@@ -82,12 +82,6 @@ a{
     height: 40px;
     border-radius: 40px;
     background-color: white;
-
-    position: fixed;
-    top: 3%;
-    right: 1.5%;
-    z-index: 999;
-    
     cursor: pointer;
 }
 
@@ -105,6 +99,30 @@ a{
     background-color: rgba(53, 53, 53, 0.75);
     visibility: visible;
     transition: all .3s ease-in-out;
+}
+.pseudo{
+    color: white;
+    margin-right: 10px;
+    transform: translate(0,-50%);
+    font-family: "Overpass";
+
+}
+.content_head{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    position: fixed;
+    right: 5%;
+    top: 3%;
+    z-index: 999;
+}
+.logOut{
+    color: red;
+    font-family: "Overpass";
+    font-size: 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
 @keyframes burger {

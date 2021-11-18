@@ -12,16 +12,25 @@
     <title>Burger - don't touch</title>
 </head>
 <body>
-
+    <?php if (!isset($_SESSION["pseudo"])){
+        $pseudo="Guest";
+    }
+    else{
+        $pseudo=$_SESSION["pseudo"];
+    } ?>
+    <section class="content_head">
     <div class="rondBurger"></div>
-
+    <h3 class="pseudo"><?php echo $pseudo; ?></h3>
+    </section >
     <div class="burger">
         <div class="containerTitles">
             <a href="" class="home">HOME</a><br>
             <a href="" class="archives">ARCHIVES</a><br>
             <a href="" class="profile">PROFILE</a>
+            <br>
+            <span><a href="../../logOut/index.php" class="logOut">Log out</a></span>
         </div>
-        <h3><?php echo $_SESSION["pseudo"]; ?></h3>
+        
         <a href="" class="explain"> Where am I ?</a>
     </div>
     
