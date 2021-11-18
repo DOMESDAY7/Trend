@@ -21,6 +21,7 @@
             <a href="" class="archives">ARCHIVES</a><br>
             <a href="" class="profile">PROFILE</a>
         </div>
+        <h3><?php echo $_SESSION["pseudo"]; ?></h3>
         <a href="" class="explain"> Where am I ?</a>
     </div>
     

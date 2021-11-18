@@ -14,47 +14,41 @@
     <title>Home</title>
 </head>
 <body>
+    <?php require '../db_connect/detetction.php'; 
+    $sql="SELECT short_description , id_image , date , titre  FROM billet ORDER BY date DESC ";
+    $req=$link -> query($sql);
+    $cpt=0;
+    ?>
+    
+
     <h1 class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </h1>
-
-    <div class="lasTrends">
-        <div class="containerLT">
-                <h3 class="titleTrends">Last trends</h3>
-
-                <div class="exTrend1">
-                    <div class="textsTrend">
-                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
-                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
-                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
-                    </div>
-                    <div class="imgTrend">
-                        <img src="../img/pc.jpg" alt="">
-                    </div>
+    
+    <main>
+    <h3 class="titleTrends">Last trends</h3>
+        <div class="lasTrends">
+            
+                <div class="containerLT">
+                        
+                    <?php while(($data=$req -> fetch()) && ($cpt<3)){ ?>
+                        <?php $date=date_create($data["date"]) ?>
+                        
+                        <div class="exTrend1">
+                            <div class="textsTrend">
+                            <!-- pour le hashtag on va mettre le lien de l'article -->
+                                <h1><span id="hashtag">#</span> <?php echo $data["titre"]; ?> </h1> 
+                                <p class="description"> <?php echo $data["short_description"]; ?></p>
+                                <p class="date"><?php echo date_format($date,'d.M.Y') ; ?></p>
+                            </div>
+                            <div class="imgTrend">
+                                <img src="../img/pc.jpg" alt="">
+                            </div>
+                        </div>
+                    <?php $cpt++; } ?>
+                        <a href="#">I want to see more</a>
                 </div>
-                <div class="exTrend1">
-                    <div class="textsTrend">
-                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
-                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
-                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
-                    </div>
-                    <div class="imgTrend">
-                        <img src="../img/pc.jpg" alt="">
-                    </div>
-                </div>
-                <div class="exTrend1">
-                    <div class="textsTrend">
-                        <h1><span id="hashtag">#</span> <!-- PHP ici --> This is a trend. </h1>
-                        <p class="description"> <!--Mini description ici--> This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend. This is a trend.</p>
-                        <p class="date"><!-- Date du trend(billet) ici --> 23.oct.2021</p>
-                    </div>
-                    <div class="imgTrend">
-                        <img src="../img/pc.jpg" alt="">
-                    </div>
-                </div>
-
-                <a href="#">I want to see more</a>
         </div>
-    </div>
-    <div class="archivesHome"></div>
+        <div class="archivesHome"></div>
+    </main>
 
 
     

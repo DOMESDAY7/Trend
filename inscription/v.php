@@ -29,14 +29,14 @@
             $sql="INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`) VALUES (NULL, '$pseudo', '$mail', '$mdp')";
             $req=$link->prepare($sql);
             //faire des bindValue ici
-            control($sql);
+            controlHTML($sql);
             $req->execute();
             //faire un lien et le stocker dans $link
             mailverification($mail,$pseudo,$link);
 
 
             //MVC
-            function control($string){
+            function controlHTML($string){
                 htmlspecialchars($string);//injection script
                 return $string;
             }

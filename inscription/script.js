@@ -25,6 +25,7 @@ function equal(){
         return false;
     }
 }
+//vérification de l'existence du pseudo ou non
 
 function verifPseudo(){
     pseudo="?pseudo="+pseudo.value;
