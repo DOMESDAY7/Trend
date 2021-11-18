@@ -22,7 +22,7 @@
     ?>
     
 
-    <h1 class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </h1>
+
     
     <main>
     <h3 class="titleTrends">Last trends</h3>

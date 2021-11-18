@@ -17,8 +17,9 @@ main{
     "titleTrends archives" 10vh
     "trends archives" 1fr/ 1fr 0.75fr
     ;
-    gap:1vh;
+  
     height: 100vh;
+    margin-top: 8vh;
 }
 
 a{
@@ -150,6 +151,7 @@ a{
     color: white;
     padding-left: 22px;
     padding-top: -15px;
+    word-wrap: break-word;
 }
 
 .date{
@@ -167,18 +169,7 @@ a{
 
 /* décor lol */
 
-.logoProvisoire{
-    color: white;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.8rem;
-    line-height: 44px;
 
-    position: fixed;
-    top: -1%;
-    left: 1.5%;
-}
 
 #T{
     color: #F39200;
