@@ -1,0 +1,25 @@
+.content{
+    background-color: #111;
+    color: white;
+}
+body{
+    background-color: black;
+}
+h1{
+    font-family: 'Overpass', sans-serif;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+    color:white;
+    border: white solid 1px;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
+a:hover{
+    background-color: white;
+    color: black;
+}

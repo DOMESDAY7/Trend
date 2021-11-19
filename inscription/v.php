@@ -55,15 +55,29 @@
                 $db_key=$db_key->fetch(PDO::FETCH_ASSOC);
                 $db_key=$db_key["verificationKey"];
                 $db_key=password_hash($db_key,PASSWORD_DEFAULT);
-                $link="<a href='trend.mathieuandry.fr/verification?key='$db_key'?pseudo=$pseudo>Check your email<a>";
-                $text="Hello".$pseudo."!<br>
-                To confirm your registration to trend click on this button:";
+                $link="<a href='trend.mathieuandry.fr/verification?key=".$db_key."?pseudo=".$pseudo.">Check your email<a>";
+                require 'mail.php';
+                // Remplacement de certains caractères spéciaux
+                $message = str_replace("&#039;","'",$message);
+                $message = str_replace("&#8217;","'",$message);
+                $message = str_replace("&quot;",'"',$message);
+                $message = str_replace('<br>','',$message);
+                $message = str_replace('<br />','',$message);
+                $message = str_replace("&lt;","<",$message);
+                $message = str_replace("&gt;",">",$message);
+                $message = str_replace("&amp;","&",$message);
                 $text = str_replace("\n.", "\n..", $text);
-                $headers = array(
-                    'From' => 'webmaster@trend.com',
-                    'X-Mailer' => 'PHP/' . phpversion()
-                );
-                mail($email,$subject,$text,$headers);
+                $email="hello@trend.fr";
+                $nom="Trend team";
+                $email="hello@trendblog.fr";
+                $headers  = 'MIME-Version: 1.0' . "\r\n";
+                $headers .= 'From:'.$nom.' <'.$email.'>' . "\r\n" .
+                    'Reply-To:'.$email. "\r\n" .
+                    'Content-Type: text/html; charset="utf-8"; '."\r\n" .
+                    'Content-Disposition: inline'. "\r\n" .
+                    'X-Mailer:PHP/'.phpversion();
+                mail($email,$subject,$message,$headers);
+
             }
 
             //MVC
@@ -71,7 +85,6 @@
                 $origin=1;
                 $key=password_hash($origin,PASSWORD_DEFAULT);
                 $origin++;
-                echo $key;
                 return $key;
             }
         

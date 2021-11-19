@@ -79,6 +79,7 @@ a{
     min-width: 85vmin;
     /* min-height:200vmin; */
     border-radius: 24px;
+    cursor: pointer;
 }
 
 .containerLT > a{
