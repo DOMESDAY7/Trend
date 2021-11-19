@@ -1,4 +1,4 @@
-<?php 
+<?php ob_start(); ?>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,4 +13,4 @@
         <!-- overpass -->
         <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
     </head>
-?>
+<?php $head=ob_get_clean() ?>

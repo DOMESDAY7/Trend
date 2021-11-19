@@ -30,7 +30,7 @@
             <a href="" class="archives">ARCHIVES</a><br>
             <a href="" class="profile">PROFILE</a>
             <br>
-            <span><a href="../../logOut/index.php" class="logOut">Log out</a></span>
+            <span><a href="../logOut" class="logOut">Log out</a></span>
         </div>
         
         <a href="" class="explain"> Where am I ?</a>

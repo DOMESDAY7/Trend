@@ -25,13 +25,15 @@
             $pseudo=strtolower($pseudo);
             $mail=$_POST["mail"];
             $mdp=$_POST["mdp"];
+            $key=createKey();
             $mdp=password_hash($mdp,PASSWORD_DEFAULT);
-            $sql="INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`) VALUES (NULL, '$pseudo', '$mail', '$mdp')";
+            $sql="INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`,user_check,verificationKey) VALUES (NULL, '$pseudo', '$mail', '$mdp','0','$key')";
             $req=$link->prepare($sql);
             //faire des bindValue ici
             controlHTML($sql);
             $req->execute();
             //faire un lien et le stocker dans $link
+            
             mailverification($mail,$pseudo,$link);
 
 
@@ -48,6 +50,12 @@
             //MVC
             function mailverification($email,$pseudo,$link){
                 $subject="Confirmation of your account";
+                $sql_grapTheKey="SELECT verificationKey from utilisateurs WHERE pseudo='$pseudo'";
+                $db_key=$link->query($sql_grapTheKey);
+                $db_key=$db_key->fetch(PDO::FETCH_ASSOC);
+                $db_key=$db_key["verificationKey"];
+                $db_key=password_hash($db_key,PASSWORD_DEFAULT);
+                $link="<a href='trend.mathieuandry.fr/verification?key='$db_key'?pseudo=$pseudo>Check your email<a>";
                 $text="Hello".$pseudo."!<br>
                 To confirm your registration to trend click on this button:";
                 $text = str_replace("\n.", "\n..", $text);
@@ -56,6 +64,15 @@
                     'X-Mailer' => 'PHP/' . phpversion()
                 );
                 mail($email,$subject,$text,$headers);
+            }
+
+            //MVC
+            function createKey(){
+                $origin=1;
+                $key=password_hash($origin,PASSWORD_DEFAULT);
+                $origin++;
+                echo $key;
+                return $key;
             }
         
         ?>

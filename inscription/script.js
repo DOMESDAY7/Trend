@@ -8,8 +8,8 @@ let pseudo=document.querySelector('#username');
 pseudo.addEventListener('change',verifPseudo)
 comfirm.addEventListener('keyup',equal)
 
-// window.addEventListener('submit',equal)
-//vérifier si les deux mots de passe sont remplis
+//à faire
+//trouver un moyen de supprimer le submit si
 function equal(){
     let mdp=document.querySelector('input#mdp').value;
     let comfirm_value=document.querySelector('input#comfirm').value;
@@ -17,12 +17,13 @@ function equal(){
         message.textContent="👍Les mots de passes corresspondent";
         button.style.cssText="cursor: pointer;"
         button.addEventListener('click',formSub)
+        writeInput(comfirm)
         return true;
     }
     else{
         message.textContent="👎Les mots de passes ne corresspondent pas";
-        coloredInput(comfirm)
-        coloredInput(mdp)
+        wrongInput(comfirm)
+        wrongInput(mdp)
         button.style.cssText="cursor: not-allowed;"
         button.removeEventListener('click',formSub)
         return false;
@@ -38,16 +39,21 @@ function verifPseudo(){
     .then((resp)=>resp.json())
     .then((data)=>
     message.textContent="Le pseudo "+data.pseudo+" existe déjà ❌",
-    coloredInput(pseudo)
+    wrongInput(pseudo)
 
     
     
     )
-    .catch(message.textContent="✅votre pseudo est unique")
+    .catch(message.textContent="✅votre pseudo est unique",
+    wrongInput(pseudo)
+    )
 }
 function formSub(){
     form.submit()
 }
-function coloredInput(input){
+function wrongInput(input){
     input.style.cssText="background-color: red"
+}
+function writeInput(input){
+    input.style.cssText="background-color: green"
 }

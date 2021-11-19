@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+}
+main{
+    height: 50vh;
+    width: 50vw;
+    background-color: #1111;
+}
+h1{
+    font-family: 'Overpass', sans-serif;
+    color:white
+}
