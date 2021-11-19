@@ -3,12 +3,13 @@ let comfirm=document.querySelector('input#comfirm')
 let message=document.querySelector('span.message');
 let button=document.querySelector('.subButton');
 let form=document.querySelector('#inscription')
-let pseudo=document.querySelector('#pseudo');
+let pseudo=document.querySelector('#username');
 
 pseudo.addEventListener('change',verifPseudo)
 comfirm.addEventListener('keyup',equal)
 
 // window.addEventListener('submit',equal)
+//vérifier si les deux mots de passe sont remplis
 function equal(){
     let mdp=document.querySelector('input#mdp').value;
     let comfirm_value=document.querySelector('input#comfirm').value;
@@ -25,17 +26,16 @@ function equal(){
         return false;
     }
 }
-//vérification de l'existence du pseudo ou non
 
+//vérification de l'existence du pseudo
 function verifPseudo(){
-    pseudo="?pseudo="+pseudo.value;
-    let url="trend.mathieuandry.fr/api";
-    url=url+pseudo;
+    let pseudoSearch="?pseudo="+pseudo.value;
+    let url="../api";
+    url=url+pseudoSearch;
     fetch(url)
-    .then((resp)=>resp.json)
-    .then((data)=>console.log(data))
-
-
+    .then((resp)=>resp.json())
+    .then((data)=>message.textContent="Le pseudo "+data.pseudo+" existe déjà ❌")
+    .catch(message.textContent="✅votre pseudo est unique")
 }
 function formSub(){
     form.submit()

@@ -10,7 +10,6 @@
 <body>
         <form action="./v.php" method="POST" id="inscription">
             <img src="../img/profil.svg" alt="">
-                <span class="message"></span>
                 <input type="text" name="pseudo" id="username" placeholder="Username">
                 <input type="email" name="mail" id="mail" placeholder="@Mail✉️">
                 <input type="password" name="mdp" id="mdp" placeholder="Password🔑">
