@@ -32,8 +32,6 @@
             //faire des bindValue ici
             controlHTML($sql);
             $req->execute();
-            //faire un lien et le stocker dans $link
-            
             mailverification($mail,$pseudo,$link);
 
 
@@ -55,7 +53,6 @@
                 $db_key=$db_key->fetch(PDO::FETCH_ASSOC);
                 $db_key=$db_key["verificationKey"];
                 $db_key=password_hash($db_key,PASSWORD_DEFAULT);
-                $link="<a href='trend.mathieuandry.fr/verification?key=".$db_key."?pseudo=".$pseudo.">Check your email<a>";
                 require 'mail.php';
                 // Remplacement de certains caractères spéciaux
                 $message = str_replace("&#039;","'",$message);
@@ -67,15 +64,13 @@
                 $message = str_replace("&gt;",">",$message);
                 $message = str_replace("&amp;","&",$message);
                 $text = str_replace("\n.", "\n..", $text);
-                $email="hello@trend.fr";
+                $emailFrom="hello@trend.fr";
                 $nom="Trend team";
-                $email="hello@trendblog.fr";
                 $headers  = 'MIME-Version: 1.0' . "\r\n";
-                $headers .= 'From:'.$nom.' <'.$email.'>' . "\r\n" .
-                    'Reply-To:'.$email. "\r\n" .
+                $headers .= 'From:'.$nom.' <'.$emailFrom.'>' . "\r\n" .
+                    'Reply-To:'.$emailFrom. "\r\n" .
                     'Content-Type: text/html; charset="utf-8"; '."\r\n" .
-                    'Content-Disposition: inline'. "\r\n" .
-                    'X-Mailer:PHP/'.phpversion();
+                    'Content-Disposition: inline'. "\r\n";
                 mail($email,$subject,$message,$headers);
 
             }
