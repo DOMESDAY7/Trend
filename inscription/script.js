@@ -21,6 +21,8 @@ function equal(){
     }
     else{
         message.textContent="👎Les mots de passes ne corresspondent pas";
+        coloredInput(comfirm)
+        coloredInput(mdp)
         button.style.cssText="cursor: not-allowed;"
         button.removeEventListener('click',formSub)
         return false;
@@ -34,9 +36,18 @@ function verifPseudo(){
     url=url+pseudoSearch;
     fetch(url)
     .then((resp)=>resp.json())
-    .then((data)=>message.textContent="Le pseudo "+data.pseudo+" existe déjà ❌")
+    .then((data)=>
+    message.textContent="Le pseudo "+data.pseudo+" existe déjà ❌",
+    coloredInput(pseudo)
+
+    
+    
+    )
     .catch(message.textContent="✅votre pseudo est unique")
 }
 function formSub(){
     form.submit()
+}
+function coloredInput(input){
+    input.style.cssText="background-color: red"
 }
