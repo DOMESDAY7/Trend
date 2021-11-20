@@ -1,0 +1,59 @@
+/* Général */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+
+
+.back{
+    display: block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 1%;
+    left: 1.5%;
+}
+
+.back > p{
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding-left: 10px;
+}
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 900px) {
+    .back > svg{
+        width: 10%;
+    }
+    
+    .back > p{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .back{
+        bottom: 2%;
+        left: 4%;
+    }
+
+    .back > p{
+        display: none;
+    }
+
+    .back > svg{
+        width: 100%;
+    }
+}
