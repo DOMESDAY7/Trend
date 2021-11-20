@@ -14,6 +14,14 @@ a{
     display: inline-block;
 }
 
+#T{
+    color: #F39000;
+}
+
+#d{
+    color: #FF0000;
+}
+
 .explain{
     text-decoration: underline;
     font-family: "Overpass";
