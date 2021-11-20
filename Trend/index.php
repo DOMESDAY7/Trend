@@ -26,7 +26,10 @@
             <p class="texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem mollitia delectus, accusantium ipsa, quidem, vitae magni laboriosam ullam explicabo aspernatur! Nobis voluptates aliquam odio accusamus, aliquid mollitia facere nulla?</p>
             <p class="date"> 23.oct.2021 </p>
         </div>
-        <div class="utilities"></div>
+        <div class="utilities">
+            <div class="SHcomments"></div>
+            <div class="putComment"></div>
+        </div>
     </div>
     
 
