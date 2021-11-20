@@ -140,11 +140,11 @@ a{
 }
 
 
-@keyframes burger {
-    0%{
-        transform: translateX(500px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
+/* @keyframes burger { */
+    /* 0%{ */
+        /* transform: translateX(500px); */
+    /* } */
+    /* 100%{ */
+        /* transform: translateX(0); */
+    /* } */
+/* } */

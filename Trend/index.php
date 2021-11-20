@@ -17,9 +17,10 @@
 <body>
     <?php require '../db_connect/detetction.php';?>
 
-    <main>
-
-    </main>
+    <div class="containerTrend">
+        <div class="img"></div>
+        <div class="texTrend"></div>
+    </div>
     
 
 
