@@ -129,8 +129,7 @@ problème. */
 }
 
 .imgTrend >img{
-    width: 95%;
-    border-radius: 15px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -169,11 +168,10 @@ problème. */
 .date{
     color: #B6B6B6;
     font-family: "Overpass";
-    font-weight: 400;
+    font-weight: 300;
     font-size: .75rem;
     padding-top: 8px;
     padding-left: 10px;
-    
 }
 
 

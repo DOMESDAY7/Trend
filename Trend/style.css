@@ -8,17 +8,16 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: solid red;
-    height: 100vh;
+    align-items: flex-start;
+    height: 100vmin;
 }
 
 .containerTrend{
     background-color: #111111;
-    width: 50%;
+    width: 68%;
     height: 50%;
-    margin-top: 4vh;
-    border: royalblue solid;
+    margin-top: 5vh;
+    border-radius: 24px;
 }
 
 .back{
@@ -39,6 +38,70 @@ body{
     font-size: 1.05rem;
     padding-left: 10px;
 }
+
+
+
+/* Trend */
+
+.containerTrend{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerTrend > div{
+    width: 75%;
+}
+
+.infos{
+    margin: 10px;
+}
+
+.imgtrend2{
+    width: 75%;
+    height: 60%;
+    border-radius: 15px;
+    overflow-y: hidden;
+    box-shadow: 2px 2px 2px rgba(255, 0, 0, 0.25);
+}
+
+.imgtrend2 >img{
+    width: 100%;
+}
+
+.texTrend{
+    background-color: #242424;
+    border-radius: 24px;
+    font-family: "Overpass";
+    margin-top: 30px;
+}
+
+.texTrend > .texts{
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-size: 1.2rem;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    /* padding-bottom: 10px; */
+}
+
+.date{
+    color: #B6B6B6;
+    font-family: "Overpass";
+    font-weight: 100;
+    font-size: .9rem;
+    padding-top: 8px;
+    padding-right: 15px;
+    float: right;
+}
+
+.utilities{
+
+}
+
 
 
 
@@ -66,5 +129,9 @@ body{
 
     .back > svg{
         width: 100%;
+    }
+
+    .containerTrend{
+        margin-top: 9vh;
     }
 }

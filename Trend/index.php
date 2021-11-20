@@ -11,15 +11,22 @@
     <!-- Montserrat font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600700&display=swap" rel="stylesheet">
     <!-- Overpass font -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600;700&display=swap" rel="stylesheet">
     <title><!-- Mettre le nom du trend en PHP ici --></title>
 </head>
 <body>
     <?php require '../db_connect/detetction.php';?>
 
     <div class="containerTrend">
-        <div class="img"></div>
-        <div class="texTrend"></div>
+        <div class="infos"></div>
+        <div class="imgtrend2">
+            <img src="../img/pc2.jpg" alt="">
+        </div>
+        <div class="texTrend">
+            <p class="texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem mollitia delectus, accusantium ipsa, quidem, vitae magni laboriosam ullam explicabo aspernatur! Nobis voluptates aliquam odio accusamus, aliquid mollitia facere nulla?</p>
+            <p class="date"> 23.oct.2021 </p>
+        </div>
+        <div class="utilities"></div>
     </div>
     
 
