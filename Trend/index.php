@@ -20,7 +20,15 @@
     <div class="containerTrend">
 
         <!-- Infos -->
-        <div class="infos"></div>
+        <div class="infos">
+            <div class="titre">
+                <span id="hashtag">#</span><h1> This is a Trend. </h1>
+            </div>
+            <div class="proprio">
+                <p>Trend's Master</p>
+                <div class="pp"></div>
+            </div>
+        </div>
 
         <!-- Image -->
         <div class="imgtrend2">
