@@ -313,6 +313,28 @@ body{
     }
 }
 
+@media screen and (max-width: 700px) {
+    #hashtag{
+        font-size: 3rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1rem;
+    }
+
+    .proprio > p{
+        font-size: 1rem;
+    }
+
+    .pp{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-left: 10px;
+    }
+}
+
 @media screen and (max-width: 590px) {
     .imgtrend2{
         height: 20vh;
