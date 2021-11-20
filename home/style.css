@@ -65,12 +65,13 @@ problème. */
 
 .titleTrends::after{
     content: "";
-    width: 40%;
+    width: 73%;
     background-color: white;
-    height: 2px;
+    height: 2.2px;
 
     position: absolute;
-    right: 0;
+    right: -15%;
+    bottom: 35%;
 }
 
 .containerLT{
@@ -84,7 +85,6 @@ problème. */
     min-width: 85vmin;
     /* min-height:200vmin; */
     border-radius: 24px;
-    cursor: pointer;
 }
 
 .containerLT > a{
@@ -113,6 +113,8 @@ problème. */
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+
+    cursor: pointer;
 }
 
 .imgTrend{
