@@ -19,6 +19,7 @@
         $pseudo=$_SESSION["pseudo"];
     } ?>
 
+    <!-- Content Head -->
     <section class="content_head">
         <!-- logo à mettre iciii -->
         <h1 class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </h1>
@@ -26,7 +27,9 @@
         <h3 class="pseudo"><?php echo $pseudo; ?></h3>
     </section >
 
-    <div class="burger">
+
+    <!-- Burger -->
+    <nav class="burger">
         <div class="containerTitles">
             <a href="#" class="home">HOME</a><br>
             <a href="#" class="archives">ARCHIVES</a><br>
@@ -34,8 +37,8 @@
             <br>
             <span><a href="../logOut" class="logOut">Log out</a></span>
         </div>
-        <a href="" class="explain"> Where am I ?</a>
-    </div>
+        <a href="#" class="explain"> Where am I ?</a>
+    </nav>
     
     <div class="burgerBG"></div>
 

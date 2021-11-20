@@ -1,3 +1,5 @@
+/* Général */
+
 *{
     box-sizing: border-box;
 }
@@ -22,22 +24,55 @@ a{
     color: #FF0000;
 }
 
-.explain{
-    text-decoration: underline;
-    font-family: "Overpass";
-    font-size: .9rem;
-    font-weight: 700;
-    font-style: italic;
 
-    position: absolute;
-    bottom: 10px;
-    right: 20px;
+/* ScrollBar */
+
+::-webkit-scrollbar {
+    width: 11px;
+    height: 13px;
 }
 
-.explain:hover{
-    color: #F39200;
-    transition: color .3s ease-in-out;
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, #F39000 14%, #FF0000 64%);
+    border-radius: 10px;
 }
+
+::-webkit-scrollbar-track {
+    background: #000;
+    border-radius: 15px;
+}
+
+
+/* Content Head */
+
+.content_head{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row-reverse;
+    position: fixed;
+   top: 0;
+    z-index: 999;
+    width: 100vw;
+    
+}
+
+.logoProvisoire{
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.8rem;
+    line-height: 44px;
+
+    position: fixed;
+    top: -1%;
+    left: 1.5%;
+}
+
+
+
+/* Burger */
 
 .burger{
     width: 500px;
@@ -45,18 +80,29 @@ a{
     background-color: #242424;
 
     position: fixed;
-    right: 0;
+    right: -500px;
     top: 0;
     z-index: 998;
 
-    transform: translateX(500px);
-    animation: burger .3s ease-in-out alternate-reverse;
-
+    transition: all .3s ease-in-out;
 }
 
 .show{
-    transform: translateX(0);
-    transition: transform .3s ease-in-out;
+    right: 0;
+}
+
+.burgerBG{
+    position: fixed;
+    z-index: 997;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(53, 53, 53, 0.75);
+
+}
+
+.display{
+    visibility: visible;
+    transition: all .8s ease-in-out;
 }
 
 .containerTitles{
@@ -75,7 +121,7 @@ a{
 
 .containerTitles > a:hover{
     font-style: italic;
-    color: #FF0000;
+    color: #ec9c22;
     text-shadow: 5px 2px 5px #f3920080;
     transition: all .3s ease-in-out;
 }
@@ -99,33 +145,12 @@ a{
     transition: all .15s ease-in-out;
 }
 
-.burgerBG{
-    width: 100vw;
-    height: 100vh;
-}
-
-.display{
-    background-color: rgba(53, 53, 53, 0.75);
-    visibility: visible;
-    transition: all .3s ease-in-out;
-}
 .pseudo{
     color: white;
     margin-right: 10px;
     font-family: "Overpass";
+}
 
-}
-.content_head{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: row-reverse;
-    position: fixed;
-   top: 0;
-    z-index: 999;
-    width: 100vw;
-    
-}
 .logOut{
     color: red;
     font-family: "Overpass";
@@ -134,25 +159,24 @@ a{
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
-.logoProvisoire{
-    color: white;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 800;
-    font-size: 1.8rem;
-    line-height: 44px;
 
-    position: fixed;
-    top: -1%;
-    left: 1.5%;
+.explain{
+    text-decoration: underline;
+    font-family: "Overpass";
+    font-size: .9rem;
+    font-weight: 700;
+    font-style: italic;
+
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+.explain:hover{
+    color: #F39200;
+    transition: color .3s ease-in-out;
 }
 
 
-/* @keyframes burger { */
-    /* 0%{ */
-        /* transform: translateX(500px); */
-    /* } */
-    /* 100%{ */
-        /* transform: translateX(0); */
-    /* } */
-/* } */
+/* Keyframes */
+
