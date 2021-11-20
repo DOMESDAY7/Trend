@@ -1,9 +1,17 @@
 .content{
     background-color: #111;
     color: white;
+    text-align: center;
+    padding: 30px 20px 30px 20px;
+    border-radius: 10px;
+    justify-self: center;
+    align-self: center;
+
 }
 body{
     background-color: black;
+    display: grid;
+    
 }
 h1{
     font-family: 'Overpass', sans-serif;
@@ -18,8 +26,13 @@ a{
     background-color: black;
     font-family: 'Montserrat', sans-serif;
     padding: 10px;
+    border-radius: 10px;
+    transition: 0.8s ease;
 }
 a:hover{
     background-color: white;
     color: black;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
 }

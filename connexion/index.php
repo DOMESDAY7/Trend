@@ -18,11 +18,7 @@
 
 <body>
     <?php
-        if($_SERVER['SERVER_NAME']=="localhost"){
-            require '../db_connect/local.php';
-        }else{
-            require '../db_connect/server.php';
-            }
+       require '../db_connect/detetction.php';
     ?>
     <form method="POST">
         <span class="content_bj">
@@ -55,12 +51,12 @@
                     header('Location: ../home');
                 
                 }else{
-                    echo "test";
+                    
                     header('Location: ../connexion?error=true');
                     
                 }
             }else{
-                echo "test2";
+                
                 header('Location: ../connexion?error=true');
             }
         }
