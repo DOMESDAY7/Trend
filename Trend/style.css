@@ -50,7 +50,7 @@ body{
 }
 
 .infos{
-    margin: 10px;
+    margin-top: 3%;
 }
 
 .imgtrend2{
@@ -93,8 +93,10 @@ body{
 }
 
 .utilities{
-    margin-top: 10%;
-    margin-bottom: 4%;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .SHcomments{
@@ -117,6 +119,28 @@ body{
     font-weight: bold;
     color: white;
 }
+
+.putComment{
+    width: 70px;
+    height: 45px;
+    background-color: #242424;
+    box-shadow: 2px 2px 5px rgba(240, 0, 0, 0.65);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.putComment > p{
+    font-family: "Overpass";
+    font-size: 1.8rem;
+    font-weight: normal;
+    color: white;
+    padding-left: 5px;
+}
+
 
 
 
