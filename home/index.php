@@ -49,7 +49,11 @@
                 </div>
                 
         </div>
-        <div class="archivesHome"></div>
+        <div class="archivesHome">
+            <a href="#" class="linkArchives">
+                    <div class="word">A<br>R<br>C<br>H<br>I<br>V<br>E<br>S</div>
+            </a>
+        </div>
     </main>
 
 

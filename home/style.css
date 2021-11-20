@@ -9,7 +9,7 @@ body{
     background-color: #000;
     /* background-attachment: fixed; */
     overflow-x: hidden;
-    height: 100vh;
+    /* height: 100vh;*/
 }
 main{
     display: grid;
@@ -32,7 +32,7 @@ a{
     grid-area: trends;
     display: flex;
     align-items: space-around;
-      justify-self: end; 
+     justify-self: end; 
      align-self: baseline; 
 }
 
@@ -40,6 +40,10 @@ a{
     grid-area: archives;
     justify-self: center;
     align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -173,6 +177,26 @@ problème. */
 }
 
 
+/* Archives */
+
+.word{
+    color: white;
+    text-shadow: 2px 2px 2px rgba(243, 146, 0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    font-size: 4.8rem;
+    font-family: "Overpass";
+
+
+}
+
+.word:hover{
+    font-style: italic;
+    transition: all 3s ease-in-out;
+    text-shadow: 2px 2px 2px rgba(240, 0, 0, 0.25);
+}
+
+
 
 
 /* décor lol */
@@ -194,7 +218,7 @@ problème. */
     main{
         display: grid;
         grid-template: 
-        "titleTrends " 1fr
+        "titleTrends" 1fr
         "trends" 1fr
         "archives" 1fr 
         ;
