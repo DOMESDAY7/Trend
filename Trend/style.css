@@ -50,8 +50,7 @@ body{
 }
 
 .infos{
-    margin-top: 3%;
-    margin-bottom: 1%;
+    margin-top: 2%;
 
     display: flex;
     justify-content: space-between;
@@ -78,7 +77,6 @@ body{
     font-size: 2.1875rem;
     color: white;
     font-weight: bold;
-    line-height: 35px;
 }
 
 .proprio{
@@ -92,13 +90,12 @@ body{
     font-size: 2.1875rem;
     color: white;
     font-weight: bold;
-    line-height: 35px;
 }
 
 .pp{
     width: 65px;
     height: 65px;
-    border-radius: 100%;
+    border-radius: 65px;
     background-color: red;
     margin-left: 15px;
 }
@@ -200,6 +197,26 @@ body{
     .imgtrend2{
         height: 35vh;
     }
+
+    #hashtag{
+        font-size: 4.1rem;
+        margin-right: 11px;
+    }
+
+    .titre > h1{
+        font-size: 2rem;
+    }
+
+    .proprio > p{
+        font-size: 2rem;
+    }
+
+    .pp{
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-left: 13px;
+    }
 }
 
 @media screen and (max-width: 1110px) {
@@ -212,6 +229,26 @@ body{
     }
     .imgtrend2{
         height: 30vh;
+    }
+
+    #hashtag{
+        font-size: 3.8rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1.7rem;
+    }
+
+    .proprio > p{
+        font-size: 1.7rem;
+    }
+
+    .pp{
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+        margin-left: 10px;
     }
 }
 
@@ -229,6 +266,50 @@ body{
 
     .date{
         font-size: .5rem;
+    }
+
+    #hashtag{
+        font-size: 3.5rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1.4rem;
+    }
+
+    .proprio > p{
+        font-size: 1.4rem;
+    }
+
+    .pp{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-left: 10px;
+    }
+
+    .SHcomments{
+        width: 180px;
+        height: 35px;
+        border-radius: 12px;
+    }
+    
+    .SHcomments > p{
+        font-size: 1rem;
+    }
+    
+    .putComment{
+        width: 60px;
+        height: 35px;
+        border-radius: 12px;
+    }
+
+    .putComment > svg{
+        width: 20px;
+    }
+    
+    .putComment > p{
+        font-size: 1.6rem;
     }
 }
 
