@@ -64,7 +64,7 @@ a{
 }
 
 /* Touche pas à ces deux positionnements, c'est pour le trait
-en dessous du "Last trends", c'est en ::after donc ça pose pas
+en dessous du "Last trends", c'est un ::after donc ça pose pas
 problème. */
 
 .titleTrends::after{
@@ -87,8 +87,6 @@ problème. */
     height: 80vh;
     width:50vw;
     min-width: 85vmin;
-    /* min-height:200vmin; */
-    border-radius: 24px;
 }
 
 .containerLT > a{
