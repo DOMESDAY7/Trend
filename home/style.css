@@ -184,8 +184,11 @@ problème. */
     text-shadow: 2px 2px 2px rgba(243, 146, 0, 0.5);
     text-align: center;
     font-weight: bold;
-    font-size: 4.8rem;
+    font-size: 6rem;
     font-family: "Overpass";
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -30px;
 
 
 }

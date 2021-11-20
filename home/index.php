@@ -51,7 +51,7 @@
         </div>
         <div class="archivesHome">
             <a href="#" class="linkArchives">
-                    <div class="word">A<br>R<br>C<br>H<br>I<br>V<br>E<br>S</div>
+                    <div class="word">ARCHIVES</div>
             </a>
         </div>
     </main>
