@@ -6,9 +6,17 @@
 
 body{
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
+main{
+    background-color: #111111;
+    width: 50vmin;
+    height: 100vh;
+    margin-top: 4vh;
+}
 
 .back{
     display: block;
