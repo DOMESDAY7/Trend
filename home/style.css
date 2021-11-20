@@ -15,8 +15,7 @@ main{
     display: grid;
     grid-template: 
     "titleTrends archives" 10vh
-    "trends archives" 1fr/ 1fr 0.75fr
-    ;
+    "trends archives" 1fr/ 1fr 0.75fr;
   
     height: 100vh;
     margin-top: 8vh;
@@ -57,15 +56,21 @@ a{
     align-self: flex-end;
     justify-self: end;
    
-
+    position: relative;
 }
+
+/* Touche pas à ces deux positionnements, c'est pour le trait
+en dessous du "Last trends", c'est en ::after donc ça pose pas
+problème. */
 
 .titleTrends::after{
     content: "";
     width: 40%;
     background-color: white;
     height: 2px;
-  
+
+    position: absolute;
+    right: 0;
 }
 
 .containerLT{
