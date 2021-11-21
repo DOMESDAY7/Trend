@@ -1,0 +1,64 @@
+body{
+    background-color: black;
+    overflow: hidden;
+   
+}
+main{
+    display: grid;
+    grid-template: 
+    "addTrend" 1fr
+    "trend_modify"1fr
+    "manage "1fr
+    ;
+    height: 100vh;
+    width: 100vw;
+}
+.line{
+    border-top: 2px solid white;
+
+}
+.content_manage{
+    display: flex;
+    justify-content: space-around;
+    grid-area: manage;
+    justify-self:center;
+    align-self: center;
+    width: 100vw;
+    padding: 5vh;
+}
+a{
+    background-color: #242424;
+     color: white;
+     font-family: 'Overpass',sans-serif;
+     padding: 30px;
+     box-shadow:  2px 2px 2px #F00000;
+     text-decoration: none;
+     border-radius: 24px;
+     font-size: 2.8125rem;
+     text-align: center;
+
+}
+.hashtag{
+    font-family: 'Overpass',sans-serif;
+    font-size: 4.375rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #F00000;
+}
+.trend_modify{
+    grid-area: trend_modify;
+    justify-self:center;
+    align-self: center;
+}
+.content_addTrend{
+    grid-area: addTrend;
+    justify-self: center;
+    align-self: center;
+}
+@media  (max-width:1000px) {
+    .content_manage{
+        flex-direction: column;
+        
+    }
+    
+}
