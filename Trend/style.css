@@ -158,6 +158,11 @@ body{
     align-items: center;
 
     cursor: pointer;
+    transition: all .6s ease-in-out;
+}
+
+.SHcomments:hover, .putComment:hover{
+    transform: translateY(-5px);
 }
 
 .SHcomments > p{
@@ -178,6 +183,7 @@ body{
     align-items: center;
 
     cursor: pointer;
+    transition: all .6s ease-in-out;
 }
 
 .putComment > p{
