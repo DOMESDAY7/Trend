@@ -231,7 +231,7 @@ body{
     
     position: absolute;
     top: 2%;
-    left: -12%;
+    left: -8%;
 }
 
 .User{
@@ -312,6 +312,11 @@ body{
         height: 60px;
         border-radius: 60px;
         margin-left: 13px;
+    }
+
+    #hashtag2{
+        top: 2%;
+        left: -10%;
     }
 }
 
