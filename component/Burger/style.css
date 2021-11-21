@@ -84,7 +84,7 @@ a{
     top: 0;
     z-index: 998;
 
-    transition: all .3s ease-in-out;
+    transition: all .6s ease-in-out;
 }
 
 .show{
@@ -182,6 +182,48 @@ a{
 
 /* Media Queries */
 
+@media screen and (max-width: 1000px) {
+    .burger{
+        width: 400px;
+        height: 100vh;
+        right: -400px;
+    }
+
+    .show{
+        right: 0;
+    }
+
+    .containerTitles{
+        margin-top: 150px;
+        margin-left: 65px;
+    }
+
+    .containerTitles > a{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .burger{
+        width: 300px;
+        height: 100vh;
+        right: -300px;
+    }
+
+    .show{
+        right: 0;
+    }
+
+    .containerTitles{
+        margin-top: 150px;
+        margin-left: 55px;
+    }
+
+    .containerTitles > a{
+        font-size: 1.7rem;
+    }
+}
+
 @media screen and (max-width: 380px) {
     .logoProvisoire{
         top: -2%;
@@ -200,8 +242,26 @@ a{
         margin-right: 5px;
         font-size: 1rem;
     }
-}
 
-@media screen and (max-width: 1000px) {
-    
+    .burger{
+        width: 100vw;
+        height: 100vh;
+        right: 0;
+        top: -100vh;
+
+        transition: all .8s ease-in-out;
+    }
+
+    .show{
+        top: 0;
+    }
+
+    .containerTitles{
+        margin-top: 150px;
+        margin-left: 55px;
+    }
+
+    .containerTitles > a{
+        font-size: 1.7rem;
+    }
 }
