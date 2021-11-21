@@ -1,64 +1,172 @@
 body{
     background-color: black;
     overflow: hidden;
+    display: grid;
+    grid-template: 
+    "title_trend nav"3vh
+    "last_trend nav" 1fr
+    "title_user nav"5vh
+    "last_user nav" 1fr/1fr 0.25fr
+    
+    
+    ;
+    /* gap: 10px; */
+    margin: 0;
    
 }
 main{
-    display: grid;
-    grid-template: 
-    "addTrend" 1fr
-    "trend_modify"1fr
-    "manage "1fr
-    ;
-    height: 100vh;
-    width: 100vw;
-}
-.line{
-    border-top: 2px solid white;
-
-}
-.content_manage{
     display: flex;
-    justify-content: space-around;
-    grid-area: manage;
-    justify-self:center;
-    align-self: center;
-    width: 100vw;
-    padding: 5vh;
+    flex-direction: column;
+    height: 100vh;
+    width: 20vw;
+    float: right;
+    grid-area: nav;
+    justify-self: end;
+    margin-right: 10px;
 }
-a{
+
+
+main a{
     background-color: #242424;
      color: white;
      font-family: 'Overpass',sans-serif;
-     padding: 30px;
+     padding: 1%;
      box-shadow:  2px 2px 2px #F00000;
      text-decoration: none;
      border-radius: 24px;
-     font-size: 2.8125rem;
+     font-size: 1rem;
      text-align: center;
+     margin-top: 5%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-width:150px;
+     max-width:300px;
+     
+    
 
 }
 .hashtag{
     font-family: 'Overpass',sans-serif;
-    font-size: 4.375rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     text-shadow: 2px 2px 2px #F00000;
 }
-.trend_modify{
-    grid-area: trend_modify;
-    justify-self:center;
-    align-self: center;
-}
-.content_addTrend{
-    grid-area: addTrend;
+
+
+.title_trend {
+    font-family:'Overpass',sans-serif ;
+    color: white;
+    grid-area: title_trend;
     justify-self: center;
-    align-self: center;
+    align-self:center ;
 }
-@media  (max-width:1000px) {
-    .content_manage{
-        flex-direction: column;
-        
-    }
+.title_user{
+    font-family:'Overpass',sans-serif ;
+    color: white;
+    grid-area: title_user;
+    justify-self: center;
+    align-self:center ;
     
+}
+.last_trend{
+    background-color:#242424 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: last_trend;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    height: 45vh;
+    width: 50vw;
+    border-radius: 10px;
+}
+.last_user{
+    background-color:#242424 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    grid-area: last_user;
+    padding: 10px;
+    align-self: center;
+    justify-self: center;
+    height: 45vh;
+    width: 50vw;
+    border-radius: 10px;
+    overflow: auto;
+}
+.user{
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px #F00000;
+    font-family:'Overpass',sans-serif ;
+    align-items: center;
+    
+    
+}
+.trend{
+    background: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px #F00000;
+    font-family:'Overpass',sans-serif ;
+    align-items: center;
+   
+   
+}
+.user_img{
+    background: white;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+img{
+    width: 10%;
+    height: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+.date{
+    font-size: 0.75rem;
+    font-family:'Montserrats',sans-serif ;
+    color: gray;
+}
+.since{
+    font-size: 0.75rem;
+    font-family:'Montserrats',sans-serif ;
+    color: gray;
+}
+.content_img{
+    /* border: white solid; */
+    width: 20%;
+    height: 90%;
+    
+}
+.content_nb{
+    /* border:solid white; */
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+   
+}
+.link_trend{
+    height: 20%;
+    text-decoration: none;
+    cursor: pointer;
+}
+.link_user{
+    height: 20%;
+    text-decoration: none;
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
 }
