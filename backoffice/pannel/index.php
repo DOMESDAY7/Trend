@@ -36,12 +36,12 @@
         <a href="" class="link_trend">
             <span class="trend">
             <h3 class="titre"><span class="hashtag">#</span>
-                This is a trend</h3>
-                <h5 class="date">01.dec.2021</h5>
+                <?php echo $data_trend["titre"]; ?></h3>
+                <h5 class="date"><?php echo $data_trend["date"]; ?></h5>
                 <h5 class="nb_comments">number of comments:</h5>
                 <h5 class="nb">10</h5>
                 
-                  <img src="../../img/pc.jpg" alt="">
+                  <img src="<?php echo $data_trend["id_image"];"" ?>" alt="">
             </span>
         </a>
         <?php } ?>
@@ -52,9 +52,9 @@
         <?php while ($data_user = $req->fetch()){ ?>
         <a href="" class="link_user">
             <span class="user">
-                <h3 class="pseudo">User</h3>
-                <h3 class="pseudo">test@test</h3>
-                <h5 class="since"> Active since 10.dec.2021</h5>
+                <h3 class="pseudo"><?php echo $data_user["pseudo"]; ?></h3>
+                <h3 class="pseudo"><?php echo $data_user["login"]; ?></h3>
+                <h5 class="since"> Active since <?php echo $data_user["creation_date"]; ?></h5>
                 <div class="user_img"></div>
             </span>
         </a>
