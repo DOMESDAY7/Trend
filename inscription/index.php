@@ -10,10 +10,10 @@
 <body>
         <form action="./v.php" method="POST" id="inscription">
             <img src="../img/profil.svg" alt="">
-                <input type="text" name="pseudo" id="username" placeholder="Username">
-                <input type="email" name="mail" id="mail" placeholder="@Mail✉️">
-                <input type="password" name="mdp" id="mdp" placeholder="Password🔑">
-                <input type="password" name="comfirm" id="comfirm" placeholder="Comfirmation">
+                <input type="text" name="pseudo" id="username" placeholder="Username" require>
+                <input type="email" name="mail" id="mail" placeholder="@Mail✉️" require>
+                <input type="password" name="mdp" id="mdp" placeholder="Password🔑" require>
+                <input type="password" name="comfirm" id="comfirm" placeholder="Comfirmation" require>
                 <span class="message"></span>
                 
         </form>

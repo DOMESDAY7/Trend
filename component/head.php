@@ -13,4 +13,5 @@
         <!-- overpass -->
         <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
     </head>
-<?php $head=ob_get_clean() ?>
+<?php $head=ob_get_clean();  echo $head;?>
+<?php require('../logOut/index.php'); ?>

@@ -16,7 +16,7 @@ form{
     align-items: center;
     flex-direction: column;
     width: 30vw;
-    min-width: 50vmin;
+    min-width: 250px;
     height: 50vh;
     border-radius: 20px;
 }
@@ -75,4 +75,19 @@ article{
     text-align: center;
     font-size: 0.875rem;
 }
+@media (max-width:650px) {
+    form{
+        width: 250px;
+    }
+    input{
+        margin-bottom: 10%;
+    }
+    img{
+        width: 15%;
+    }
+    input{
+        height: 15%;
+    }
+}
+
 
