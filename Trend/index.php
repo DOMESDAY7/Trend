@@ -60,6 +60,21 @@
             </div>
         </div>
     </div>
+
+    <div class="containerComments">
+        <div class="userComment">
+            <span id="hashtag2">#</span>
+            <div class="User">
+                <div class="ppUser"></div>
+                <p class="pseudoUser"> User </p>
+            </div>
+            <p class="comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas itaque eos repellendus adipisci! Obcaecati inventore ut neque assumenda, architecto nam repudiandae, dolorum omnis hic officia commodi adipisci excepturi, tenetur animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia ipsam maxime consequuntur eum nobis minima quaerat asperiores eos ad! Sunt in dolorem distinctio provident odio atque dolorum voluptatibus ab.</p>
+            <p class="dateUser"> 23.oct.2021 </p>
+        </div>
+        <!-- Le 2ème commentaire est pour la déco en attendant 
+        le fetch du php t'as captéééé -->
+        <div class="userComment2"></div>
+    </div>
     
 
 
