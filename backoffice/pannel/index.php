@@ -17,7 +17,7 @@
 
 <body>
     <?php
-     require '../../db_connect/detetction.php';
+     require '../../db_connect/detetction';
      $sql="SELECT * FROM utilisateurs , billet ";
      $req=$link->query($sql);
     ?>
