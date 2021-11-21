@@ -83,8 +83,6 @@ body{
 .proprio{
     display: flex;
     align-items: center;
-    border: #ffffff solid;
-
 }
 
 .proprio > p{
@@ -207,7 +205,7 @@ body{
     height: auto;
 }
 
-.userComment{
+.userComment, .userComment2{
     width: 95%;
     height: auto;
 
@@ -241,6 +239,10 @@ body{
     height: 38px;
     border-radius: 38px;
     background-color: #F39000;
+}
+
+.pp2{
+    background-color: #05BC7A;
 }
 
 .pseudoUser{
@@ -338,6 +340,31 @@ body{
         border-radius: 55px;
         margin-left: 10px;
     }
+
+    .ppUser{
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+    }
+    
+    .pseudoUser{
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+    
+    .comment{
+        border-radius: 24px;
+        padding: 20px;
+        font-size: 1rem;
+    }
+    
+    .dateUser{
+        font-size: .8rem;
+    }
+
+    #hashtag2{
+        font-size: 3.8rem;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -398,6 +425,39 @@ body{
     
     .putComment > p{
         font-size: 1.6rem;
+    }
+
+    .ppUser{
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+    }
+    
+    .pseudoUser{
+        font-size: 1.3rem;
+        padding-left: 10px;
+    }
+    
+    .comment{
+        border-radius: 24px;
+        padding: 20px;
+        font-size: .8rem;
+    }
+    
+    .dateUser{
+        font-size: .6rem;
+    }
+
+    #hashtag{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #hashtag2{
+        font-size: 3.2rem;
+        top: 2%;
+        left: -13%;
     }
 }
 
@@ -480,6 +540,37 @@ body{
         border-radius: 40px;
         margin-bottom: 5px;
     }
+
+    .ppUser{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+    
+    .pseudoUser{
+        font-size: 1.3rem;
+        padding-left: 5px;
+    }
+    
+    .comment{
+        border-radius: 24px;
+        padding: 20px;
+        font-size: .6rem;
+    }
+    
+    .dateUser{
+        font-size: .5rem;
+    }
+
+    .containerComments{
+        margin-top: 3vh;
+    }
+
+    #hashtag2{
+        font-size: 3.2rem;
+        top: 2%;
+        left: -16%;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -515,6 +606,12 @@ body{
     .proprio{
         top: -15%;
         left: 25%;
+    }
+
+    #hashtag2{
+        font-size: 3rem;
+        top: 2%;
+        left: -18%;
     }
 }
 
@@ -573,4 +670,32 @@ body{
     .putComment > svg{
         width: 40%;
     }
+
+    #hashtag2{
+        font-size: 2.8rem;
+        top: 2%;
+        left: -20%;
+    }
+
+    .comment{
+        border-radius: 24px;
+        padding: 15px;
+        font-size: .5rem;
+    }
+
+    .ppUser{
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+    }
+    
+    .pseudoUser{
+        font-size: 1rem;
+        padding-left: 4px;
+    }
+    
+    .dateUser{
+        font-size: .4rem;
+    }
+
 }
