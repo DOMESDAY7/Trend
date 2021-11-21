@@ -1,31 +1,26 @@
-
-<?php 
-$message=
-"
+<?php
+$message="
+<!DOCTYPE html>
 <html lang=\"en\">
-<body style=\"background-color: black;
-    display: grid;\">
-    <main style=\" background-color: #111;
-    color: white;
-    text-align: center;
-    padding: 30px 20px 30px 20px;
-    border-radius: 10px;
-    justify-self: center;
-    align-self: center;\">
-        <h1 style=\" font-family: 'Overpass', sans-serif;\">Hello $pseudo !</h1><br>
-        <p style=\"font-family: 'Montserrat', sans-serif;\">we are pleased to have you as a member of trend 😊</p>
-        <h3 style=\"font-family: 'Montserrat', sans-serif;\">To confirm your registration to Trend click on this button:</h3><br>
-        <a href='trend.mathieuandry.fr/verification?key=$db_key&pseudo=$pseudo' style=\"text-decoration: none;
-    color:white;
-    border: white solid 1px;
-    background-color: black;
-    font-family: 'Montserrat', sans-serif;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.8s ease;\"> Verify your email </a>
-    </main>
-</body>
+<head>
+    <meta charset=\"UTF-8\">
+    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Document</title>
+    <!-- montserrat -->
+    <link href=\"https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap\" rel=\"stylesheet\">
+   <!-- overpass -->
+   <link href=\"https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap\" rel=\"stylesheet\">
+</head>
 
-</html>
-";
+<body>
+    <table style=\"margin:auto; text-align:center; margin:auto; background-color:#111111; border-radius: 20px; height:200px; width:300px; padding: 20px; \">
+        <tbody>
+            <tr style=\"text-align:center; font-family:'Overpass';color:white; font-size:1.5rem; border:none;\"><td style=\"font-family:'Overpass',sans-serif;\">Hello $pseudo 🖖!</td></tr><br>
+            <tr style=\"text-align:center;color:white; border:none;\"><td style=\"font-family:'Montserrat',sans-serif;\">To confirm your registration to Trend click on this button:</td></tr><br><br>
+            <tr><td ><a href='https://trend.mathieuandry.fr/verification?key=$db_key&pseudo=$pseudo' style=\" color:black !important; border:white solid 1px; border-radius:10px; margin:auto; padding: 10px;text-decoration:none; color:white; background-color:white; font-family:'Montserrat',sans-serif;\">Check your email<a></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>"; 
 ?>

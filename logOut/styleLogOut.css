@@ -1,0 +1,22 @@
+body{
+    background-color: black;
+    display: grid;
+    grid-template: "main" 1fr;
+}
+main{
+    height: 50vh;
+    width: 50vw;
+    background-color: #1111;
+    grid-area: main;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 15px;
+    
+}
+h1{
+    font-family: 'Overpass', sans-serif;
+    color:white
+}

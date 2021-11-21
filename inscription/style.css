@@ -19,7 +19,7 @@ form{
     align-items: center;
     flex-direction: column;
     width: 30vw;
-    min-width: 40vmin;
+    min-width: 250px;
     height: 50vh;
     border-radius: 20px;
     padding: 5vh 2vw 5vh 2vw;
@@ -38,7 +38,7 @@ input{
     
 }
 img{
-    width: 5vw;
+    width: 10%;
     margin-bottom: -2%;
 }
 .subButton{
@@ -60,5 +60,19 @@ img{
     font-size: 0.8rem;
    
 
+}
+@media (max-width:500px) {
+    form{
+        width: 50vw;
+    }
+    input{
+        margin-bottom: 10%;
+    }
+    img{
+        width: 15%;
+    }
+    input{
+        height: 15%;
+    }
 }
 
