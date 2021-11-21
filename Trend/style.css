@@ -373,7 +373,7 @@ body{
     .proprio{
         flex-direction: column-reverse;
         position: absolute;
-        top: -14%;
+        top: -15%;
         left: 28.5%;
     }
 
@@ -390,6 +390,7 @@ body{
         width: 40px;
         height: 40px;
         border-radius: 40px;
+        margin-bottom: 5px;
     }
 }
 
@@ -424,15 +425,15 @@ body{
     }
 
     .proprio{
-        top: -14%;
+        top: -15%;
         left: 25%;
     }
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 340px){
     .proprio{
         top: -13%;
-        left: 27.5%;
+        left: 22%;
     }
 
     .containerTrend{
@@ -448,5 +449,40 @@ body{
         width: 30px;
         height: 30px;
         border-radius: 30px;
+        margin-bottom: 5px;
+    }
+
+    .SHcomments{
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .SHcomments > p{
+        display: none;
+    }
+
+    .svg > svg{
+        width: 85%;
+        margin-left: 1.5px;
+        margin-top: 4px;
+    }
+    
+    .putComment{
+        width: 35px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    
+    .putComment > p{
+        display: none;
+    }
+
+    .putComment > svg{
+        width: 40%;
     }
 }
