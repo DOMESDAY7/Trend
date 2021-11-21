@@ -163,6 +163,7 @@ body{
 
 .SHcomments:hover, .putComment:hover{
     transform: translateY(-5px);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.65);
 }
 
 .SHcomments > p{
