@@ -50,7 +50,54 @@ body{
 }
 
 .infos{
-    margin-top: 3%;
+    margin-top: 2%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hashtag{
+    font-family: "Overpass";
+    font-size: 4.375rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #F00000;
+    margin-right: 13px;
+}
+
+.titre{
+    display: flex;
+    align-items: center;
+}
+
+.titre > h1{
+    font-family: "Overpass";
+    margin: 0;
+    font-size: 2.1875rem;
+    color: white;
+    font-weight: bold;
+}
+
+.proprio{
+    display: flex;
+    align-items: center;
+}
+
+.proprio > p{
+    font-family: "Overpass";
+    margin: 0;
+    font-size: 2.1875rem;
+    color: white;
+    font-weight: bold;
+}
+
+.pp{
+    width: 65px;
+    height: 65px;
+    border-radius: 65px;
+    background-color: red;
+    margin-left: 15px;
 }
 
 .imgtrend2{
@@ -150,6 +197,26 @@ body{
     .imgtrend2{
         height: 35vh;
     }
+
+    #hashtag{
+        font-size: 4.1rem;
+        margin-right: 11px;
+    }
+
+    .titre > h1{
+        font-size: 2rem;
+    }
+
+    .proprio > p{
+        font-size: 2rem;
+    }
+
+    .pp{
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        margin-left: 13px;
+    }
 }
 
 @media screen and (max-width: 1110px) {
@@ -162,6 +229,26 @@ body{
     }
     .imgtrend2{
         height: 30vh;
+    }
+
+    #hashtag{
+        font-size: 3.8rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1.7rem;
+    }
+
+    .proprio > p{
+        font-size: 1.7rem;
+    }
+
+    .pp{
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
+        margin-left: 10px;
     }
 }
 
@@ -179,6 +266,72 @@ body{
 
     .date{
         font-size: .5rem;
+    }
+
+    #hashtag{
+        font-size: 3.5rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1.4rem;
+    }
+
+    .proprio > p{
+        font-size: 1.4rem;
+    }
+
+    .pp{
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-left: 10px;
+    }
+
+    .SHcomments{
+        width: 180px;
+        height: 35px;
+        border-radius: 12px;
+    }
+    
+    .SHcomments > p{
+        font-size: 1rem;
+    }
+    
+    .putComment{
+        width: 60px;
+        height: 35px;
+        border-radius: 12px;
+    }
+
+    .putComment > svg{
+        width: 20px;
+    }
+    
+    .putComment > p{
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #hashtag{
+        font-size: 3rem;
+        margin-right: 8px;
+    }
+
+    .titre > h1{
+        font-size: 1rem;
+    }
+
+    .proprio > p{
+        font-size: 1rem;
+    }
+
+    .pp{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        margin-left: 10px;
     }
 }
 
