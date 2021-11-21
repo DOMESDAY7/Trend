@@ -339,6 +339,58 @@ body{
     .imgtrend2{
         height: 20vh;
     }
+
+    .SHcomments{
+        width: 155px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    
+    .SHcomments > p{
+        font-size: .9rem;
+    }
+
+    .svg > svg{
+        width: 80%;
+    }
+    
+    .putComment{
+        width: 45px;
+        height: 30px;
+        border-radius: 10px;
+    }
+    
+    .putComment > p{
+        font-size: 1.2rem;
+    }
+
+    .putComment > svg{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .proprio{
+        flex-direction: column-reverse;
+        position: absolute;
+        top: -14%;
+        left: 28.5%;
+    }
+
+    .containerTrend{
+        margin-top: 12vh;
+        position: relative;
+    }
+
+    .proprio > p{
+        font-size: 1.4rem;
+    }
+
+    .pp{
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
 }
 
 @media screen and (max-width: 420px) {
@@ -364,9 +416,37 @@ body{
     }
 
     .containerTrend{
-        margin-top: 9vh;
+        margin-top: 12vh;
     }
+
     .imgtrend2{
         height: 25vh;
+    }
+
+    .proprio{
+        top: -14%;
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .proprio{
+        top: -13%;
+        left: 27.5%;
+    }
+
+    .containerTrend{
+        margin-top: 12vh;
+        position: relative;
+    }
+
+    .proprio > p{
+        font-size: 1.2rem;
+    }
+
+    .pp{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
     }
 }

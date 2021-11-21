@@ -51,7 +51,7 @@ a{
     align-items: center;
     flex-direction: row-reverse;
     position: fixed;
-   top: 0;
+    top: 0;
     z-index: 999;
     width: 100vw;
     
@@ -180,5 +180,28 @@ a{
 }
 
 
-/* Keyframes */
+/* Media Queries */
 
+@media screen and (max-width: 380px) {
+    .logoProvisoire{
+        top: -2%;
+        left: 3%;
+        font-size: 1.4rem;
+    }
+
+    .rondBurger{
+        width: 35px;
+        height: 35px;
+        border-radius: 35px;
+        margin-right: 2%;
+    }
+
+    .pseudo{
+        margin-right: 5px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    
+}
