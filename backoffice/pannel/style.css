@@ -12,7 +12,17 @@ body{
     ;
     /* gap: 10px; */
     margin: 0;
+    gap: 10px;
    
+}
+.last_trend::-webkit-scrollbar{
+    background-color: rgba(128, 128, 128, 0);
+
+}
+.last_trend::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    width: 5px;
 }
 main{
     display: flex;
@@ -74,7 +84,7 @@ main a{
     background-color:#242424 ;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    
     grid-area: last_trend;
     padding: 10px;
     align-self: center;
@@ -82,6 +92,7 @@ main a{
     height: 45vh;
     width: 50vw;
     border-radius: 10px;
+    overflow: auto;
 }
 .last_user{
     background-color:#242424 ;
@@ -119,7 +130,13 @@ main a{
     font-family:'Overpass',sans-serif ;
     align-items: center;
    
+    
+    
    
+   
+}
+.titre{
+    width: 20%;
 }
 .user_img{
     background: white;
@@ -161,6 +178,7 @@ img{
     height: 20%;
     text-decoration: none;
     cursor: pointer;
+    margin-bottom: 15%;
 }
 .link_user{
     height: 20%;
@@ -169,4 +187,10 @@ img{
 }
 a{
     cursor: pointer;
+}
+@media (max-width:1110px) {
+    .link_trend{
+        margin-bottom: 20%;
+    }
+    
 }

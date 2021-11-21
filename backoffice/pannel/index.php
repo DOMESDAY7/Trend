@@ -17,9 +17,10 @@
 
 <body>
     <?php
-     require '../../db_connect/detetction';
+     require '../../db_connect/detetction.php';
      $sql="SELECT * FROM utilisateurs , billet ";
      $req=$link->query($sql);
+    
     ?>
     <main>
 
@@ -32,7 +33,8 @@
     <?php $sql="SELECT pseudo login" ?>
     <h3 class="title_trend">Last trend</h3>
     <section class="last_trend">
-        <?php while ($data_trend = $req->fetch()){ ?>
+        <?php  $cpt_trend=0; ?>
+        <?php while (($data_trend = $req->fetch()) &&($cpt_trend<5)){ ?>
         <a href="" class="link_trend">
             <span class="trend">
             <h3 class="titre"><span class="hashtag">#</span>
@@ -44,12 +46,13 @@
                   <img src="<?php echo $data_trend["id_image"];"" ?>" alt="">
             </span>
         </a>
-        <?php } ?>
+        <?php $cpt_trend++; } ?>
     </section>
-
+<!-- faire un rowCount()pour compter le nb de com -->
     <h3 class="title_user"> Last user</h3>
     <section class="last_user">
-        <?php while ($data_user = $req->fetch()){ ?>
+        <?php $cpt_user=0; ?>
+        <?php while (($data_user = $req->fetch()) && ($cpt_user<10)){ ?>
         <a href="" class="link_user">
             <span class="user">
                 <h3 class="pseudo"><?php echo $data_user["pseudo"]; ?></h3>
@@ -58,7 +61,7 @@
                 <div class="user_img"></div>
             </span>
         </a>
-        <?php } ?>
+        <?php $cpt_user++; } ?>
 
     </section>
 </body>
