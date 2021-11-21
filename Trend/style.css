@@ -83,6 +83,8 @@ body{
 .proprio{
     display: flex;
     align-items: center;
+    border: #ffffff solid;
+
 }
 
 .proprio > p{
@@ -225,15 +227,13 @@ body{
     
     position: absolute;
     top: 2%;
-    left: -8%;
+    left: -12%;
 }
 
 .User{
-    /* width: auto; */
-    align-self: flex-start;
     display: flex;
     align-items: center;
-    border: #ffffff solid;
+    margin-top: 2%;
 }
 
 .ppUser{
@@ -241,8 +241,6 @@ body{
     height: 38px;
     border-radius: 38px;
     background-color: #F39000;
-    border: red solid;
-
 }
 
 .pseudoUser{
@@ -250,9 +248,8 @@ body{
     font-weight: bold;
     font-size: 1.7rem;
     color: #ffffff;
-    padding-left: 5%;
-    border: greenyellow solid;
-
+    margin: 0;
+    padding-left: 10px;
 }
 
 .comment{
@@ -260,6 +257,8 @@ body{
     border: solid 1px #ffffff;
     border-radius: 24px;
     padding: 20px;
+    margin: 0;
+    margin-top: 1%;
     font-family: "Montserrat";
     font-size: 1.2rem;
     font-weight: 300;
@@ -272,6 +271,9 @@ body{
     font-weight: normal;
     color: #B6B6B6;
     align-self: flex-end;
+    margin: 0;
+    margin-bottom: 3%;
+    margin-top: 1%;
 }
 
 
