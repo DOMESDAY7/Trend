@@ -110,7 +110,7 @@
     include "../component/Burger/index.php";
 ?>
 
-    <script src="script.js"></script>
     <script src="../component/Burger/java.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

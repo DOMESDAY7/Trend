@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require '../../component/head.php'; ?>
-    <link rel="stylesheet" href="../../component/Burger/style.css">
+    <?php require 'https://localhost/Trend/component/head.php'; ?>
+    <link rel="stylesheet" href="https://localhost/Trend/component/Burger/style.css">
     
     <title>Burger - don't touch</title>
 </head>
@@ -37,6 +37,6 @@
     
     <div class="burgerBG"></div>
 
-    <script src="../../component/Burger/java.js"></script>
+    <script src="https://localhost/Trend/component/Burger/java.js"></script>
 </body>
 </html>
