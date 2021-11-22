@@ -31,7 +31,7 @@
     <!-- Burger -->
     <nav class="burger">
         <div class="containerTitles">
-            <a href="#" class="home">HOME</a><br>
+            <a href="../home/index.php" class="home">HOME</a><br>
             <a href="#" class="archives">ARCHIVES</a><br>
             <a href="#" class="profile">PROFILE</a>
             <br>
