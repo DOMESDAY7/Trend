@@ -26,8 +26,8 @@
     <!-- Burger -->
     <nav class="burger">
         <div class="containerTitles">
-            <a href="#" class="home">HOME</a><br>
-            <a href="#" class="archives">ARCHIVES</a><br>
+            <a href="../home/index.php" class="home">HOME</a><br>
+            <a href="../archives/index.php" class="archives">ARCHIVES</a><br>
             <a href="#" class="profile">PROFILE</a>
             <br>
             <span><a href="../logOut" class="logOut">Log out</a></span>

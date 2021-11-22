@@ -10,6 +10,11 @@ body{
     background-attachment: fixed;
 }
 
+::selection{
+    background-color: #F39200;
+    color: #000;
+}
+
 a{
     text-decoration: none;
     color: white;
