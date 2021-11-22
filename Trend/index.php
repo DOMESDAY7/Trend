@@ -96,7 +96,6 @@
         </div>
     </div>
         
-    
 
     <!-- Retour menu -->
     <a href="../home/index.php" class="back"> 
@@ -111,7 +110,7 @@
     include "../component/Burger/index.php";
 ?>
 
-    <script src="../component/Burger/java.js"></script>
     <script src="script.js"></script>
+    <script src="../component/Burger/java.js"></script>
 </body>
 </html>
