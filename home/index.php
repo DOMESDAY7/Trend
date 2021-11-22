@@ -2,16 +2,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php require '../component/head.php'; ?>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../component/Burger/style.css">
-    <!-- Montserrat font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Overpass font -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Home</title>
 </head>
 <body>
@@ -20,9 +14,6 @@
     $req=$link -> query($sql);
     $cpt=0;
     ?>
-    
-
-
     
     <main>
     <h3 class="titleTrends">Last trends</h3>
