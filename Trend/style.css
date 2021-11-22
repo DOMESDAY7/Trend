@@ -385,6 +385,12 @@ textarea{
     padding-top: 10px;
 }
 
+textarea:focus{
+    outline: none !important;
+    border-color: #F00000;
+    transition: all .6s ease-in-out;
+}
+
 .BTNpost{
     width: 120px;
     height: 45px;
