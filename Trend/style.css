@@ -324,7 +324,7 @@ body{
     height: 78px;
     width: 78px;
     border-radius: 78px;
-    background-color: #000000;
+    background-color: #111111;
     margin-bottom: 1%;
 
     display: flex;
@@ -336,7 +336,7 @@ body{
 
 .modal{
     width: 70%;
-    height: 50%;
+    height: 60%;
     background-color: #111111;
     border-radius: 10px;
 
@@ -383,6 +383,7 @@ textarea{
     font-size: 1rem;
     padding-left: 15px;
     padding-top: 10px;
+    resize: none;
 }
 
 textarea:focus{
@@ -715,6 +716,54 @@ textarea:focus{
         font-size: 3.2rem;
         top: 2%;
         left: -16%;
+    }
+
+    .modal{
+        height: 40%;
+    }
+
+    .BTNpost{
+        align-self: center;
+    }
+
+    .croix{
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+    }
+
+    .croix > img{
+        width: 50%;
+    }
+        
+    .userModal{
+        width: 60%;
+    }
+    
+    .ppModal{
+        height: 25px;
+        width: 25px;
+        border-radius: 25px;
+    }
+    
+    .pseudoModal{
+        margin-left: 4%;
+        padding-top: 5px;
+        font-size: 1.2rem;
+    }
+    
+    textarea{
+        border-radius: 12px;
+        font-size: .8rem;
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+    
+    .BTNpost{
+        width: 90px;
+        height: 35px;
+        border-radius: 11x;
+        font-size: .9rem;
     }
 }
 
