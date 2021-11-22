@@ -59,9 +59,6 @@ function verifPseudo(){
     .then((data)=>
     message.textContent="The username "+data.pseudo+" already exists ❌",
     wrongInput(pseudo)
-
-    
-    
     )
     .catch(message.textContent="✅Your username is unique",
     writeInput(pseudo)
