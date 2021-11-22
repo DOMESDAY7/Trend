@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require '../../component/head.php'; ?>
-    <link rel="stylesheet" href="../../component/Burger/style.css">
+    <?php require '../head.php'; ?>
+    <link rel="stylesheet" href="../Burger/style.css">
     
     <title>Burger - don't touch</title>
 </head>

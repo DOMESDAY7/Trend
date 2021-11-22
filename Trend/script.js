@@ -6,6 +6,7 @@ let p = document.querySelector('.p');
 let show = "Show comments";
 let hide = "Hide comments";
 
+
 document.querySelector('.SHcomments').addEventListener('click', ()=>{
     areaComments.classList.toggle('show');
 
