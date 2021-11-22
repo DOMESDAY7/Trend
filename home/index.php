@@ -8,34 +8,16 @@
     <link rel="stylesheet" href="../component/Burger/style.css">
     <title>Home</title>
 </head>
-<body>
-    <?php require '../db_connect/detetction.php'; 
-    $sql="SELECT short_description , id_image , date , titre  FROM billet ORDER BY date DESC ";
-    $req=$link -> query($sql);
-    $cpt=0;
-    ?>
-    
+<body> 
     <main>
     <h3 class="titleTrends">Last trends</h3>
         <div class="lasTrends">
             
                 <div class="containerLT">
                         
-                    <?php while(($data=$req -> fetch()) && ($cpt<3)){ ?>
-                        <?php $date=date_create($data["date"]) ?>
-                        
-                        <div class="exTrend1">
-                            <div class="textsTrend">
-                            <!-- pour le hashtag on va mettre le lien de l'article -->
-                                <h1><span id="hashtag">#</span> <?php echo $data["titre"]; ?> </h1> 
-                                <p class="description"> <?php echo $data["short_description"]; ?></p>
-                                <p class="date"><?php echo date_format($date,'d.M.Y') ; ?></p>
-                            </div>
-                            <div class="imgTrend">
-                                <img src="../img/pc.jpg" alt="">
-                            </div>
-                        </div>
-                    <?php $cpt++; } ?>
+                    <?php require './model.php'; 
+                    lastThree();
+                    ?>
                         <a href="#">I want to see more</a>
                 </div>
                 
@@ -50,7 +32,8 @@
 
     
 <?php
-    include "../component/Burger/index.php";
+    
+    require '../component/Burger/index.php';
 ?>
 
     <script src="../component/Burger/java.js"></script>
