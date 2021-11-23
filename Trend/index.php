@@ -1,4 +1,5 @@
 <?php session_start()?>
+<?php require '../db_connect/detetction.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +16,9 @@
     <title><!-- Mettre le nom du trend en PHP ici --></title>
 </head>
 <body>
-    <?php require '../db_connect/detetction.php';?>
-
+    
+    <?php echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
+    echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; ?>
     <!-- Trend -->
     <div class="containerTrend">
         <!-- Infos -->
@@ -94,6 +96,7 @@
             </div>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write a comment..."></textarea>
             <div class="BTNpost" > Let's post </div>
+            <span class="message"></span>
         </div>
     </div>
         
@@ -111,7 +114,7 @@
     include "../component/Burger/index.php";
 ?>
 
-    <script src="../component/Burger/java.js"></script>
+    <script src="../component/Burger/java.js"></>
     <script type="text/javascript" src="script.js"></script>
     <script src="script_comment.js"></script>
 </body>
