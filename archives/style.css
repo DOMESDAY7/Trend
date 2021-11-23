@@ -1,0 +1,41 @@
+/* Général */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    height: auto;
+    display: grid;
+    grid-template: 
+    "part1" 1fr
+    "part2" 1fr;
+}
+
+.part1{
+    grid-area: part1;
+    border: blue solid;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.part1 > h1{
+    font-family: "Overpass";
+    font-size: 4.6875rem;
+    font-weight: bold;
+    color: white;
+}
+
+.searchArchive{
+    display: flex;
+    
+}
+
+.part2{
+    grid-area: part2;
+    border: springgreen solid;
+}
