@@ -82,6 +82,7 @@
     </div>
 
     <!-- Modal ajout commentaire -->
+  
     <div class="BGmodal">
         <div class="croix">
             <img src="../img/croix.svg" alt="" class="svgCroix">
@@ -92,7 +93,7 @@
                 <p class="pseudoModal"> User3 </p>
             </div>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write a comment..."></textarea>
-            <div class="BTNpost"> Let's post </div>
+            <div class="BTNpost" > Let's post </div>
         </div>
     </div>
         
@@ -112,5 +113,6 @@
 
     <script src="../component/Burger/java.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script src="script_comment.js"></script>
 </body>
 </html>
