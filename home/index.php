@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require '../component/head.php'; ?>
+    <?php require '../component/head.php' ?>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../component/Burger/style.css">

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php require '../head.php'; ?>
+    <!-- gros pb au niveau du chemin ici -->
+    <?php require $_SERVER["DOCUMENT_ROOT"].'/trend/component/head.php'; ?>
     <link rel="stylesheet" href="../Burger/style.css">
     
     <title>Burger - don't touch</title>
