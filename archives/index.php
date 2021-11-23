@@ -19,6 +19,22 @@
 
 
 
+    <main>
+        <div class="part1">
+            <h1 class="title">Archives</h1>
+            <div class="searchArchive">
+                <input type="search" name="search" id="search">
+                <div class="filterDate">
+                    <img src="../img/arrow2.svg" alt="">
+                    <p>Date</p>
+                </div>
+            </div>
+        </div>
+        <div class="part2"></div>
+    </main>
+
+
+
 <?php
     include "../component/Burger/index.php";
 ?>
