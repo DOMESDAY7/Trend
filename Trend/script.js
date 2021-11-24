@@ -29,11 +29,16 @@ document.querySelector('.SHcomments').addEventListener('click', ()=>{
 // Modal
 let BG2 = document.querySelector('.BGmodal');
 let croix = document.querySelector('.croix');
+let addComment = document.querySelector('.BTNpost');
 
 document.querySelector('.putComment').addEventListener('click', ()=>{
     BG2.classList.toggle('display');
 });
 
 croix.addEventListener('click', ()=>{
+    BG2.classList.toggle('display');
+})
+
+addComment.addEventListener('click', ()=>{
     BG2.classList.toggle('display');
 })
