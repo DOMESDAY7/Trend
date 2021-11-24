@@ -1,20 +1,33 @@
 let subBTN=document.querySelector('.BTNpost');
-const url="../API/comment.php";
+let url="http://localhost/trend/api/comment.php";
 let message=document.querySelector(".message");
-let date = new Date();
+
 
 window.addEventListener('click',(e)=>{
+    let date = new Date();
     if(e.target==subBTN){
+        //vérifier si le commentaire n'est pas vide
        //récupération du commentaire dans la textarea
         let contentCom=document.querySelector('#comment').value;
         //création d'un objet que l'on va mettre en json 
         date=beautiDate(date)
-        let com = new Object();
+        let com = {
+            post_date:"",
+            ext_billet:"",
+            content:"",
+            ext_utilisateur:"",
+        };
         //rajout des choses dans l'objet
-        com[post_date]=date;
-        com[ext_billet]=id_billet;
-        com[content]=contentCom;
-        com[ext_utilisateur]=id_user;
+        com.post_date=date;
+        com.ext_billet=id_billet;
+        com.content=contentCom;
+        com.ext_utilisateur=id_user;
+        
+        // com[post_date]=date;
+        // com[ext_billet]=id_billet;
+        // com[content]=contentCom;
+        // com[ext_utilisateur]=id_user;
+        console.log(com)
         //smiler()
         //mettre ici l'encodage des smileys
         fetch(url,{

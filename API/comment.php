@@ -15,8 +15,6 @@
     while($data=$req->fetch(PDO::FETCH_ASSOC)){
         echo(json_encode($data));
     }
-    
-    ?>
-    
+    ?>  
 </body>
 </html>
