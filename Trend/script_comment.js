@@ -37,6 +37,7 @@ window.addEventListener('click',(e)=>{
                 "Content-Type":"application/json",
             }
         })
+        .then(console.log("le com est envoyé"))
         .catch (message.textContent="An error has occurred")
 
 
