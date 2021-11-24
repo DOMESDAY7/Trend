@@ -114,7 +114,7 @@
     include "../component/Burger/index.php";
 ?>
 
-    <script src="../component/Burger/java.js"></>
+    <script src="../component/Burger/java.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script src="script_comment.js"></script>
 </body>
