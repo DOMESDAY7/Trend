@@ -1,6 +1,7 @@
 let subBTN=document.querySelector('.BTNpost');
 let url="http://localhost/trend/api/comment.php";
 let message=document.querySelector(".message");
+let content_comment=document.querySelector('.containerComments')
 
 
 window.addEventListener('click',(e)=>{
@@ -37,7 +38,23 @@ window.addEventListener('click',(e)=>{
                 "Content-Type":"application/json",
             }
         })
-        .then(console.log("le com est envoyé"))
+        .then(
+            c=document.createElement('div'),
+            c.classList.add('userComment'),
+            c.innerHTML= `<div class="userComment">
+            <span id="hashtag2">#</span>
+            <div class="User">
+                <div class="ppUser"></div>
+                <p class="pseudoUser">${pseudo} </p>
+            </div>
+            <p class="comment"> ${contentCom}</p>
+            <p class="dateUser"> ${date} </p>
+        </div>`,
+            content_comment.appendChild(c)
+           
+
+
+        )
         .catch (message.textContent="An error has occurred")
 
 

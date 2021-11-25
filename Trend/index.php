@@ -18,7 +18,9 @@
 <body>
     
     <?php echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
-    echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; ?>
+    echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
+    echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>";
+    ?>
     <!-- Trend -->
     <div class="containerTrend">
         <!-- Infos -->
@@ -61,26 +63,27 @@
     </div>
 
     <!-- Espace commentaires -->
+    <?php
+    require '../db_connect/detetction.php';
+    $id_billet=$_GET["id_billet"];
+    $id_user=$_SESSION["id_user"];
+    $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user'";
+    //faire une requête préparé au cas ou il y a une injection dans l'URL
+    $req=$link->query($sql_com);
+     ?>
     <div class="containerComments">
+        <?php while( $data = $req->fetch(PDO::FETCH_ASSOC)){ ?>
         <div class="userComment">
             <span id="hashtag2">#</span>
             <div class="User">
                 <div class="ppUser"></div>
-                <p class="pseudoUser"> User </p>
+                <p class="pseudoUser"> <?php echo $data["pseudo"]; ?> </p>
             </div>
-            <p class="comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas itaque eos repellendus adipisci! Obcaecati inventore ut neque assumenda, architecto nam repudiandae, dolorum omnis hic officia commodi adipisci excepturi, tenetur animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia ipsam maxime consequuntur eum nobis minima quaerat asperiores eos ad! Sunt in dolorem distinctio provident odio atque dolorum voluptatibus ab.</p>
-            <p class="dateUser"> 23.oct.2021 </p>
+            <p class="comment"> <?php echo $data["content"]; ?></p>
+            <p class="dateUser"> <?php  echo $data["post_date"]; ?> </p>
         </div>
-        <!-- Le 2ème commentaire est pour la déco en attendant le fetch du php t'as captéééé -->
-        <div class="userComment2">
-        <span id="hashtag2">#</span>
-            <div class="User">
-                <div class="ppUser pp2"></div>
-                <p class="pseudoUser"> User </p>
-            </div>
-            <p class="comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas itaque eos repellendus adipisci! Obcaecati inventore ut neque assumenda, architecto nam repudiandae, dolorum omnis hic officia commodi adipisci excepturi, tenetur animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia ipsam maxime consequuntur eum nobis minima quaerat asperiores eos ad! Sunt in dolorem distinctio provident odio atque dolorum voluptatibus ab.</p>
-            <p class="dateUser"> 23.oct.2021 </p>
-        </div>
+    <?php } ?>
+    
     </div>
 
     <!-- Modal ajout commentaire -->
