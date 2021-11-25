@@ -12,7 +12,7 @@
         ?>
         <?php $date=date_create($data["date"]) ?>
         
-        <!-- <a href="../Trend/?id_billet=<?php echo $data["id_billet"]; ?>"> -->
+        <a href="../Trend/?id_billet=<?php echo $data["id_billet"]; ?>">
             <div class="exTrend1">
                 <div class="textsTrend">
                 <!-- pour le hashtag on va mettre le lien de l'article -->
@@ -24,7 +24,7 @@
                     <img src="../img/pc.jpg" alt="">
                 </div>
             </div>
-        <!-- </a> -->
+        </a>
     <?php $cpt++; 
     }
 }

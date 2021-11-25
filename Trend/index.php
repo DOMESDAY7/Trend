@@ -1,5 +1,15 @@
 <?php session_start()?>
 <?php require '../db_connect/detetction.php';?>
+<?php
+        $id_billet=$_GET["id_billet"];
+        if(!isset($_SESSION["id_user"])){
+        }
+        $id_user=$_SESSION["id_user"];
+        $sql_trend="SELECT * FROM billet WHERE id_billet='$id_billet' ";
+        $req_trend=$link->query($sql_trend);
+        $data_trend=$req_trend->fetch(PDO::FETCH_ASSOC);
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,25 +23,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Overpass font -->
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600;700&display=swap" rel="stylesheet">
-    <title><!-- Mettre le nom du trend en PHP ici --></title>
+    <title>TREND -<?php echo $data_trend["titre"]; ?></title>
 </head>
 <body>
-    
-    <?php 
-    // if(!isset($_GET["id_user"])){
-    //     //peut pas commenter
-    // }else{
-    //     $id_user=$_GET["id_user"];
-    // }
-    // if(!isset($_SESSION["pseudo"])){
-    //     //peut pas commenter
-    // }
-  
-  
-    echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
-    echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
-    echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>";
-    ?>
+<?php 
+     if(!isset($_GET["id_user"])){
+         //peut pas commenter
+     }
+     
+     ?>
     <!-- Trend -->
     <div class="containerTrend">
         <!-- Infos -->
@@ -49,13 +49,7 @@
         <div class="imgtrend2">
             <img src="../img/pc2.jpg" alt="">
         </div>
-        <?php
-        $id_billet=$_GET["id_billet"];
-        $id_user=$_SESSION["id_user"];
-        $sql_trend="SELECT * FROM billet WHERE id_billet='$id_billet' ";
-        $req_trend=$link->query($sql_trend);
-        $data_trend=$req_trend->fetch(PDO::FETCH_ASSOC);
-        ?>
+        
 
         <!-- Texte -->
         <div class="texTrend">  
@@ -83,6 +77,14 @@
 
     <!-- Espace commentaires -->
     <?php
+      if (!isset($_SESSION["pseudo"])){
+        $_SESSION["pseudo"]="Guest";
+      }
+     echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
+     echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
+     echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>";
+   
+   
     
     
     $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user'";

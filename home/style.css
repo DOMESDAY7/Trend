@@ -19,9 +19,7 @@ main{
     margin-top: 8vh;
 }
 
-a{
-    text-decoration: none;
-}
+
 
 
 /* Parts of grid */
@@ -93,6 +91,7 @@ problème. */
     font-size: 0.8125rem;
     text-decoration: underline;
     color: #B6B6B6;
+
     
 }
 
