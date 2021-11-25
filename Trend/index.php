@@ -38,17 +38,25 @@
         <div class="imgtrend2">
             <img src="../img/pc2.jpg" alt="">
         </div>
+        <?php
+        $id_billet=$_GET["id_billet"];
+        $id_user=$_SESSION["id_user"];
+        $sql_trend="SELECT * FROM billet WHERE id_billet='$id_billet' ";
+        $req_trend=$link->query($sql_trend);
+        $data_trend=$req_trend->fetch(PDO::FETCH_ASSOC);
+        ?>
 
         <!-- Texte -->
-        <div class="texTrend">
-            <p class="texts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem mollitia delectus, accusantium ipsa, quidem, vitae magni laboriosam ullam explicabo aspernatur! Nobis voluptates aliquam odio accusamus, aliquid mollitia facere nulla?</p>
-            <p class="date"> 23.oct.2021 </p>
+        <div class="texTrend">  
+            <p class="texts"><?php echo $data_trend["article"]; ?></p>
+            <p class="date"> <?php echo $data_trend["date"]; ?> </p>
         </div>
 
         <!-- Boutons utilitaires -->
         <div class="utilities">
             <div class="SHcomments">
                 <div class="svg">
+                    <!-- mettre l'id de l'image ici -->
                     <img src="../img/eyeOpen.svg" alt="" class="eye">
                 </div>
                 <p class="p"> Show comments </p>
@@ -64,17 +72,16 @@
 
     <!-- Espace commentaires -->
     <?php
-    require '../db_connect/detetction.php';
-    $id_billet=$_GET["id_billet"];
-    $id_user=$_SESSION["id_user"];
+    
+    
     $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user'";
     //faire une requête préparé au cas ou il y a une injection dans l'URL
     $req=$link->query($sql_com);
      ?>
     <div class="containerComments">
         <?php while( $data = $req->fetch(PDO::FETCH_ASSOC)){ ?>
-        <div class="userComment">
-            <span id="hashtag2">#</span>
+        <div class="userComment" id=#<?php $data["id_commentaire"]; ?>>
+            <span id="hashtag2"><a href="#<?php echo $data["id_commentaire"]; ?>"> #</a></span>
             <div class="User">
                 <div class="ppUser"></div>
                 <p class="pseudoUser"> <?php echo $data["pseudo"]; ?> </p>
