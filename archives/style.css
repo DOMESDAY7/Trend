@@ -13,9 +13,14 @@ body{
     "part2" 1fr;
 }
 
+
+
+
+/* Partie 1 */
+
 .part1{
     grid-area: part1;
-    border: blue solid;
+    /* border: blue solid; */
 
     display: flex;
     flex-direction: column;
@@ -32,10 +37,122 @@ body{
 
 .searchArchive{
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
 }
+
+#search{
+    width: 315px;
+    height: 40px;
+    border: 2px #FFFFFF solid;
+    border-radius: 24px;
+    background-color: transparent;
+    background-image: url("../img/loupe.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+
+    color: #FFFFFF;
+    font-family: "Overpass";
+    font-size: 1rem;
+    padding-left: 35px;
+}
+
+.top{
+    align-self: flex-start;
+}
+
+#search:focus{
+    outline: none;
+    border-color: #FF0000;
+    transition: all .5s ease-in-out;
+}
+
+#search::placeholder{
+    font-family: "Overpass";
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    opacity: .8;
+}
+
+.filterDate{
+    margin-left: 10px;
+}
+
+.firstClick{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.color{
+    background-color: #242424;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.firstClick:hover{
+    background-color: #242424;
+    border-radius: 18px;
+    transition: background-color .3s ease-in-out;
+}
+
+.test{
+    display: flex;
+    cursor: pointer;
+    margin: 0;
+    padding: 8px;
+}
+
+.test > p{
+    font-family: "Overpass";
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: 0;
+    padding-left: 7px;
+    padding-top: 4px;
+}
+
+.miniModal{
+    background-color: #242424;
+    border-radius: 0px 0px 15px 15px;
+    padding: 10px;
+    /* border: steelblue solid; */
+    display: none;
+    transition: all .6s ease-in-out;
+}
+
+.show{
+    display: flex;
+}
+
+label{
+    font: 1.4rem "Overpass";
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+input[type='radio']{
+    box-sizing: border-box;
+    appearance: none;
+    background: white;
+    outline: none;
+    border: 3px solid white;
+    width: 13px;
+    height: 13px;
+}
+
+input[type='radio']:checked{
+    background-color: #F39000;
+}
+
+
+
+
+/* Partie 2 */
 
 .part2{
     grid-area: part2;
-    border: springgreen solid;
+    /* border: springgreen solid; */
 }
