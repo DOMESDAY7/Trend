@@ -25,6 +25,11 @@ SHcomment.addEventListener('click', ()=>{
         eye.src = "../img/eyeOpen.svg"
         p.textContent = show;
     }
+
+    if(areaComments.innerHTML = null){
+        console.log('ya r ma gueule');
+    }
+
 });
 
 

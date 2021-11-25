@@ -26,12 +26,12 @@
     <title>TREND -<?php echo $data_trend["titre"]; ?></title>
 </head>
 <body>
-<?php 
-     if(!isset($_GET["id_user"])){
-         //peut pas commenter
-     }
-     
-     ?>
+<!-- ?php  -->
+    <!-- if(!isset($_GET["id_user"])){ -->
+        <!-- //peut pas commenter -->
+    <!-- } -->
+<!-- ?> -->
+
     <!-- Trend -->
     <div class="containerTrend">
         <!-- Infos -->
@@ -53,7 +53,7 @@
 
         <!-- Texte -->
         <div class="texTrend">  
-            <p class="texts"><?php echo $data_trend["article"]; ?></p>
+            <p class="texts"> <?php echo $data_trend["article"]; ?> </p>
             <p class="date"> <?php echo $data_trend["date"]; ?> </p>
         </div>
 
@@ -104,6 +104,7 @@
         </div>
     <?php } ?>
     
+        <div class="noComments"></div>
     </div>
 
     <!-- Modal ajout commentaire -->
