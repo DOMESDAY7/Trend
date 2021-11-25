@@ -83,7 +83,6 @@ body{
 .firstClick{
     display: flex;
     flex-direction: column;
-    cursor: pointer;
 }
 
 .color{
@@ -102,6 +101,7 @@ body{
     cursor: pointer;
     margin: 0;
     padding: 8px;
+    cursor: pointer;    
 }
 
 .test > p{
