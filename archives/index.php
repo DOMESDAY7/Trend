@@ -26,7 +26,7 @@
                 <input type="search" name="search" id="search" placeholder="Search...">
                 <div class="filterDate">
                     <div class="firstClick">
-                        <div class="test">
+                        <div class="BTNdate">
                             <img src="../img/arrow2.svg" alt="">
                             <p>Date</p>
                         </div>

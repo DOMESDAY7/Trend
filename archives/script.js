@@ -1,5 +1,5 @@
 let miniModal = document.querySelector('.miniModal');
-let BTNdate = document.querySelector('.test');
+let BTNdate = document.querySelector('.BTNdate');
 let show = document.querySelector('.show');
 let search = document.querySelector('#search');
 let color = document.querySelector('.color');
