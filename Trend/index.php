@@ -17,7 +17,18 @@
 </head>
 <body>
     
-    <?php echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
+    <?php 
+    // if(!isset($_GET["id_user"])){
+    //     //peut pas commenter
+    // }else{
+    //     $id_user=$_GET["id_user"];
+    // }
+    // if(!isset($_SESSION["pseudo"])){
+    //     //peut pas commenter
+    // }
+  
+  
+    echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
     echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
     echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>";
     ?>
