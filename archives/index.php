@@ -23,10 +23,27 @@
         <div class="part1">
             <h1 class="title">Archives</h1>
             <div class="searchArchive">
-                <input type="search" name="search" id="search">
+                <input type="search" name="search" id="search" placeholder="Search...">
                 <div class="filterDate">
-                    <img src="../img/arrow2.svg" alt="">
-                    <p>Date</p>
+                    <div class="firstClick">
+                        <div class="test">
+                            <img src="../img/arrow2.svg" alt="">
+                            <p>Date</p>
+                        </div>
+                        <div class="miniModal">
+                            <form action="">
+                                <div class="choice1">
+                                    <input type="radio" name="choice" id="newer">
+                                    <label for="newer">Newer</label>
+                                </div>
+                                <div class="choice2">
+                                    <input type="radio" name="choice" id="latest">
+                                    <label for="latest">Latest</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -40,5 +57,6 @@
 ?>
 
     <script src="../component/Burger/java.js"></script>
+    <script text="text/javascript" src="script.js"></script>
 </body>
 </html>
