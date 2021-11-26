@@ -5,11 +5,20 @@
             header('Location:../home');
         }else{
             $id_billet=$_GET["id_billet"];
+            echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
         }
        
         if(!isset($_SESSION["id_user"])){
+        }else{
+            $id_user=$_SESSION["id_user"];
+            echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
         }
-        $id_user=$_SESSION["id_user"];
+
+        if (!isset($_SESSION["pseudo"])){
+            $_SESSION["pseudo"]="Guest";
+          }
+            echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>\n";
+            
         $sql_trend="SELECT * FROM billet WHERE id_billet='$id_billet' ";
         $req_trend=$link->query($sql_trend);
         $data_trend=$req_trend->fetch(PDO::FETCH_ASSOC);
@@ -82,25 +91,16 @@
 
     <!-- Espace commentaires -->
     <?php
-      if (!isset($_SESSION["pseudo"])){
-        $_SESSION["pseudo"]="Guest";
-      }
-     echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
-     echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
-     echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>\n";
+
      if (!isset($_GET["com"])){
         echo "<script>let setComment=true;</script>\n";
      }else{
         echo "<script>let setComment=false;</script>\n";
      }
     
-   
-   
-    
-    
-    $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user' ORDER BY post_date DESC";
-    //faire une requête préparé au cas ou il y a une injection dans l'URL
-    $req=$link->query($sql_com);
+        $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE ext_billet=id_billet AND ext_utilisateur=id_utilisateur AND id_billet='$id_billet' ORDER BY post_date DESC; ";
+        $req=$link->query($sql_com);
+
      ?>
     <div class="containerComments">
         <?php while( $data = $req->fetch(PDO::FETCH_ASSOC)){
