@@ -1,7 +1,12 @@
 <?php session_start()?>
 <?php require '../db_connect/detetction.php';?>
 <?php
-        $id_billet=$_GET["id_billet"];
+        if(!isset($_GET["id_billet"])){
+            header('Location:../home');
+        }else{
+            $id_billet=$_GET["id_billet"];
+        }
+       
         if(!isset($_SESSION["id_user"])){
         }
         $id_user=$_SESSION["id_user"];
@@ -82,25 +87,33 @@
       }
      echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
      echo "<script>let id_user=".$_SESSION["id_user"]."</script>"; 
-     echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>";
+     echo "<script>let pseudo='{$_SESSION["pseudo"]}'</script>\n";
+     if (!isset($_GET["com"])){
+        echo "<script>let setComment=true;</script>\n";
+     }else{
+        echo "<script>let setComment=false;</script>\n";
+     }
+    
    
    
     
     
-    $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user'";
+    $sql_com="SELECT * FROM commentaire , utilisateurs , billet WHERE id_billet='$id_billet' AND ext_utilisateur='$id_user' ORDER BY post_date DESC";
     //faire une requête préparé au cas ou il y a une injection dans l'URL
     $req=$link->query($sql_com);
      ?>
     <div class="containerComments">
-        <?php while( $data = $req->fetch(PDO::FETCH_ASSOC)){ ?>
-        <div class="userComment" id=#<?php $data["id_commentaire"]; ?>>
-            <span id="hashtag2"><a href="#<?php echo $data["id_commentaire"]; ?>"> #</a></span>
+        <?php while( $data = $req->fetch(PDO::FETCH_ASSOC)){
+            // $date=$data["post_date"];
+            ?>
+        <div class="userComment" id=com<?php echo $data["id_commentaire"]; ?>>
+            <span id="hashtag2"><a href="?com=show#com<?php echo $data["id_commentaire"]; ?>"> #</a></span>
             <div class="User">
                 <div class="ppUser"></div>
                 <p class="pseudoUser"> <?php echo $data["pseudo"]; ?> </p>
             </div>
             <p class="comment"> <?php echo $data["content"]; ?></p>
-            <p class="dateUser"> <?php  echo $data["post_date"]; ?> </p>
+            <p class="dateUser"> <?php echo $data["post_date"] ;?> </p>
         </div>
     <?php } ?>
     
@@ -116,7 +129,7 @@
         <div class="modal">
             <div class="userModal">
                 <div class="ppModal"></div>
-                <p class="pseudoModal"> User3 </p>
+                <p class="pseudoModal"> <?php echo $_SESSION["pseudo"]; ?> </p>
             </div>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write a comment..."></textarea>
             <div class="BTNpost" > Let's post </div>

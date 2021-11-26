@@ -6,7 +6,7 @@ let eye = document.querySelector('.eye');
 let p = document.querySelector('.p');
 let show = "Show comments";
 let hide = "Hide comments";
-let setComment = "prout";
+
 
 
 if(setComment == true){
@@ -26,8 +26,8 @@ SHcomment.addEventListener('click', ()=>{
         p.textContent = show;
     }
 
-    if(areaComments.innerHTML = null){
-        console.log('ya r ma gueule');
+    if(areaComments.innerHTML == null){
+        areaComments.textContent="Be the first"
     }
 
 });

@@ -50,7 +50,9 @@ window.addEventListener('click',(e)=>{
             <p class="comment"> ${contentCom}</p>
             <p class="dateUser"> ${date} </p>
         </div>`,
-            content_comment.appendChild(c)
+           first=content_comment.firstChild,
+           content_comment.insertBefore(c,first),
+
            
 
 
