@@ -1,5 +1,6 @@
 <?php
 require '../db_connect/detetction.php';
+session_start();
 
 if(!isset($_GET["id_billet"])){
     header('Location:../home');
