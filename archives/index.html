@@ -19,7 +19,8 @@
 
 
 
-    <main>
+    <!-- <main role="main"> -->
+        <!-- Titre et barre de recherche + filtres -->
         <div class="part1">
             <h1 class="title">Archives</h1>
             <div class="searchArchive">
@@ -47,18 +48,26 @@
                 </div>
             </div>
         </div>
+
+        <!-- Trends des archives -->
         <div class="part2">
 
-            <div class="containerLT">
-                        
-                <?php require './model.php'; 
-                lastThree();
-                ?>
-                    <a href="#">I want to see more</a>
+            <!-- <div class="containerLT"> -->
+                
+                <!-- <?php require './model.php';  -->
+                <!-- lastThree(); -->
+                <!-- ?> -->
+                    <!-- <a href="#">I want to see more</a> -->
+            <!-- </div> -->
+
+            <!-- No Trend found -->
+            <div class="BGnop">
+                <img src="../img/NoTrend.svg" alt="">
+                <span class="sentence">No trend found.</span>                
             </div>
 
         </div>
-    </main>
+    <!-- </main> -->
 
 
 
