@@ -67,7 +67,7 @@
         </div>
     </div>
     <?php 
-    //je pense pas qu'on doit faire comme ça
+    //je ne pense pas qu'on doive faire comme ça
   
     echo $comment; ?>
 

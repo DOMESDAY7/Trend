@@ -39,7 +39,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: #F39000 solid;
+    /* border: #F39000 solid; */
 }
 
 #search{
@@ -61,6 +61,7 @@ body{
 
 .top{
     align-self: flex-start;
+    margin-top: 2%;
 }
 
 #search:focus{
@@ -79,13 +80,13 @@ body{
 
 .filterDate{
     margin-left: 10px;
-    border: #F23000 solid;
+    /* border: #F23000 solid; */
 }
 
 .firstClick{
     display: flex;
     flex-direction: column;
-    border: #a35000 solid;
+    /* border: #a35000 solid; */
 }
 
 .color{
@@ -105,7 +106,7 @@ body{
     margin: 0;
     padding: 8px;
     cursor: pointer;
-    border: #56a891 solid;  
+    /* border: #56a891 solid; */
 }
 
 .BTNdate > p{
@@ -122,7 +123,7 @@ body{
     background-color: #242424;
     border-radius: 0px 0px 15px 15px;
     padding: 10px;
-    border: steelblue solid;
+    /* border: steelblue solid; */
     display: none;
     transition: all .6s ease-in-out;
 }
@@ -159,4 +160,125 @@ input[type='radio']:checked{
 .part2{
     grid-area: part2;
     /* border: springgreen solid; */
+}
+
+.containerLT{
+    background-color: #111111;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80vh;
+    width:50vw;
+    min-width: 85vmin;
+}
+
+.containerLT > a{
+    display: inline-block;
+    font-family: "Overpass";
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    color: #B6B6B6;
+
+    
+}
+
+.containerLT > a:hover{
+    color: #F39000;
+    transition: all .3s ease-in-out;
+}
+
+.exTrend1{
+    width: 90%;
+    height: 25%;
+    background-color: #242424;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px rgba(240, 0, 0, 
+0.25);
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.imgTrend{
+    width: 34%;
+    height: 80%;
+    border-radius: 15px;
+    overflow-y: hidden;
+}
+
+.imgTrend >img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.textsTrend{
+    width: 60%;
+    height: 95%;
+    font-family: "Overpass";
+}
+
+#hashtag{
+    font-size: 4.375rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #F00000;
+}
+
+.textsTrend > h1{
+    margin: 0;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.description{
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: white;
+    padding-left: 22px;
+    padding-top: -15px;
+    word-wrap: break-word;
+}
+
+.date{
+    color: #B6B6B6;
+    font-family: "Overpass";
+    font-weight: 300;
+    font-size: .75rem;
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+
+/* Archives */
+
+.word{
+    color: white;
+    text-shadow: 2px 2px 2px rgba(243, 146, 
+0, 0.5);
+    text-align: center;
+    font-weight: bold;
+    font-size: 6rem;
+    font-family: "Overpass";
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -30px;
+
+
+}
+
+.word:hover{
+    font-style: italic;
+    transition: all 3s ease-in-out;
+    text-shadow: 2px 2px 2px rgba(240, 0, 0, 
+0.25);
 }

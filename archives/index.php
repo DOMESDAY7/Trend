@@ -47,7 +47,17 @@
                 </div>
             </div>
         </div>
-        <div class="part2"></div>
+        <div class="part2">
+
+            <div class="containerLT">
+                        
+                <?php require './model.php'; 
+                lastThree();
+                ?>
+                    <a href="#">I want to see more</a>
+            </div>
+
+        </div>
     </main>
 
 
