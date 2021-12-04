@@ -8,9 +8,9 @@ window.addEventListener('keyup',(e)=>{
         
         titlePseudo.textContent= pseudo.value+",";
         if(pseudo.value=="Admin" || pseudo.value=="admin" ){
-            img.src="../img/admin.svg"
+            img.src="./public/img/admin.svg"
         }else{
-            img.src="../img/profil.svg"
+            img.src="./public/img/profil.svg"
         }
     }
 })

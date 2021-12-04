@@ -1,24 +1,6 @@
 <?php session_start() ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../component/Burger/style.css">
-    <!-- Montserrat font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Overpass font -->
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Archives</title>
-</head>
+
 <body>
-    <?php require '../db_connect/detetction.php'; ?>
-
-
-
     <!-- <main role="main"> -->
         <!-- Titre et barre de recherche + filtres -->
         <div class="part1">
@@ -28,7 +10,7 @@
                 <div class="filterDate">
                     <div class="firstClick">
                         <div class="BTNdate">
-                            <img src="../img/arrow2.svg" alt="">
+                            <img src="./public/img/arrow2.svg" alt="">
                             <p>Date</p>
                         </div>
                         <div class="miniModal">
@@ -54,15 +36,13 @@
 
             <!-- <div class="containerLT"> -->
                 
-                <!-- <?php require './model.php';  -->
-                <!-- lastThree(); -->
-                <!-- ?> -->
+               <?php  lastThree();  ?> 
                     <!-- <a href="#">I want to see more</a> -->
             <!-- </div> -->
 
             <!-- No Trend found -->
             <div class="BGnop">
-                <img src="../img/NoTrend.svg" alt="">
+                <img src="./public/img/NoTrend.svg" alt="">
                 <span class="sentence">No trend found.</span>                
             </div>
 
@@ -72,10 +52,10 @@
 
 
 <?php
-    include "../component/Burger/index.php";
+    require "./view/components/Burger/index.php";
 ?>
 
-    <script src="../component/Burger/java.js"></script>
+    <script src="./view/components/Burger/java.js"></script>
     <script text="text/javascript" src="script.js"></script>
 </body>
 </html>

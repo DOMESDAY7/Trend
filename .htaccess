@@ -1,1 +1,4 @@
 ErrorDocument 404 https://trend.mathieuandry.fr/404/
+
+#RewriteEngine On
+#RewriteRule ^([a-z]+)$ ?page=$1

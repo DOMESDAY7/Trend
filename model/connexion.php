@@ -1,6 +1,6 @@
 <?php  
 function connection(){
-require '../db_connect/detetction.php';    
+require './db_connect/detection.php';    
 
 @$pseudo=$_POST["pseudo"];
 $pseudo=strtolower($pseudo);
@@ -16,16 +16,16 @@ if (isset($_POST["sub"])){
             session_start();
             $_SESSION["id_user"]=$data_verif["id_utilisateur"];
             $_SESSION["pseudo"]=$pseudo;
-            header('Location: ../home');
+            header('Location: ?page=home');
         
         }else{
             
-            header('Location: ../connexion?error=true');
+            header('Location: ?page=connexion&error=true');
             
         }
     }else{
         
-        header('Location: ../connexion?error=true');
+        header('Location: ?page=connexion&error=true');
     }
 }
     }

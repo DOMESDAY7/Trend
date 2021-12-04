@@ -1,7 +1,7 @@
 
 <?php function lastThree(){?>
     <?php 
-    require '../db_connect/detetction.php';
+    require './db_connect/detection.php';
      $sql="SELECT short_description , id_image , date , titre, id_billet  FROM billet ORDER BY date DESC ";
      $req=$link -> query($sql);
      $cpt=0;
@@ -21,7 +21,7 @@
                     <p class="date"><?php echo date_format($date,'d.M.Y') ; ?></p>
                 </div>
                 <div class="imgTrend">
-                    <img src="../img/pc.jpg" alt="">
+                    <img src="./public/img/pc.jpg" alt="">
                 </div>
             </div>
         </a>

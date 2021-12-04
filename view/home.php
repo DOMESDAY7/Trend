@@ -23,9 +23,9 @@
     
 <?php
     
-    require '../component/Burger/index.php';
+    require './view/components/Burger/index.php';
 ?>
 
-    <script src="../component/Burger/java.js"></script>
+    <script src="./view/components/Burger/java.js"></script>
 </body>
 </html>

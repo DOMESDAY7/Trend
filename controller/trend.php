@@ -1,9 +1,9 @@
 <?php
-require '../db_connect/detetction.php';
+require './db_connect/detection.php';
 session_start();
 
 if(!isset($_GET["id_billet"])){
-    header('Location:../home');
+    header('Location:?page=home');
 }else{
     $id_billet=$_GET["id_billet"];  
     echo "<script>let id_billet=".$_GET["id_billet"]."</script>"; 
@@ -24,6 +24,7 @@ if (!isset($_GET["com"])){
 }else{
     echo "<script>let setComment=false;</script>\n";
 }
-require 'model.php';
-require 'vue.php';
+require './view/components/head.php';
+require './model/trend.php';
+require './view/trend.php';
            

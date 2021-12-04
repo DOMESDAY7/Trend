@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- gros pb au niveau du chemin ici -->
-    <?php require $_SERVER["DOCUMENT_ROOT"].'/trend/component/head.php'; ?>
-    <link rel="stylesheet" href="../Burger/style.css">
-    
-    <title>Burger - don't touch</title>
-</head>
+
 <body>
     <?php if (!isset($_SESSION["pseudo"])){
         $pseudo="Guest";
@@ -27,11 +21,11 @@
     <!-- Burger -->
     <nav class="burger">
         <div class="containerTitles">
-            <a href="../home/index.php" class="home">HOME</a><br>
-            <a href="../archives/index.php" class="archives">ARCHIVES</a><br>
+            <a href="?page=home" class="home">HOME</a><br>
+            <a href="?page=archives" class="archives">ARCHIVES</a><br>
             <a href="#" class="profile">PROFILE</a>
             <br>
-            <span><a href="../logOut" class="logOut">Log out</a></span>
+            <span><a href="?page=logOut" class="logOut">Log out</a></span>
         </div>
         <a href="#" class="explain"> Where am I ?</a>
     </nav>
