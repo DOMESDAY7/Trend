@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <?php require '../component/head.php'; ?>
-    <title>Trend - Connexion</title>
-    <link rel="stylesheet" href="style.css">
-   
-</head>
 
 <body>
     <?php
@@ -32,7 +23,7 @@
 
     ?>
     <article>No account ?<a href="../inscription"> <b>Sign up now</b></a></article>
-    <script src="script.js"></script>
+    <script src="./public/js/connexion.js"></script>
 </body>
 
 </html>
