@@ -17,7 +17,7 @@
                 $db_key=$db_key->fetch(PDO::FETCH_ASSOC);
                 $db_key=$db_key["verificationKey"];
                 $db_key=password_hash($db_key,PASSWORD_DEFAULT);
-                require './mail.php';
+                require 'mail.php';
                 // Remplacement de certains caractères spéciaux
                 $message = str_replace("&#039;","'",$message);
                 $message = str_replace("&#8217;","'",$message);
