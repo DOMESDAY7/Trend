@@ -1,13 +1,5 @@
 <?php session_start() ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php require '../component/head.php' ?>
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../component/Burger/style.css">
-    <title>Home</title>
-</head>
+
 <body> 
     <main>
     <h3 class="titleTrends">Last trends</h3>
@@ -15,9 +7,7 @@
             
                 <div class="containerLT">
                         
-                    <?php require './model.php'; 
-                    lastThree();
-                    ?>
+                    <?= lastThree(); ?>
                         <a href="#">I want to see more</a>
                 </div>
                 
