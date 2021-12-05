@@ -10,13 +10,13 @@
         ?>
         <?php $date=date_create($data["date"]) ?>
         
-        <a href="../Trend/?id_billet=<?php echo $data["id_billet"]; ?>">
+        <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>">
             <div class="exTrend1">
                 <div class="textsTrend">
                 <!-- pour le hashtag on va mettre le lien de l'article -->
-                    <h1><span id="hashtag">#</span> <?php echo $data["titre"]; ?> </h1>
-                    <p class="description"> <?php echo $data["short_description"]; ?></p>
-                    <p class="date"><?php echo date_format($date,'d.M.Y') ; ?></p>
+                    <h1><span id="hashtag">#</span> <?= $data["titre"]; ?> </h1>
+                    <p class="description"> <?= $data["short_description"]; ?></p>
+                    <p class="date"><?= date_format($date,'d.M.Y') ; ?></p>
                 </div>
                 <div class="imgTrend">
                     <img src="./public/img/pc.jpg" alt="">
@@ -25,5 +25,9 @@
         </a>
     <?php 
     }
+}
+if(isset($_GET["id_billet"])){
+    $id_billet = $_GET["id_billet"];
+    header("Location:/?page=trend&id_billet=".$id_billet);
 }
 ?>

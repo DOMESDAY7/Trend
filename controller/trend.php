@@ -2,7 +2,7 @@
 require './db_connect/detection.php';
 session_start();
 
-if(!isset($_GET["id_billet"])){
+if(!isset($_GET["id_billet"]) || $_GET["id_billet"]==null){
     header('Location:?page=home');
 }else{
     $id_billet=$_GET["id_billet"];  

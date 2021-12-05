@@ -40,6 +40,9 @@ function query() {
             part.innerHTML = "",
                 tab.forEach(el => {
                     let billet = document.createElement('a')
+                    let link = `?page=trend&id_billet=${el.id_billet}`
+                    
+                    billet.href = link
                     billet.innerHTML = `
                     <div class="exTrend1">
                     <div class="textsTrend">
