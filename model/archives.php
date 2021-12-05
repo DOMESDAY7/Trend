@@ -3,9 +3,8 @@
     require './db_connect/detection.php';
      $sql="SELECT short_description , id_image , date , titre, id_billet  FROM billet ORDER BY date DESC ";
      $req=$link -> query($sql);
-     $cpt=0;
-    
-    while(($data=$req -> fetch(PDO::FETCH_ASSOC)) && ($cpt<3)){ 
+   
+    while(($data=$req -> fetch(PDO::FETCH_ASSOC)) ){ 
         
         
         ?>
@@ -24,7 +23,7 @@
                 </div>
             </div>
         </a>
-    <?php $cpt++; 
+    <?php 
     }
 }
 ?>
