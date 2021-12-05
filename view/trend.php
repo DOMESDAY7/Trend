@@ -35,7 +35,7 @@
             <div class="SHcomments">
                 <div class="svg">
                     <!-- mettre l'id de l'image ici -->
-                    <img src="../public/img/eyeOpen.svg" alt="" class="eye">
+                    <img src="./public/img/eyeOpen.svg" alt="" class="eye">
                 </div>
                 <p class="p"> Show comments </p>
             </div>
@@ -58,7 +58,7 @@
 
     <div class="BGmodal">
         <div class="croix">
-            <img src="../public/img/croix.svg" alt="" class="svgCroix">
+            <img src="./public/img/croix.svg" alt="" class="svgCroix">
         </div>
         <div class="modal">
             <div class="userModal">

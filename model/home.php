@@ -12,7 +12,7 @@ function lastThree()
 ?>
         <?php $date = date_create($data["date"]) ?>
 
-        <a href="../Trend/?id_billet=<?= $data["id_billet"]; ?>">
+        <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>">
             <div class="exTrend1">
                 <div class="textsTrend">
                     <!-- pour le hashtag on va mettre le lien de l'article -->

@@ -56,6 +56,7 @@
 ?>
 
     <script src="./view/components/Burger/java.js"></script>
-    <script text="text/javascript" src="script.js"></script>
+    
+    <script src="./public/js/archives.js"></script>
 </body>
 </html>

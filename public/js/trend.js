@@ -17,12 +17,12 @@ SHcomment.addEventListener('click', ()=>{
     areaComments.classList.toggle('show');
 
     if(areaComments.classList.contains('show') ==  true){
-        eye.src = "../img/eyeClosed.svg";
+        eye.src = "./public/img/eyeClosed.svg";
         p.textContent = hide;
     }
     
     if(areaComments.classList.contains('show') == false){
-        eye.src = "../img/eyeOpen.svg"
+        eye.src = "./public/img/eyeOpen.svg"
         p.textContent = show;
     }
 
@@ -31,10 +31,6 @@ SHcomment.addEventListener('click', ()=>{
     }
 
 });
-
-
-
-
 
 // Modal
 let BG2 = document.querySelector('.BGmodal');

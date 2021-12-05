@@ -1,4 +1,3 @@
-
 <?php function lastThree(){?>
     <?php 
     require './db_connect/detection.php';
@@ -6,7 +5,7 @@
      $req=$link -> query($sql);
      $cpt=0;
     
-    while(($data=$req -> fetch()) && ($cpt<3)){ 
+    while(($data=$req -> fetch(PDO::FETCH_ASSOC)) && ($cpt<3)){ 
         
         
         ?>

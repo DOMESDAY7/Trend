@@ -1,5 +1,5 @@
 let subBTN=document.querySelector('.BTNpost');
-let url="http://localhost/trend/api/comment.php";
+let url="./api/comment.php";
 let message=document.querySelector(".message");
 let content_comment=document.querySelector('.containerComments')
 
