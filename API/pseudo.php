@@ -4,8 +4,8 @@ header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: * ");
 header('Access-Control-Allow-Headers: Content-Type');
 header("Access-Control-Request-Headers: *");
-require '../db_connect/detetction.php';//bdd
-//récupération des pseudos
+require '../db_connect/detection.php';
+
 if(!isset($_GET["pseudo"])){
 }else{
     $pseudo=$_GET["pseudo"];
