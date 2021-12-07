@@ -10,7 +10,7 @@
         <div class="infos">
             <div class="titre">
                 <span id="hashtag">#</span>
-                <h1> This is a Trend. </h1>
+                <h1> <?= $trend_titre ?></h1>
             </div>
             <div class="proprio">
                 <p>Trend's Master</p>
