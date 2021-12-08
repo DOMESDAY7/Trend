@@ -4,9 +4,7 @@
      $sql="SELECT short_description , id_image , date , titre, id_billet  FROM billet ORDER BY date DESC ";
      $req=$link -> query($sql);
    
-    while(($data=$req -> fetch(PDO::FETCH_ASSOC)) ){ 
-        
-        
+    while(($data=$req -> fetch(PDO::FETCH_ASSOC)) ){
         ?>
         <?php $date=date_create($data["date"]) ?>
         
@@ -30,4 +28,4 @@ if(isset($_GET["id_billet"])){
     $id_billet = $_GET["id_billet"];
     header("Location:/?page=trend&id_billet=".$id_billet);
 }
-?>
+

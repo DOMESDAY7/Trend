@@ -1,5 +1,6 @@
 <?php
 function encodage($article){
+    filter_var($article,FILTER_SANITIZE_SPECIAL_CHARS);
     $article = str_replace("&#039;","'",$article);
     $article = str_replace("&#8217;","'",$article);
     $article = str_replace("&quot;",'"',$article);
@@ -9,6 +10,7 @@ function encodage($article){
     $article = str_replace("&gt;",">",$article);
     $article = str_replace("&amp;","&",$article);
     return $article;
+    
 }
 function verification($string){
     require '../../inscription/model.php';// je récupère des fonction que j'avais déjà créé
