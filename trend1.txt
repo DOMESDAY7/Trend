@@ -1,0 +1,6 @@
+TITLE: First Trend, welcome !
+DATE: 2021-12-08
+TEXT: 
+Hello and welcome on Trend ! <br>
+Devise as part of php lessons, we are happy to finally present you our blog: ✨Trend✨. For the principle, the owners, us, can post what is known as a "Trend". It's a subject about something, it can be an actuality, a news or themes subjects. The most interessant is that you can interact with us ! Indeed, after creating an account, you're able to comment a Trend ! But don't worry, if you just want to sail on the Trend wave, you're not obligate to create an account. Just be sure you've have a good connection as well as a cookie and let's share are Trend's vibe ! 😉 <br>
+The owners ~
