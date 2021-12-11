@@ -95,18 +95,18 @@ problème. */
     height: 25%;
 }
 
-/* .containerLT > a{ */
-    /* display: inline-block; */
-    /* font-family: "Overpass"; */
-    /* font-size: 0.8125rem; */
-    /* text-decoration: underline; */
-    /* color: #B6B6B6; */
-/* } */
-/*  */
-/* .containerLT > a:hover{ */
-    /* color: #F39000; */
-    /* transition: all .3s ease-in-out; */
-/* } */
+.invisible{
+    display: inline-block;
+    font-family: "Overpass";
+    font-size: 0.8125rem;
+    text-decoration: underline;
+    color: #B6B6B6;
+}
+
+.invisible{
+    color: #F39000;
+    transition: all .3s ease-in-out;
+}
 
 .contentTrend{
     width: 100%;
