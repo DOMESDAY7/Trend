@@ -17,7 +17,6 @@ main{
     "trends archives" 1fr/ 1fr 0.75fr;
   
     height: 100vh;
-    margin-top: 8vh;
 }
 
 
@@ -30,7 +29,8 @@ main{
     display: flex;
     align-items: space-around;
      justify-self: end; 
-     align-self: baseline; 
+     align-self: baseline;
+     /* border: #FF0000 solid;  */
 }
 
 .archivesHome{
@@ -41,6 +41,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    /* border: gold solid; */
 }
 
 
@@ -95,7 +96,14 @@ problème. */
     height: 25%;
 }
 
-.invisible{
+.linkContainerTrend:hover > .contentTrend{
+    transform: translateY(-5px);
+    box-shadow: 2px 2px 2px white;
+    transition: all .5s ease-in-out;
+    
+}
+
+.more{
     display: inline-block;
     font-family: "Overpass";
     font-size: 0.8125rem;
@@ -103,7 +111,7 @@ problème. */
     color: #B6B6B6;
 }
 
-.invisible{
+.more:hover{
     color: #F39000;
     transition: all .3s ease-in-out;
 }
@@ -142,6 +150,9 @@ problème. */
     height: 95%;
     font-family: "Overpass";
     /* border: tan solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #hashtag{
@@ -157,6 +168,7 @@ problème. */
     color: white;
     font-weight: bold;
     line-height: 35px;
+    /* border: blue solid; */
 }
 
 .description{
@@ -176,6 +188,7 @@ problème. */
     font-family: "Overpass";
     font-weight: 300;
     font-size: .75rem;
+    margin: 0;
     padding-top: 8px;
     padding-left: 10px;
     /* border: rgb(48, 171, 187) solid; */
@@ -185,6 +198,7 @@ problème. */
 /* Archives */
 
 .word{
+    display: block;
     color: white;
     text-shadow: 2px 2px 2px rgba(243, 146, 0, 0.5);
     text-align: center;
@@ -194,8 +208,6 @@ problème. */
     writing-mode: vertical-lr;
     text-orientation: upright;
     letter-spacing: -30px;
-
-
 }
 
 .word:hover{
@@ -221,16 +233,25 @@ problème. */
 
 /* Media Queries */
 
+
+@media screen and (max-width: 1635px) {
+    .textsTrend > h1{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+    .description{
+        font-size: 1rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
-    
     main{
         display: grid;
         grid-template: 
         "titleTrends" 1fr
         "trends" 1fr
-        "archives" 1fr 
-        ;
-        gap:1vh;
+        "archives" 1fr;
+        gap: 1vh;
         height: 100vh;
     }
     .titleTrends{
@@ -240,37 +261,41 @@ problème. */
     .lasTrends{
         justify-self: center;
     }
-  
     .containerLT{
         height: 100vh;
     }
-    
-
+    .linkContainerTrend{
+        height: 20%;
+    }
     .titleTrends{
         font-size: 2rem;
     }
-    
-    /* .titleTrends::after{
-        width: 114px;
-        height: 2.5px;
-        bottom: 34%;
-        right: -12%;
-    } */
     .textsTrend > h1{
-        font-size:1.5rem;
+        font-size: 1.5rem;
         line-height: 1.5rem;
     }
     .description{
         display: none;
     }
-}
-@media screen and (max-width: 1635px) {
-
-    .textsTrend > h1{
-        font-size:1rem;
-        line-height: 1rem;
+    .word{
+        writing-mode: horizontal-tb;
+        text-orientation: sideways;
+        letter-spacing: 15px;
+        font-size: 5rem;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
-    .description{
-        font-size: 0.8rem;
+}
+
+@media screen and (max-width: 400px) {
+    .textsTrend > h1{
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+    .word{
+        letter-spacing: 5px;
+        font-size: 3rem;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
 }

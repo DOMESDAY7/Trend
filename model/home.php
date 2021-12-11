@@ -6,7 +6,7 @@ function lastThree()
     $req = $link->query($sql);
     $cpt = 0;
     ?>
-        <div  class="containerLT">
+
     <?php while (($data = $req->fetch(PDO::FETCH_ASSOC)) && ($cpt < 3)) {
 
 
@@ -32,4 +32,3 @@ function lastThree()
     }
            
 }?>
-</div>

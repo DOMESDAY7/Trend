@@ -8,14 +8,12 @@
                 <div class="containerLT">
                         
                     <?= lastThree(); ?>
-                        <a href="#">I want to see more</a>
+                        <a href="#" class="more">I want to see more</a>
                 </div>
                 
         </div>
         <div class="archivesHome">
-            <a href="#" class="linkArchives">
-                    <div class="word">ARCHIVES</div>
-            </a>
+            <a href="#" class="word">ARCHIVES</a>
         </div>
     </main>
 
