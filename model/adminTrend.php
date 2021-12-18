@@ -1,7 +1,7 @@
 <?php
 function showTrend()
 {
-    require './db_connect/detetction.php';
+    require './db_connect/detection.php';
     $sql_trend = "SELECT * FROM billet ";
     $req = $link->query($sql_trend);
     $cpt_trend = 0; ?>
@@ -24,7 +24,7 @@ function showTrend()
 }
 function showUsers()
 {
-    require './db_connect/detetction.php';
+    require './db_connect/detection.php';
     $sql_user = "SELECT * FROM utilisateurs";
     $req_utilisateur = $link->query($sql_user);
     $cpt_user = 0;

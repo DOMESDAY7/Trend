@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    border: red solid 2px;
+    width: 70%;
+    height: 80%;
+    border-radius: 10px;
+    
+    
+}
+.enter{
+    border: red solid 2px;
+    border-radius: 10px;
+    color: white;
+    background-color: gray;
+}
+.enter::placeholder{
+    color: white;
+}
