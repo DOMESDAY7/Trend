@@ -25,6 +25,11 @@
             <a href="?page=archives" class="archives">ARCHIVES</a><br>
             <a href="#" class="profile">PROFILE</a>
             <br>
+           
+            <?php if ($pseudo=="admin"){ ?>
+                <br><a href="?page=adminPannel">Admin Pannel</a><br>
+            <?php } ?>
+            
             <span><a href="?page=logOut" class="logOut">Log out</a></span>
         </div>
         <a href="#" class="explain"> Where am I ?</a>

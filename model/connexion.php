@@ -14,14 +14,12 @@ function connection()
         if ($verif == 1) {
             $data_verif = $req_count->fetch(PDO::FETCH_ASSOC);
             if (password_verify($mdp, $data_verif["mdp"])) {
-                if ($pseudo == "admin" || $pseudo == "Admin") {
-                    header("Location: ?page=adminPannel");
-                } else {
+                
                     session_start();
                     $_SESSION["id_user"] = $data_verif["id_utilisateur"];
                     $_SESSION["pseudo"] = $pseudo;
                     header('Location: ?page=home');
-                }
+                
             } else {
 
                 header('Location: ?page=connexion&error=true');
