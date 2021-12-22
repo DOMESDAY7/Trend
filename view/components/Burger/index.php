@@ -32,7 +32,7 @@
             
             <span><a href="?page=logOut" class="logOut">Log out</a></span>
         </div>
-        <a href="../../../view/where.php" class="explain"> Where am I ?</a>
+        <a href="?page=where" class="explain"> Where am I ?</a>
     </nav>
     
     <div class="burgerBG"></div>
