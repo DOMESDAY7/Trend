@@ -23,7 +23,7 @@
         <div class="containerTitles">
             <a href="?page=home" class="home">HOME</a><br>
             <a href="?page=archives" class="archives">ARCHIVES</a><br>
-            <a href="#" class="profile">PROFILE</a>
+            <a href="?page=profil" class="profile">PROFILE</a>
             <br>
            
             <?php if ($pseudo=="admin"){ ?>
