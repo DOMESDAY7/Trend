@@ -37,37 +37,37 @@ function showInForm(id) {
         )
 }
 subBtn.addEventListener("click", () => {
-    if (confirm("The changes will be final")) {
+    if (inputIdTrend.value == "") {
+        alert("Any trends are selected")
+    } else if (confirm("The changes will be final")) {
         let newTrend = {
             short_description: `${short_description.value}`,
             titre: `${titre.value}`,
             article: `${article.value}`,
 
         }
-        
-
-
         modifyTrend(newTrend, inputIdTrend.value);
     }
+
 })
 
 function modifyTrend(obj, id) {
-   
-
     let url = "./API/modifyTrend.php?id_trend=" + id;
-    console.log(JSON.stringify(obj));
-    
     fetch(url, {
-            method: 'POST',
-            body: JSON.stringify(obj),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            }
+        method: 'POST',
+        body: JSON.stringify(obj),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8'
+        }
 
-        }).then(() => {
-            document.body.innerHTML += toast
+    }).then(() => {
+        document.body.innerHTML += toast
+        console.log(id);
+        
+        document.querySelector(`body > div.list-group.w-50 > a:nth-child(${id}) > div > div > h5`).textContent =`${obj.titre}`
+        document.querySelector( `body > div.list-group.w-50 > a:nth-child(${id}) > div > p` ).textContent = `${obj.short_description}`
+        
 
-        })
-        .catch(console.log("pb"))
+    })
+
 }
-

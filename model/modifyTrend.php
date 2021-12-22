@@ -18,6 +18,19 @@ function showAllTrend()
         </div>
         <a href="./photo/<?= $data["id_image"]; ?>" class="btn btn-secondary">see the image of the trend</a>
       </a>
+      
+      <!-- test de carte -->
+      <!-- <a href="#<?= $data["titre"] ?>" class="contentTrend"> 
+        <div class="card w-75 mb-5  bg-secondary">
+          <div class="card-body">
+            <h5 class="card-title"><?= $data["titre"] ?></h5>
+            <p class="card-text"><?= $data["short_description"] ?></p>
+            <a href="./photo/<?= $data["id_image"] ?>" class="btn btn-dark">see the image of the trend</a>
+          </div>
+        </div>
+        </a> -->
+
+
     <?php } ?>
   </div>
 
