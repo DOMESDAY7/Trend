@@ -6,7 +6,7 @@
             <p class="blah"> Adresse e-mail </p>
         </section>
 
-        <a href="#" class="logOut"> Log out </a>
+        <a href="?page=logOut" class="logOut"> Log out </a>
     </main>
     
 
