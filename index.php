@@ -5,7 +5,7 @@ try {
         $page = $_GET["page"];
         if ($page != "trend" && $page != "adminPannel") {
             require './db_connect/detection.php'; // connexion à la base de donnée
-            if ($page != "404" && $page != "logOut" && $page!="where") { //mettre les pages qui n'on pas besoin de model
+            if ($page != "404" && $page != "logOut" && $page!="where" && $page != "profil") { //mettre les pages qui n'on pas besoin de model
                 $modelFile = "./model/".$page. ".php";
                 if(file_exists($modelFile)){
                     require $modelFile;
