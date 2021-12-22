@@ -2,7 +2,7 @@
 function showAllTrend()
 {
   require "./db_connect/detection.php";
-  $sql = "SELECT * FROM `billet`";
+  $sql = "SELECT * FROM `billet` ORDER BY date DESC";
   $req = $link->query($sql);
 ?>
 
