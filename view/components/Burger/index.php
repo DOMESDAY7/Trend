@@ -12,7 +12,7 @@
     <!-- Content Head -->
     <section class="content_head">
         <!-- logo à mettre iciii -->
-        <h1 class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </h1>
+        <a href="?page=home" class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </a>
         <div class="rondBurger"></div>
         <h3 class="pseudo"><?php echo $pseudo; ?></h3>
     </section >
