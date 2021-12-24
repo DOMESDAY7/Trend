@@ -2,7 +2,7 @@
 function lastThree()
 {
     require './db_connect/detection.php';
-    $sql = "SELECT short_description , id_image , date , titre, id_billet  FROM billet ORDER BY date DESC ";
+    $sql = "SELECT * FROM billet ORDER BY date DESC ";
     $req = $link->query($sql);
     $cpt = 0;
     ?>
@@ -11,7 +11,7 @@ function lastThree()
 
 
 ?>
-        <?php $date = date_create($data["date"]) ?>
+        <?php $date = date_create($data["date"]);?>
 
 
             <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>" class="linkContainerTrend">
@@ -23,7 +23,7 @@ function lastThree()
                         <p class="date"><?= date_format($date, 'd.M.Y'); ?></p>
                     </div>
                     <div class="imgTrend">
-                        <img src="./public/img/pc.jpg" alt="">
+                        <img src="./public/img/trendPic/<?=$data["imgName"] ?>.jpg" >
                     </div>
                 </div>
             </a>

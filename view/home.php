@@ -4,16 +4,14 @@
     <main>
     <h3 class="titleTrends">Last trends</h3>
         <div class="lasTrends">
-            
                 <div class="containerLT">
-                        
                     <?= lastThree(); ?>
                         <a href="#" class="more">I want to see more</a>
                 </div>
                 
         </div>
         <div class="archivesHome">
-            <a href="#" class="word">ARCHIVES</a>
+            <a href="?page=archives" class="word">ARCHIVES</a>
         </div>
     </main>
 

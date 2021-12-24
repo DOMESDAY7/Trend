@@ -9,14 +9,9 @@ try {
                 $modelFile = "./model/".$page. ".php";
                 if(file_exists($modelFile)){
                     require $modelFile;
-                   
                 }else{
-                    
                     header("Location: ?page=404");
-                    
-                    
                 }
-
             }
             require './view/components/head.php'; // importation de head
             require './view/' . $page . '.php'; // importation de la vue relier a la page}
@@ -38,5 +33,5 @@ try {
 }
  catch (Exception $e) {
     // header("Location:?page=404");
-    echo "An error has occurred";
+    // echo "An error has occurred";
 }

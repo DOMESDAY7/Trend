@@ -1,9 +1,15 @@
+<?php session_start() ?>
 <body>
     <main>
         <section class="infos">
             <p class="pp"></p>
-            <p class="blah"> Pseudo </p>
-            <p class="blah"> Adresse e-mail </p>
+            <p class="blah"> <?php if  ($_SESSION["pseudo"] == "Guest"){ ?>
+                you are not connected
+            <?php }else{ ?>
+                <?= $_SESSION["pseudo"]; ?> </p>
+                <p class="blah"> <?=  $_SESSION["mail"]; ?></p>
+           <?php } ?> 
+           
         </section>
 
         <a href="?page=logOut" class="logOut"> Log out </a>

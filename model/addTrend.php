@@ -32,7 +32,21 @@ function postTrend()
         $short_description = $_POST["short_description"];
         verification($short_description);
         $date = date('Y-m-d');
-        $sql_newTrend = "INSERT INTO `billet` (`id_billet`, `titre`, `article`, `id_image`, `date`, `short_description`) VALUES (NULL, '$titre', '$article', '4', '$date', '$short_description')";
+        $picFile = "./public/img/trendPic";
+        $tmp_file = $_FILES['userfile']['tmp_name'];
+        var_dump($tmp_file);
+        print_r($_FILES);
+        if (!is_uploaded_file($tmp_file)){
+            echo "Un problème est survenu"; 
+        }else{
+            echo "le fichier est uplodé",
+            $name = basename($_FILES['img']['tmp_name']);
+            if (pathinfo($tmp_file,PATHINFO_EXTENSION)=="jpg"){ // vérification si le fichier est un fichier jpg
+                move_uploaded_file($tmp_file,"$picFile/$name");
+                echo "le fichier à été déplacé";
+            }
+        }
+        $sql_newTrend = "INSERT INTO `billet` (`id_billet`, `titre`, `article`, `imgName`, `date`, `short_description`) VALUES (NULL, '$titre', '$article', '$name', '$date', '$short_description')";
         //requête préparé
         $link->query($sql_newTrend);
     }else{

@@ -7,7 +7,7 @@ function connection()
     $pseudo = strtolower($pseudo);
     @$mdp = $_POST["mdp"];
     //appel de la fonction control
-    $sql_verif = "SELECT `pseudo`,`mdp`,id_utilisateur FROM `utilisateurs` WHERE `pseudo`='$pseudo'";
+    $sql_verif = "SELECT `pseudo`,`mdp`,id_utilisateur,login FROM `utilisateurs` WHERE `pseudo`='$pseudo'";
     if (isset($_POST["sub"])) {
         $req_count = $link->query($sql_verif);
         $verif = $req_count->rowCount();
@@ -18,6 +18,7 @@ function connection()
                     session_start();
                     $_SESSION["id_user"] = $data_verif["id_utilisateur"];
                     $_SESSION["pseudo"] = $pseudo;
+                    $_SESSION["mail"] = $data_verif["login"];
                     header('Location: ?page=home');
                 
             } else {
