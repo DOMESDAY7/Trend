@@ -16,7 +16,7 @@ function showAllTrend()
           </div>
           <p class="mb-1"><?= $data["short_description"] ?>.</p>
         </div>
-        <a href="./photo/<?= $data["id_image"]; ?>" class="btn btn-secondary">see the image of the trend</a>
+        <a href="./img/trendPic/<?= $data["imgName"]; ?>.jpg" class="btn btn-secondary">see the image of the trend</a>
       </a>
       
       <!-- test de carte -->

@@ -1,7 +1,7 @@
 <?php function lastThree(){?>
     <?php 
     require './db_connect/detection.php';
-     $sql="SELECT short_description , id_image , date , titre, id_billet  FROM billet ORDER BY date DESC ";
+     $sql="SELECT *  FROM billet ORDER BY date DESC ";
      $req=$link -> query($sql);
    
     while(($data=$req -> fetch(PDO::FETCH_ASSOC)) ){
@@ -17,9 +17,14 @@
                     <p class="date"><?= date_format($date,'d.M.Y') ; ?></p>
                 </div>
                 <div class="imgTrend">
-                    <img src="./public/img/pc.jpg" alt="">
+                    
+                    <?php 
+                    
+                    if(file_exists("./public/img/img/trendPic/ {$data["imgName"]}")){ ?>
+                    <img src="./public/img/img/trendPic/<?= $data["imgName"]; ?>" alt="">
+                    <?php } ?>
                 </div>
-            </div>
+            </div>}
         </a>
     <?php 
     }

@@ -33,5 +33,6 @@ try {
 }
  catch (Exception $e) {
     // header("Location:?page=404");
-    // echo "An error has occurred";
+    echo "An error has occurred";
+    echo $e;
 }
