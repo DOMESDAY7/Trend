@@ -31,6 +31,7 @@ function postTrend()
                 require "./db_connect/detection.php";
                 $sqlNewTrend = "INSERT INTO `billet` (`id_billet`, `titre`, `article`, `imgName`, `date`, `short_description`) VALUES (NULL, '$titre', '$article', '$imgName', '$date', '$short_description')";
                  $link->query($sqlNewTrend);
+                 header("Location:?page=adminPannel&back=addTrend&send=true");
                
             } else {
                 echo "not possible";

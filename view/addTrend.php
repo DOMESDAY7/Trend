@@ -4,7 +4,6 @@
       <?php if(isset( $_GET["error"])){ ?>
     <div class="alert alert-danger" role="alert">
         <?php 
-        
         $error = $_GET["error"];
         if($error == "weight" ){ ?>
           the file is too large
@@ -40,6 +39,22 @@
   </div>
         <button type="submit" name="subAddTrend" class="btn btn-danger">Add the new trend</button>
     </form>
+    <?php if(isset($_GET["send"])){ ?>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+  <div id="liveToast" class=" toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header bg-dark">
+     😁
+      <strong class="me-auto">Trend</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body bg-secondary text-white">
+    The Trend has been sent
+    </div>
+  </div>
+</div>
+    <?php } ?>
+    <script src="./public/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>

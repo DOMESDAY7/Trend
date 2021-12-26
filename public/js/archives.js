@@ -53,9 +53,12 @@ function query() {
                 })
         })
 }
-btn.addEventListener("click",inverseSort)
-function inverseSort(){
-    let trends = document.querySelectorAll(".part2>a")
-    part2.innerHTML = trends.reverse();
-    trends.forEach
-}
+// btn.addEventListener("click",inverseSort)
+// function inverseSort(){
+//     let trends = document.querySelectorAll(".part2>a")
+//     let cpt = 0 ;
+//     while ( cpt<trends.length){
+//         trends==
+//         cpt++;
+//     }
+// }
