@@ -32,13 +32,14 @@ SHcomment.addEventListener('click', ()=>{
 
 });
 
-// Modal
-let BG2 = document.querySelector('.BGmodal');
+// Modal 1
+let BGcomment = document.querySelector('.BGmodal');
 let croix = document.querySelector('.croix');
 let addComment = document.querySelector('.BTNpost');
 
 document.querySelector('.putComment').addEventListener('click', ()=>{
-    BG2.classList.toggle('display');
+    BGcomment.classList.toggle('display');
+    console.log("prouy");
 });
 
 croix.addEventListener('click', ()=>{
@@ -48,3 +49,16 @@ croix.addEventListener('click', ()=>{
 addComment.addEventListener('click', ()=>{
     BG2.classList.toggle('display');
 })
+
+
+// Modal 2
+// let BGops = document.querySelector('.BGmodal2');
+
+// document.querySelector('.putComment').addEventListener('click', ()=>{
+    // BGops.classList.toggle('display');
+    // console.log("gnah");
+// });
+
+// BGops.addEventListener('click', ()=>{
+    // BGops.classList.toggle('display');
+// })

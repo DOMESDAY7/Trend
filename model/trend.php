@@ -67,9 +67,9 @@ if ($canCom =="1"){
         <span class="message"></span>
     </div>
 </div>
-<?php }else{ ?>
+<?php }else if($canCom =="0"){ ?>
 <!-- No connected modal -->
-<div class="BGmodal">
+<div class="BGmodal2">
     <div class="noConnect">
         <div class="part">
             <h1>Whoops, it seems <span>you're connected !</span></h1>

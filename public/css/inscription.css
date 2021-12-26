@@ -54,7 +54,7 @@ img{
     margin-bottom: -2%;
 }
 
-button{
+button[type]{
     background-color: rgba(99, 99, 99, 0.2);
     color: white;
     border: none;
@@ -68,7 +68,7 @@ button{
     transition: all .6s ease-in-out;
 }
 
-button:hover{
+.subButton:hover{
     box-shadow: 1px 1px 1px rgba(240, 0, 0, 0.25);
 }
 
