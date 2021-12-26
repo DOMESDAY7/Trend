@@ -71,6 +71,21 @@
         </div>
     </div>
 
+    <!-- No connected modal -->
+    <div class="BGmodal">
+        <div class="noConnect">
+            <div class="part">
+                <h1>Whoops, it seems you're connected !</h1>
+                <p>To comment, we need you to create an account or connect to an account.</p>
+            </div>
+            
+            <div class="part">
+                <a href="?page=connexion" id="a1">Log in</a>
+                <p>I want to <a href="?page=inscription" id="a2">sign up</a> now</p>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Retour menu -->
     <a href="?page=home" class="back">

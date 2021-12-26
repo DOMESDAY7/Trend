@@ -223,7 +223,7 @@ body{
     display: flex;
 }
 
-.userComment, .userComment2{
+.userComment{
     width: 95%;
     height: auto;
 
@@ -308,7 +308,7 @@ body{
     width: 100vw;
     height: 100%;
     background-color: rgba(53, 53, 53, 0.75);
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: visibility .3s ease-in-out;
 
     display: flex;
@@ -417,6 +417,60 @@ textarea:focus{
 .BTNpost:hover{
     transform: translateY(-5px);
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.65);
+}
+
+
+/* No connected modal */
+
+.noConnect{
+    background-color: #242424;
+    color: white;
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.part > h1{
+    font-family: "Overpass";
+}
+
+#a1{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Overpass";
+    color: black;
+    transition: all .6s ease-in-out;
+}
+
+#a1:hover{
+    color: #242424;
+    transform: scale(1.2);
+}
+
+#a2{
+    font-weight: bold;
+    transition: all .6s ease-in-out;
+}
+
+#a2:hover{
+    color: #F00000;
+}
+
+.part > p{
+    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+#a1 ~ p{
+    font-size: .9rem;
+    font-style: italic;
 }
 
 
