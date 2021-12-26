@@ -21,7 +21,7 @@ $req = $link->query($sql_com);
         // $date=$data["post_date"];
     ?>
         <div class="userComment" id=com<?php echo $data["id_commentaire"]; ?>>
-            <span id="hashtag2"><a href="?com=show#com<?php echo $data["id_commentaire"]; ?>"> #</a></span>
+            <span id="hashtag2"><a href="?com=show#com<?= $data["id_commentaire"]; ?>"> #</a></span>
             <div class="User">
                 <div class="ppUser"></div>
                 <p class="pseudoUser"> <?php echo $data["pseudo"]; ?> </p>
@@ -46,7 +46,6 @@ if (isset($_SESSION["id_user"])){
 $req = $link->query($sql_canCom);
 $res = $req->fetch(PDO::FETCH_ASSOC);
 $canCom = $res["canComment"];
-var_dump($canCom);
 }else{
     $canCom = "0";
 }
@@ -59,15 +58,15 @@ if ($canCom =="1"){
     </div>
     <div class="modal">
         <div class="userModal">
-            <div class="ppModal"></div>
-            <p class="pseudoModal"> <?php echo $_SESSION["pseudo"]; ?> </p>
+                <div class="ppModal"></div>
+            <p class="pseudoModal"> <?= $_SESSION["pseudo"]; ?> </p>
         </div>
         <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write a comment..."></textarea>
         <div class="BTNpost"> Let's post </div>
         <span class="message"></span>
     </div>
 </div>
-<?php }else if($canCom =="0"){ ?>
+<?php }else{ ?>
 <!-- No connected modal -->
 <div class="BGmodal2">
     <div class="noConnect">
