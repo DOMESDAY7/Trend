@@ -75,13 +75,13 @@
     <div class="BGmodal">
         <div class="noConnect">
             <div class="part">
-                <h1>Whoops, it seems you're connected !</h1>
-                <p>To comment, we need you to create an account or connect to an account.</p>
+                <h1>Whoops, it seems <span>you're connected !</span></h1>
+                <p id="p1">To comment, we need you to create an account or connect to an account.</p>
             </div>
             
             <div class="part">
                 <a href="?page=connexion" id="a1">Log in</a>
-                <p>I want to <a href="?page=inscription" id="a2">sign up</a> now</p>
+                <p>I want to <a id="a2">sign up</a> now</p>
             </div>
         </div>
     </div>

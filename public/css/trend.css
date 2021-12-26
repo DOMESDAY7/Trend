@@ -439,6 +439,10 @@ textarea:focus{
     font-family: "Overpass";
 }
 
+.part > h1 > span{
+    color: #F00000;
+}
+
 #a1{
     background-color: white;
     border-radius: 10px;
@@ -507,6 +511,16 @@ textarea:focus{
     #hashtag2{
         top: 2%;
         left: -10%;
+    }
+    .part > h1{
+        font-size: 1.8rem;
+    }
+    .part > p{
+        font-size: 1.5rem;
+    }
+    
+    #a1 ~ p{
+        font-size: .9rem;
     }
 }
 
@@ -652,6 +666,10 @@ textarea:focus{
     #hashtag{
         font-size: 3.5rem;
     }
+    .noConnect{
+        width: 70%;
+        height: auto;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -681,6 +699,16 @@ textarea:focus{
         height: 30px;
         border-radius: 30px;
         margin-left: 10px;
+    }
+    .part > h1{
+        font-size: 1.6rem;
+    }
+    .part > p{
+        font-size: 1.3rem;
+    }
+    
+    #a1 ~ p{
+        font-size: .7rem;
     }
 }
 
@@ -861,6 +889,16 @@ textarea:focus{
         font-size: 3rem;
         top: 2%;
         left: -18%;
+    }
+    .part > h1{
+        font-size: 1.3rem;
+    }
+    .part > p{
+        font-size: 1rem;
+    }
+    .noConnect{
+        width: 90%;
+        height: 40%;
     }
 }
 
