@@ -1,93 +1,164 @@
 body{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: black;
-    grid-template: "form"1fr
-    "account"0.10fr;
     height: 100vh;
-    
 }
 
 form{
-    justify-self: center;
-    align-self: center;
+    position: relative;
     background-color:#111111;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 30vw;
+    width: 600px;
+    height: auto;
     min-width: 250px;
-    height: 50vh;
     border-radius: 20px;
+    padding: 5vh 2vw 5vh 2vw;
 }
+
 input{
     outline: none;
-    background-color:#222222;
+    background-color: #222222;
     border: none;
     color:white;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 80%;
-    height: 10%;
+    height: 45px;
     text-align: center;
     margin-bottom: 5%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
+    border: #222222;
+    transition: all .4s ease-in-out;
 }
+
+input:hover{
+    border: 1px solid #ff00007c;
+}
+
+input:focus{
+    border: 1px solid #FF0000;
+    transition: all .6s ease-in-out;
+}
+
 input::placeholder{
-    color: white;
+    font-weight: 400;
 }
+
 img{
-    width: 5vw;
+    width: 20%;
     margin-bottom: -2%;
 }
-button[type]{
+
+button{
     background-color: rgba(99, 99, 99, 0.2);
     color: white;
     border: none;
-    padding: 5%;
+    padding: 15px 20px 15px 20px;
+    margin-top: 5%;
     border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    justify-self: center;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
 }
-h1{
-    font-family: 'Overpass', sans-serif;
-    color: white;
-    font-size: 1rem;
+
+button:hover{
+    box-shadow: 1px 1px 1px rgba(240, 0, 0, 0.25);
 }
+
 .content_bj{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
+.content_bj > h1{
+    font-family: 'Overpass';
+    color: white;
+    font-size: 1rem;
+}
+
 a{
     color: white;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
 }
+
 article{
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    grid-area: account;
-    justify-self: center;
-    align-self: start;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 2%;
+    color:white;
+    font-family: 'Montserrat';
+    font-size: .8rem;
 }
+
+.bold{
+    font-weight: 600;
+    transition: all .6s ease-in-out;
+}
+
+.bold:hover{
+    color: #F00000;
+}
+
 .message{
     color: red;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     text-align: center;
-    font-size: 0.875rem;
+    font-size: .875rem;
 }
-@media (max-width:650px) {
+
+.title{
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.5rem;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+#T{
+    color: #F39000;
+}
+
+#d{
+    color: #FF0000;
+}
+
+
+
+/* Media queries */
+
+@media (max-width: 1000px) {
     form{
-        width: 250px;
-    }
-    input{
-        margin-bottom: 10%;
-    }
-    img{
-        width: 15%;
-    }
-    input{
-        height: 15%;
+        width: 450px;
     }
 }
 
-
+@media screen and (max-width: 500px) {
+    form{
+        width: 85%;
+    }
+    input{
+        width: 80%;
+        height: 35px;
+    }
+    button{
+        padding: 10px 15px 10px 15px;
+        font-size: .7rem;
+    }
+    .title{
+        font-size: 3.5rem;
+    }
+}
