@@ -1,4 +1,4 @@
-<?php function lastThree(){?>
+<?php function allTrend(){?>
     <?php 
     require './db_connect/detection.php';
      $sql="SELECT *  FROM billet ORDER BY date DESC ";

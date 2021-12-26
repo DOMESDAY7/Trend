@@ -49,6 +49,36 @@ li{
     align-items: center;
     /* border: #F39000 solid; */
 }
+#hashtag{
+    font-size: 4.375rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 2px #F00000;
+}
+.description{
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 300;
+    font-family: "Montserrat";
+    color: white;
+    padding-left: 22px;
+    padding-top: -15px;
+    word-wrap: break-word;
+}
+.imgTrend{
+    width: 10%;
+    height: 80%;
+    border-radius: 15px;
+    overflow-y: hidden;
+}
+.date{
+    color: #B6B6B6;
+    font-family: "Overpass";
+    font-weight: 300;
+    font-size: .75rem;
+    padding-top: 8px;
+    padding-left: 10px;
+}
 
 #search{
     width: 315px;
@@ -86,8 +116,30 @@ li{
     opacity: .8;
 }
 
+.exTrend1{
+    /* width: 90%;
+    height: 25%; */
+    max-width: 70vw;
+    background-color: #242424;
+    border-radius: 24px;
+    box-shadow: 2px 2px 2px rgba(240, 0, 0, 
+0.25);
+    padding: 10px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* overflow: hidden; */
+    cursor: pointer;
+    margin-bottom: 3vh;
+}
 
-
+.textsTrend{
+    width: 60%;
+    height: 95%;
+    font-family: "Overpass";
+}
 
 /* Partie 2 */
 

@@ -21,7 +21,7 @@
 
         <!-- <div class="containerLT"> -->
 
-        <?php lastThree();  ?>
+        <?php allTrend();  ?>
 
 
         <!-- No Trend found -->

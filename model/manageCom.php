@@ -8,14 +8,29 @@ function showAllTrend()
      <ol class="list-group list-group-numbered">
    <?php while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
 ?>
-       
-  <li class="list-group-item d-flex justify-content-between align-items-start bg-secondary text-white w-50 m-auto">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold"><?= $data["titre"] ?></div>
-    <?= $data["short_description"] ?>
-    </div>
-    <span class="badge bg-danger rounded-pill">14</span>
-  </li>
+
+<?php $date=date_create($data["date"]) ?>
+  <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>">
+            <div class="exTrend1">
+                <div class="textsTrend">
+                <!-- pour le hashtag on va mettre le lien de l'article -->
+                    <h1><span id="hashtag">#</span> <?= $data["titre"]; ?> </h1>
+                    <p class="description"> <?= $data["short_description"]; ?></p>
+                    <p class="date"><?= date_format($date,'d.M.Y') ; ?></p>
+                </div>
+                <div class="imgTrend">
+                    
+                    <?php 
+                    $path ="./public/img/trendPic/".$data["imgName"];
+                   
+                    if(file_exists($path)){ ?>
+                    <img src="<?= $path ?>" alt="">
+                    <?php }else{ ?>
+                        <img src="./public/img/noImg.svg" alt="no image">
+                   <?php } ?>
+                </div>
+            </div>
+        </a>
   
 
 <?php } ?>
