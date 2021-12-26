@@ -133,16 +133,13 @@ problème. */
     height: 80%;
     border-radius: 15px;
     overflow-y: hidden;
-    border: red solid;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .imgTrend > img{
-    /* width: 100%; */
-    /* object-fit: contain; */
-    border: greenyellow solid;
+    width: 100%;
 }
 
 .textsTrend{
