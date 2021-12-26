@@ -56,37 +56,7 @@
   
     echo $comment; ?>
 
-    <!-- Modal ajout commentaire -->
-
-    <div class="BGmodal">
-        <div class="croix">
-            <img src="./public/img/croix.svg" alt="" class="svgCroix">
-        </div>
-        <div class="modal">
-            <div class="userModal">
-                <div class="ppModal"></div>
-                <p class="pseudoModal"> <?php echo $_SESSION["pseudo"]; ?> </p>
-            </div>
-            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write a comment..."></textarea>
-            <div class="BTNpost"> Let's post </div>
-            <span class="message"></span>
-        </div>
-    </div>
-
-    <!-- No connected modal -->
-    <div class="BGmodal">
-        <div class="noConnect">
-            <div class="part">
-                <h1>Whoops, it seems <span>you're connected !</span></h1>
-                <p id="p1">To comment, we need you to create an account or connect to an account.</p>
-            </div>
-            
-            <div class="part">
-                <a href="?page=connexion" id="a1">Log in</a>
-                <p>I want to <a href="?page=inscription" id="a2">sign up</a> now</p>
-            </div>
-        </div>
-    </div>
+    <?= $modal ?>
 
 
     <!-- Retour menu -->

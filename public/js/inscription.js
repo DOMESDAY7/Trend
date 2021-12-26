@@ -8,28 +8,10 @@ let mail = document.querySelector('input#mail');
 let mdp = document.querySelector('input#mdp')
 
 pseudo.addEventListener('change', verifPseudo)
-comfirm.addEventListener('keyup', equal)
-button.addEventListener('click', function () {
-    let comfirm_value = comfirm.value;
-    let mail_value = mail.value;
-    let mdp_value = mdp.value;
-    let pseudo_value = pseudo.value;
-    //si l'utilisateur ne met que des espaces
-    if (comfirm_value = "" || pseudo_value == "" || mail_value == "" || mdp_value == "") {
-        console.log("tess")
-        unSubmit();
-        wrongInput(comfirm);
-        wrongInput(pseudo)
-        wrongInput(mail)
-        wrongInput(mdp)
-        message.textContent = "You can't just put spaces 🤓";
-    } else {
-        canSubmit();
-    }
-})
+
 //à faire
 //trouver un moyen de supprimer le submit si
-function equal() {
+function mdpEqual() {
     let mdp = document.querySelector('input#mdp').value;
     let comfirm_value = document.querySelector('input#comfirm').value;
     if (mdp == comfirm_value) {
@@ -59,27 +41,36 @@ function verifPseudo() {
             wrongInput(pseudo)
         )
         .catch(message.textContent = "✅Your username is unique",
-            writeInput(pseudo)
+           
         )
 }
-
-function formSub() {
-    form.submit()
-}
-
 function wrongInput(input) {
-    input.style.cssText = "background-color: red"
+    input.style.backgroundColor = " red"
 }
 
 function writeInput(input) {
-    input.style.cssText = "background-color: green"
+    input.style.backgroundColor = "green"
 }
 
-function unSubmit() {
-    button.setAttribute("disabled", "true")
-}
-
-function canSubmit() {
-    button.addEventListener('click', formSub)
-    button.setAttribute("disabled", "false")
+// au click du bouton on vérifie si les tous les champs sont remplis
+// on regarde si les deux mdp corresspondent
+button.addEventListener("click",areComplete)
+function areComplete(){
+    if (comfirm.value==null){
+        message.textContent = "You need to comfirm your password 😁"
+    }
+    if (mail.value==null){
+        message.textContent = "You have to enter an email ✉️";
+    }
+    if (mdp.value== null){
+        message.textContent = "You wouldn't want your account to be stolen? "
+    }
+    if (pseudo.value == null){
+        message.textContent ="Give us a little name "
+    }
+    else{
+       if (mdpEqual()){
+           form.submit()
+       }
+    }
 }
