@@ -2,22 +2,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-color: black;
-    overflow: hidden;
 }
 main{
     background-color:#111111;
     display: flex;
-    text-align: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 30vw;
     height: 50vh;
     min-width: 70vmin;
     min-height: 60vmin;
     border-radius: 20px;
     padding: 5vh 2vw 5vh 2vw;
-    grid-area: main;
     color: white;
 }
 h1{
@@ -36,7 +35,6 @@ a{
     border: white solid 1px;
     padding: 10px;
     border-radius: 15px;
-    width: 10%;
     display: inline-block;
     transition: 0.8s ease;
     margin: auto;
