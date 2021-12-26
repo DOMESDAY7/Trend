@@ -4,14 +4,17 @@ let titre = document.querySelector("#title")
 let article = document.querySelector("#article")
 let subBtn = document.querySelector("body > form > button")
 let inputIdTrend = document.querySelector("#idTrend")
-let toast = `<div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
-<div class="d-flex">
-  <div class="toast-body">
-    Hello, world! This is a toast message.
-  </div>
-  <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+let toast =  `<div id="liveToast" class=" toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+<div class="toast-header bg-dark">
+🥰
+  <strong class="me-auto">Trend</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
 </div>
-</div>`;
+<div class="toast-body bg-secondary text-white">
+The changes have been implemented
+</div>
+</div>
+</div>`
 trends.forEach(trend => {
     trend.addEventListener("click", () => {
         let id = trend.getAttribute("data-trend");

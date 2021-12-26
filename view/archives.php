@@ -7,13 +7,13 @@
         <h1 class="title">Archives</h1>
         <div class="searchArchive">
             <input type="search" name="search" id="search" placeholder="Search...">
-            <div class="filterDate">
+            <!-- <div class="filterDate">
                 <div class="firstClick">
                
                     <button class= "btn">see the oldest</button>
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </div>
 
