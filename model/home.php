@@ -1,4 +1,5 @@
 <?php
+
 function lastThree()
 {
     require './db_connect/detection.php';

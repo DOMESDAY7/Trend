@@ -13,8 +13,8 @@ body{
 main{
     display: grid;
     grid-template: 
-    "titleTrends archives" 10vh
-    "trends archives" 1fr/ 1fr 0.75fr;
+    "titleTrends hello" 10vh
+    "trends hello" 1fr/ 1fr 0.75fr;
   
     height: 100vh;
 }
@@ -30,18 +30,18 @@ main{
     align-items: space-around;
      justify-self: end; 
      align-self: baseline;
-     /* border: #FF0000 solid;  */
+     border: #FF0000 solid; 
 }
 
-.archivesHome{
-    grid-area: archives;
+.containerHello{
+    grid-area: hello;
     justify-self: center;
     align-self: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: gold solid; */
+    border: gold solid;
 }
 
 
@@ -49,16 +49,16 @@ main{
 /* Last Trends */
 
 .titleTrends{
+    grid-area: titleTrends;
     font-family: "Overpass";
     color: white;
     font-style: italic;
     font-weight: 700;
     font-size: 1.7rem;
-    grid-area: titleTrends;
     align-self: flex-end;
     justify-self: end;
-   
     position: relative;
+    border: green solid;
 }
 
 /* Touche pas à ces deux positionnements, c'est pour le trait
@@ -197,29 +197,18 @@ problème. */
 
 /* Archives */
 
-.word{
-    display: block;
+.hello{
     color: white;
-    text-shadow: 2px 2px 2px rgba(243, 146, 0, 0.5);
     text-align: center;
     font-weight: bold;
-    font-size: 6rem;
+    font-size: 5rem;
     font-family: "Overpass";
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-    letter-spacing: -30px;
-}
-
-.word:hover{
-    font-style: italic;
-    transition: all 3s ease-in-out;
-    text-shadow: 2px 2px 2px rgba(240, 0, 0, 0.25);
+    word-wrap: break-word;
 }
 
 
 
-
-/* décor lol */
+/* Span title */
 
 #T{
     color: #F39200;
@@ -244,15 +233,23 @@ problème. */
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
+    .hello{
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
     main{
-        display: grid;
-        grid-template: 
-        "titleTrends" 1fr
-        "trends" 1fr
-        "archives" 1fr;
-        gap: 1vh;
-        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* grid-template:  */
+        /* "titleTrends" 1fr */
+        /* "trends" 1fr; */
+        /* gap: 1vh; */
+        height: auto;
     }
     .titleTrends{
         justify-self: center;
@@ -260,6 +257,7 @@ problème. */
     }
     .lasTrends{
         justify-self: center;
+        height: auto;
     }
     .containerLT{
         height: 100vh;
@@ -277,13 +275,8 @@ problème. */
     .description{
         display: none;
     }
-    .word{
-        writing-mode: horizontal-tb;
-        text-orientation: sideways;
-        letter-spacing: 15px;
-        font-size: 5rem;
-        margin-top: 10%;
-        margin-bottom: 10%;
+    .containerHello{
+        display: none;
     }
 }
 
