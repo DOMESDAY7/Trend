@@ -1,7 +1,6 @@
 <?php session_start() ?>
 
 <body>
-    <!-- <main role="main"> -->
     <!-- Titre et barre de recherche + filtres -->
     <div class="part1">
         <h1 class="title">Archives</h1>
@@ -32,7 +31,6 @@
         </div>
 
     </div>
-    <!-- </main> -->
 
 
 

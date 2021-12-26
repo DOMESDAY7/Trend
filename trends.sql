@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : dim. 26 déc. 2021 à 11:56
+-- Généré le : dim. 26 déc. 2021 à 19:02
 -- Version du serveur : 10.4.21-MariaDB
 -- Version de PHP : 8.0.12
 
@@ -20,56 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `trends`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `billet`
---
-
-CREATE TABLE `billet` (
-  `id_billet` int(11) NOT NULL,
-  `titre` varchar(100) NOT NULL,
-  `article` text NOT NULL,
-  `imgName` varchar(50) NOT NULL,
-  `date` date NOT NULL,
-  `short_description` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `billet`
---
-
-INSERT INTO `billet` (`id_billet`, `titre`, `article`, `imgName`, `date`, `short_description`) VALUES
-(17, 'test', 'test', ' 2.jpg', '2021-12-25', 'test'),
-(24, 'test', 'test', '94368624_156371432577889_7556001364497928147_n.jpg', '2021-12-25', 'test');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `commentaire`
---
-
-CREATE TABLE `commentaire` (
-  `id_commentaire` int(11) NOT NULL,
-  `post_date` date NOT NULL,
-  `content` text NOT NULL,
-  `ext_billet` int(11) NOT NULL,
-  `ext_utilisateur` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `commentaire`
---
-
-INSERT INTO `commentaire` (`id_commentaire`, `post_date`, `content`, `ext_billet`, `ext_utilisateur`) VALUES
-(34, '2021-10-26', 'incroyable', 2, 14),
-(35, '2021-10-26', 'testtest', 2, 14),
-(36, '2021-10-26', 'trend 3', 3, 14),
-(37, '0000-00-00', '', 0, 0),
-(38, '2021-11-05', 'trestr', 3, 14),
-(39, '2021-11-05', 'bonjour', 3, 14),
-(40, '2021-11-24', 'trop bien ', 4, 14);
 
 -- --------------------------------------------------------
 
@@ -92,23 +42,15 @@ CREATE TABLE `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`, `user_check`, `verificationKey`, `canComment`) VALUES
-(14, 'admin', 'test@test', '$2y$10$4Xk74GI1soASe1mU0yXs3ObSn5./yCgfPo0YrhHCrmjNBTVMb8ltG', 1, '', 1);
+(14, 'admin', 'test@test', '$2y$10$4Xk74GI1soASe1mU0yXs3ObSn5./yCgfPo0YrhHCrmjNBTVMb8ltG', 1, '', 1),
+(22, 'test', 'test@test', '$2y$10$AHZv2ZxEFLPErM7Vhus3NuZuYu3ZzufQndp9w7/dJC0etqC.fQ9na', 0, '$2y$10$gp7FG1W2jaS5vM71.ZCxu.kpNISYWA4N5blfrybU5IjJMHGcHROf6', 0),
+(23, 'test', 'test@test', '$2y$10$N7E6JnJcwow.qrSzs9Rv0e5ZWgaHMaTWrG.Zs87zVKmZa7IGih8Uy', 0, '$2y$10$XjFx0cYzD2b73RXFag1PeucGxEE9CZHigQQksdiZ1H2gstj0rzKQC', 0),
+(24, 'test', 'test@test', '$2y$10$h9CCq7fPZcOUbKZTubwSbOtgBRh04SIuexyKK.zt713e2H.rQ65ry', 0, '$2y$10$vVPiqy5JMIB8T5XQIFLOJuG0gUddORHB6HlMG2qAEtOCr2x/SLb/O', 0),
+(25, 'test', 'test@test', '$2y$10$Pz7JRgfES/9HsN3opthTZO9v2uUGgLR6UtBvc08iUSQ6LcQEKVxHm', 0, '$2y$10$JSfxJ58JS1z.HIb.O7mxguKZZ/AH5GENiMnw17EHV4lTqU1sGgkye', 0);
 
 --
 -- Index pour les tables déchargées
 --
-
---
--- Index pour la table `billet`
---
-ALTER TABLE `billet`
-  ADD PRIMARY KEY (`id_billet`);
-
---
--- Index pour la table `commentaire`
---
-ALTER TABLE `commentaire`
-  ADD PRIMARY KEY (`id_commentaire`);
 
 --
 -- Index pour la table `utilisateurs`
@@ -121,22 +63,10 @@ ALTER TABLE `utilisateurs`
 --
 
 --
--- AUTO_INCREMENT pour la table `billet`
---
-ALTER TABLE `billet`
-  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT pour la table `commentaire`
---
-ALTER TABLE `commentaire`
-  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
-
---
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
