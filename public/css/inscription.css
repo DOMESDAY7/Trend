@@ -5,65 +5,88 @@ body{
     align-items: center;
     background-color: black;
     height: 100vh;
-    overflow-y: hidden;
-    
 }
 
 form{
-    justify-self: center;
-    align-self: center;
+    position: relative;
     background-color:#111111;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 30vw;
+    width: 600px;
+    height: auto;
     min-width: 250px;
-    height: 50vh;
     border-radius: 20px;
     padding: 5vh 2vw 5vh 2vw;
 }
+
 input{
     outline: none;
-    background-color:#222222;
+    background-color: #222222;
     border: none;
     color:white;
-    border-radius: 10px;
+    border-radius: 8px;
     width: 80%;
-    height: 10%;
+    height: 45px;
     text-align: center;
     margin-bottom: 5%;
     font-family: 'Montserrat';
-    
+    border: #222222;
+    transition: all .4s ease-in-out;
 }
+
+input:hover{
+    border: 1px solid #ff00007c;
+}
+
+input:focus{
+    border: 1px solid #FF0000;
+    transition: all .6s ease-in-out;
+}
+
+input::placeholder{
+    font-weight: 400;
+}
+
 img{
-    width: 10%;
+    width: 20%;
     margin-bottom: -2%;
 }
-.subButton{
+
+button{
     background-color: rgba(99, 99, 99, 0.2);
     color: white;
     border: none;
-    padding: 20px;
+    padding: 15px 20px 15px 20px;
+    margin-top: 5%;
     border-radius: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
+    font-weight: 400;
     justify-self: center;
-    /* align-self: start; */
-    cursor: not-allowed;
-    grid-area: sub;
+    cursor: pointer;
+    transition: all .6s ease-in-out;
 }
+
+button:hover{
+    box-shadow: 1px 1px 1px rgba(240, 0, 0, 0.25);
+}
+
 .message{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 2%;
     color:white;
-    font-family: 'Montserrat', sans-serif;
-    margin: 1% 0 1% 0;
-    font-size: 0.8rem;
+    font-family: 'Montserrat';
+    font-size: .8rem;
 }
 
 .title{
     color: white;
     font-family: "Montserrat";
     font-style: normal;
-    font-weight: 800;
+    font-weight: 400;
     font-size: 5.5rem;
     line-height: 44px;
     text-align: center;
@@ -82,18 +105,26 @@ img{
 
 
 
-@media (max-width:500px) {
+@media (max-width: 1000px) {
     form{
-        width: 50vw;
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    form{
+        width: 85%;
     }
     input{
-        margin-bottom: 10%;
+        width: 80%;
+        height: 35px;
     }
-    img{
-        width: 15%;
+    button{
+        padding: 10px 15px 10px 15px;
+        font-size: .7rem;
     }
-    input{
-        height: 15%;
+    .title{
+        font-size: 3.5rem;
     }
 }
 

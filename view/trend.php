@@ -14,7 +14,9 @@
             </div>
             <div class="proprio">
                 <p>Trend's Master</p>
-                <div class="pp"></div>
+                <div class="pp">
+                    <img src="./public/img/crown.png" alt="">
+                </div>
             </div>
         </div>
 
