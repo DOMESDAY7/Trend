@@ -1,10 +1,9 @@
 body{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: black;
-    grid-template: 
-    "form"1fr
-    "sub"0.20fr
-    ;
     height: 100vh;
     overflow-y: hidden;
     
@@ -49,7 +48,7 @@ img{
     border-radius: 10px;
     font-family: 'Montserrat', sans-serif;
     justify-self: center;
-    align-self: start;
+    /* align-self: start; */
     cursor: not-allowed;
     grid-area: sub;
 }
@@ -58,9 +57,31 @@ img{
     font-family: 'Montserrat', sans-serif;
     margin: 1% 0 1% 0;
     font-size: 0.8rem;
-   
-
 }
+
+.title{
+    color: white;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5.5rem;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+}
+
+#T{
+    color: #F39000;
+}
+
+#d{
+    color: #FF0000;
+}
+
+
+
+
 @media (max-width:500px) {
     form{
         width: 50vw;
