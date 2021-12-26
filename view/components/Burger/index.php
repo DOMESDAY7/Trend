@@ -32,7 +32,7 @@
             <br>
            
             <?php if ($pseudo=="admin"){ ?>
-                <br><a href="?page=adminPannel">Admin Pannel</a><br>
+                <a href="?page=adminPannel" class="adminPannel">ADMIN PANNEL</a><br>
             <?php } ?>
             
             <span><a href="?page=logOut" class="logOut">Log out</a></span>

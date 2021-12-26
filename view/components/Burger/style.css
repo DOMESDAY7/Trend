@@ -175,6 +175,10 @@ a{
     font-family: "Overpass";
 }
 
+.adminPannel{
+    margin-top: 50px;
+}
+
 .logOut{
     color: red;
     font-family: "Overpass";
