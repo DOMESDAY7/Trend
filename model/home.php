@@ -24,7 +24,7 @@ function lastThree()
                         <p class="date"><?= date_format($date, 'd.M.Y'); ?></p>
                     </div>
                     <div class="imgTrend">
-                        <img src="./public/img/trendPic/<?=$data["imgName"] ?>" >
+                        <img src="./public/img/trendPic/<?=$data["imgName"] ?>">
                     </div>
                 </div>
             </a>

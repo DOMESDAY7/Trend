@@ -128,15 +128,17 @@ problème. */
 }
 
 .imgTrend{
-    width: 34%;
+    width: 35%;
     height: 80%;
     border-radius: 15px;
     overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.imgTrend >img{
+.imgTrend > img{
     width: 100%;
-    object-fit: cover;
 }
 
 .textsTrend{
