@@ -1,4 +1,4 @@
-/* Général */
+    /* Général */
 
 *{
     box-sizing: border-box;
@@ -40,7 +40,7 @@ body{
 /* Trend */
 
 .containerTrend{
-    background-color: #111111;
+   
     width: 70%;
     height: auto;
     margin-top: 5vh;
@@ -205,7 +205,6 @@ body{
 /* Comments area */
 
 .containerComments{
-    background-color: #111111;
     width: 70%;
     height: auto;
     margin-top: 5vh;

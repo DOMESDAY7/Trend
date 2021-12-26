@@ -23,8 +23,9 @@ function postTrend()
                 $tmp_name = $_FILES["imgTrend"]["tmp_name"];
                 $name = basename($_FILES["imgTrend"]["name"]);
                 $name = htmlspecialchars($name);
-                move_uploaded_file($tmp_name, "$finalDir / $name");
+                move_uploaded_file($tmp_name, "$finalDir/$name");
                 $imgName = basename($_FILES["imgTrend"]["name"]);
+                str_replace(" ", "", $imgName);
                 $date = date('Y-m-d');
                 $date = htmlspecialchars($date);
                 $short_description = htmlspecialchars($_POST["short_description"]);
@@ -32,7 +33,6 @@ function postTrend()
                 $sqlNewTrend = "INSERT INTO `billet` (`id_billet`, `titre`, `article`, `imgName`, `date`, `short_description`) VALUES (NULL, '$titre', '$article', '$imgName', '$date', '$short_description')";
                  $link->query($sqlNewTrend);
                  header("Location:?page=adminPannel&back=addTrend&send=true");
-               
             } else {
                 echo "not possible";
             }

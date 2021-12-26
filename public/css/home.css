@@ -72,7 +72,7 @@ problème. */
 }
 
 .containerLT{
-    background-color: #111111;
+   
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

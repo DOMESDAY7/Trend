@@ -1,22 +1,23 @@
 <?php
-function showComTrend()
+function showAllTrend()
 {
     require "./db_connect/detection.php";
-    $sql = "SELECT* FROM billet , commentaire WHERE 'ext_billet = 'id_billet' ";
+    $sql = "SELECT * FROM billet , commentaire WHERE id_billet=ext_billet  ";
     $req = $link->query($sql);
-    while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
+     ?>
+     <ol class="list-group list-group-numbered">
+   <?php while ($data = $req->fetch(PDO::FETCH_ASSOC)) {
 ?>
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    <?= $data["titre"]; ?>
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                <p>tous les coms ICI</p>
-            </div>
-        </div>
-        <?php  echo $data; ?>
+       
+  <li class="list-group-item d-flex justify-content-between align-items-start bg-secondary text-white w-50 m-auto">
+    <div class="ms-2 me-auto">
+      <div class="fw-bold"><?= $data["titre"] ?></div>
+    <?= $data["short_description"] ?>
+    </div>
+    <span class="badge bg-danger rounded-pill">14</span>
+  </li>
+  
 
-<?php }
-} 
+<?php } ?>
+</ol>
+<?php } ?> 
