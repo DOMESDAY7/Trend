@@ -18,7 +18,7 @@ $message="
         <tbody>
             <tr style=\"text-align:center; font-family:'Overpass';color:white; font-size:1.5rem; border:none;\"><td style=\"font-family:'Overpass',sans-serif;\">Hello $pseudo 🖖!</td></tr><br>
             <tr style=\"text-align:center;color:white; border:none;\"><td style=\"font-family:'Montserrat',sans-serif;\">To confirm your registration to Trend click on this button:</td></tr><br><br>
-            <tr><td ><a href='https://trend.mathieuandry.fr/verification?key=$db_key&pseudo=$pseudo' style=\" color:black !important; border:white solid 1px; border-radius:10px; margin:auto; padding: 10px;text-decoration:none; color:white; background-color:white; font-family:'Montserrat',sans-serif;\">Check your email<a></td></tr>
+            <tr><td ><a href='https://trend.marinavelasco.fr/verification?key=$db_key&pseudo=$pseudo' style=\" color:black !important; border:white solid 1px; border-radius:10px; margin:auto; padding: 10px;text-decoration:none; color:white; background-color:white; font-family:'Montserrat',sans-serif;\">Check your email<a></td></tr>
         </tbody>
     </table>
 </body>
