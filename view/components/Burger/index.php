@@ -17,7 +17,9 @@
 
         <div class="rondBurger"></div>
         <h3 class="pseudo"><?php echo $pseudo; ?></h3>
+        <?php if(!isset($_SESSION["pseudo"]) || $_SESSION["pseudo"]=="Guest"){ ?>
         <a href="?page=connexion" class="connect"> Log in </a>
+    <?php } ?>
     </section >
 
 
