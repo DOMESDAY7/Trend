@@ -12,5 +12,5 @@ croix.addEventListener('click', ()=>{
 })
 
 addComment.addEventListener('click', ()=>{
-    BG2.classList.toggle('display');
+    BGcomment.classList.toggle('display');
 })
