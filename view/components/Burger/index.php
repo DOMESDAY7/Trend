@@ -13,8 +13,11 @@
     <section class="content_head">
         <!-- logo à mettre iciii -->
         <a href="?page=home" class="logoProvisoire"> <span id="T">T</span>ren<span id="d">d</span> </a>
+
+
         <div class="rondBurger"></div>
         <h3 class="pseudo"><?php echo $pseudo; ?></h3>
+        <a href="?page=connexion" class="connect"> Log in </a>
     </section >
 
 
