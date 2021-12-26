@@ -36,7 +36,6 @@ function mailverification($email,$pseudo,$link){
         'Content-Type: text/html; charset="utf-8"; '."\r\n" .
         'Content-Disposition: inline'. "\r\n";
     mail($email,$subject,$message,$headers);
-
 }
 
 
