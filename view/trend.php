@@ -81,7 +81,7 @@
             
             <div class="part">
                 <a href="?page=connexion" id="a1">Log in</a>
-                <p>I want to <a id="a2">sign up</a> now</p>
+                <p>I want to <a href="?page=inscription" id="a2">sign up</a> now</p>
             </div>
         </div>
     </div>
