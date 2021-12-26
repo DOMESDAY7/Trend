@@ -16,8 +16,8 @@
                     <h3>Mathieu</h3>
                     <!-- <p>Développeur Back</p> -->
                     <div class="reseaux">
-                        <a href="#" target="_blank"><img src="../public/img/linkedIn.png" alt="" class="linkedin"></a>
-                        <a href="#" target="_blank"><img src="../public/img/git.png" alt="" class="git"></a>
+                        <a href="#" target="_blank"><img src="./public/img/linkedIn.png" alt="" class="linkedin"></a>
+                        <a href="#" target="_blank"><img src="./public/img/git.png" alt="" class="git"></a>
                     </div>
                 </div>
                 <div class="card marina">
@@ -25,8 +25,8 @@
                     <h3>Marina</h3>
                     <!-- <p>Développeuse Front</p> -->
                     <div class="reseaux">
-                        <a href="https://www.linkedin.com/in/marina-velasco-7690b3201/" target="_blank"><img src="../public/img/linkedIn.png" alt="" class="linkedin"></a>
-                        <a href="https://www.instagram.com/eso.hia/" target="_blank"><img src="../public/img/insta.png" alt="" class="insta"></a>
+                        <a href="https://www.linkedin.com/in/marina-velasco-7690b3201/" target="_blank"><img src="./public/img/linkedIn.png" alt="" class="linkedin"></a>
+                        <a href="https://www.instagram.com/eso.hia/" target="_blank"><img src="./public/img/insta.png" alt="" class="insta"></a>
                     </div>
                 </div>
             </div>
