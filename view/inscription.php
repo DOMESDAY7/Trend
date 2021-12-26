@@ -6,7 +6,7 @@
                 <input type="email" name="mail" id="mail" placeholder="E-mail address" require>
                 <input type="password" name="mdp" id="mdp" placeholder="Password" require>
                 <input type="password" name="comfirm" id="comfirm" placeholder="Confirm your password" require>
-                <button class="subButton">Sign up</button>
+                <button type="submit" class="subButton">Sign up</button>
                 <span class="message"></span>
         </form>
 
