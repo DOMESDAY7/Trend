@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 18 nov. 2021 à 11:51
+-- Généré le : dim. 26 déc. 2021 à 11:56
 -- Version du serveur : 10.4.21-MariaDB
--- Version de PHP : 7.3.30
+-- Version de PHP : 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +31,7 @@ CREATE TABLE `billet` (
   `id_billet` int(11) NOT NULL,
   `titre` varchar(100) NOT NULL,
   `article` text NOT NULL,
-  `id_image` int(11) NOT NULL,
+  `imgName` varchar(50) NOT NULL,
   `date` date NOT NULL,
   `short_description` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -40,10 +40,9 @@ CREATE TABLE `billet` (
 -- Déchargement des données de la table `billet`
 --
 
-INSERT INTO `billet` (`id_billet`, `titre`, `article`, `id_image`, `date`, `short_description`) VALUES
-(1, 'Lorem ipsum dolor sit amet, consectetur ad', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', 2, '2021-11-18', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit'),
-(2, 'Lorem ipsum dolor sit amet, consectetur ad', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', 3, '2021-11-16', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit'),
-(3, '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"', 0, '2021-11-20', '\"Lorem ipsum dolor sit amet, consectetur adipiscing elit');
+INSERT INTO `billet` (`id_billet`, `titre`, `article`, `imgName`, `date`, `short_description`) VALUES
+(17, 'test', 'test', ' 2.jpg', '2021-12-25', 'test'),
+(24, 'test', 'test', '94368624_156371432577889_7556001364497928147_n.jpg', '2021-12-25', 'test');
 
 -- --------------------------------------------------------
 
@@ -59,6 +58,19 @@ CREATE TABLE `commentaire` (
   `ext_utilisateur` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `commentaire`
+--
+
+INSERT INTO `commentaire` (`id_commentaire`, `post_date`, `content`, `ext_billet`, `ext_utilisateur`) VALUES
+(34, '2021-10-26', 'incroyable', 2, 14),
+(35, '2021-10-26', 'testtest', 2, 14),
+(36, '2021-10-26', 'trend 3', 3, 14),
+(37, '0000-00-00', '', 0, 0),
+(38, '2021-11-05', 'trestr', 3, 14),
+(39, '2021-11-05', 'bonjour', 3, 14),
+(40, '2021-11-24', 'trop bien ', 4, 14);
+
 -- --------------------------------------------------------
 
 --
@@ -70,15 +82,17 @@ CREATE TABLE `utilisateurs` (
   `pseudo` varchar(20) NOT NULL,
   `login` varchar(100) NOT NULL,
   `mdp` varchar(255) NOT NULL,
-  `user_check` int(11) NOT NULL
+  `user_check` int(11) NOT NULL,
+  `verificationKey` varchar(255) NOT NULL,
+  `canComment` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
-INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`, `user_check`) VALUES
-(14, 'admin', 'test@test', '$2y$10$4Xk74GI1soASe1mU0yXs3ObSn5./yCgfPo0YrhHCrmjNBTVMb8ltG', 0);
+INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`, `user_check`, `verificationKey`, `canComment`) VALUES
+(14, 'admin', 'test@test', '$2y$10$4Xk74GI1soASe1mU0yXs3ObSn5./yCgfPo0YrhHCrmjNBTVMb8ltG', 1, '', 1);
 
 --
 -- Index pour les tables déchargées
@@ -110,19 +124,19 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `billet`
 --
 ALTER TABLE `billet`
-  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_billet` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT pour la table `commentaire`
 --
 ALTER TABLE `commentaire`
-  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_commentaire` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
 --
 ALTER TABLE `utilisateurs`
-  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_utilisateur` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

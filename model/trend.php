@@ -8,6 +8,7 @@ $data_trend = $req_trend->fetch(PDO::FETCH_ASSOC);
 $trend_titre = $data_trend["titre"];
 $trend_content = $data_trend["article"];
 $trend_date = $data_trend["date"];
+$imgTrend = $data_trend["imgName"];
 $trend_data = ob_get_clean();
 
 

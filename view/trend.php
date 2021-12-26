@@ -20,14 +20,14 @@
 
         <!-- Image -->
         <div class="imgtrend2">
-            <img src="./public/img/pc2.jpg" alt="">
+            <img src="./public/img/trendPic/<?= $imgTrend ?>" alt="">
         </div>
 
 
         <!-- Texte -->
         <div class="texTrend">
-            <p class="texts"> <?php echo $data_trend["article"]; ?> </p>
-            <p class="date"> <?php echo $data_trend["date"]; ?> </p>
+            <p class="texts"> <?= $trend_content ?> </p>
+            <p class="date"> <?= $trend_date?> </p>
         </div>
 
         <!-- Boutons utilitaires -->

@@ -4,17 +4,9 @@ let show = document.querySelector('.show');
 let search = document.querySelector('#search');
 let color = document.querySelector('.color');
 let part = document.querySelector(".part2");
+let btn = document.querySelector(".btn")
+let part2 = document.querySelector(".part2")
 
-// if(miniModal){
-//     console.log('oui');
-// }
-
-BTNdate.addEventListener('click', () => {
-    console.log('oui');
-    miniModal.classList.toggle('show');
-    search.classList.toggle('top');
-    BTNdate.classList.toggle('color');
-});
 
 
 window.addEventListener('keyup', (e) => {
@@ -41,6 +33,7 @@ function query() {
                 tab.forEach(el => {
                     let billet = document.createElement('a')
                     let link = `?page=trend&id_billet=${el.id_billet}`
+                    console.log(el);
                     
                     billet.href = link
                     billet.innerHTML = `
@@ -52,11 +45,17 @@ function query() {
                         <p class="date"> ${el.date} </p>
                     </div>
                     <div class="imgTrend">
-                        <img src="./public/img/pc.jpg" alt="">
+                        <img src="./public/img/trendPic/${el.imgName}">
                     </div>
                 </div>`
 
                     part.appendChild(billet)
                 })
         })
+}
+btn.addEventListener("click",inverseSort)
+function inverseSort(){
+    let trends = document.querySelectorAll(".part2>a")
+    part2.innerHTML = trends.reverse();
+    trends.forEach
 }
