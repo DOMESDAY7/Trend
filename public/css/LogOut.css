@@ -1,22 +1,26 @@
 body{
+    margin: 0;
     background-color: black;
-    display: grid;
-    grid-template: "main" 1fr;
-}
-main{
-    height: 50vh;
-    width: 50vw;
-    background-color: #1111;
-    grid-area: main;
-    justify-self: center;
-    align-self: center;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    border-radius: 15px;
-    
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    text-align: center;
 }
+
 h1{
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Overpass';
     color:white
+}
+
+a{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.7rem;
+    margin-bottom: 2%;
+    transition: color .6s ease-in-out;
+}
+
+a:hover{
+    color: #F00000;
 }
