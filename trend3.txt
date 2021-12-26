@@ -1,3 +1,12 @@
-TITLE: 
-DATE: 
-TEXT: 
+TITLE: OutFeat.
+DATE: 2021-10-12
+TEXT: Do you know OutFeat ?<br>
+No ?<br>
+Well.<br>
+Let's fix it.<br>
+OutFeat is a new and ecologic web application which permit you to cleanly dress. How ? By offering you only ecologic and environmentally responsible brand. Each clothes have an "eco-score", they guide you to select the best.<br>
+You likes some clothes ? Okay, make an outfit so. This is another special fonctionnality to OutFeat.
+<br><br>
+But don't forget that the first goal of OutFeat is to alert the general public to their consommation.
+
+The owners ~
