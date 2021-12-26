@@ -4,7 +4,7 @@
 <body>
     <main>
         <?php if (!isset($_SESSION["pseudo"])){
-            header('Location:../home');
+            header('Location:?page=home');
         } ?>
         <h1>Goodbye <?php echo $_SESSION["pseudo"]; ?>👋 </h1>
     </main>

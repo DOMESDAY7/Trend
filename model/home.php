@@ -14,7 +14,7 @@ function lastThree()
         <?php $date = date_create($data["date"]);?>
 
 
-            <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>" class="linkContainerTrend">
+            <a href="?page=trend&id_billet=<?= $data["id_billet"]; ?>" class="linkContainerTrend" data-date = <?=  date_format($date, 'd.M.Y') ?>>
                 <div class="contentTrend">
                     <div class="textsTrend">
                         <!-- pour le hashtag on va mettre le lien de l'article -->

@@ -19,12 +19,15 @@
                 <div class="imgTrend">
                     
                     <?php 
-                    
-                    if(file_exists("./public/img/img/trendPic/ {$data["imgName"]}")){ ?>
-                    <img src="./public/img/img/trendPic/<?= $data["imgName"]; ?>" alt="">
-                    <?php } ?>
+                    $path ="./public/img/trendPic/".$data["imgName"];
+                   
+                    if(file_exists($path)){ ?>
+                    <img src="<?= $path ?>" alt="">
+                    <?php }else{ ?>
+                        <img src="./public/img/noImg.svg" alt="no image">
+                   <?php } ?>
                 </div>
-            </div>}
+            </div>
         </a>
     <?php 
     }

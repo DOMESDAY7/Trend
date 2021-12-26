@@ -6,7 +6,7 @@
 
 body{
     margin: 0;
-   
+    background-color: black !important  ;
     height: 100vh;
     display: grid;
     grid-template: 
@@ -15,8 +15,20 @@ body{
     /* border: #F00000 solid; */
 }
 
-
-
+.btn{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 3%;
+    border-radius: 10px;
+    font-family: "Overpass";
+    text-align: center;
+    cursor: pointer;
+}
+.hoverColor:hover{
+    background-color: gray;
+    cursor: pointer;
+}
 
 /* Partie 1 */
 
@@ -128,10 +140,13 @@ body{
     /* border: steelblue solid; */
     display: none;
     transition: all .6s ease-in-out;
+;
 }
 
 .show{
     display: flex;
+    flex-direction: column;
+    color: white;
 }
 
 label{

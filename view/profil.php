@@ -3,8 +3,10 @@
     <main>
         <section class="infos">
             <p class="pp"></p>
-            <p class="blah"> <?php if  ($_SESSION["pseudo"] == "Guest"){ ?>
-                you are not connected
+            <p class="blah"> 
+                <?php 
+                if  (!isset($_SESSION["pseudo"])|| $_SESSION["pseudo"]=="Guest"){ ?>
+                You are not connected
             <?php }else{ ?>
                 <?= $_SESSION["pseudo"]; ?> </p>
                 <p class="blah"> <?=  $_SESSION["mail"]; ?></p>
