@@ -7,7 +7,7 @@
                     $db_key=$req->fetch();
                     $in_db_key=$db_key["verificationKey"];
     if(password_verify($in_db_key,$key)){
-        $sql_verif_is_ok="UPDATE `utilisateurs` SET `user_check` = '1' WHERE `pseudo` = '$pseudo'";
+        $sql_verif_is_ok="UPDATE `utilisateurs` SET `user_check` = '1', `canComment` = '1' WHERE `pseudo` = '$pseudo'";
         $link->query($sql_verif_is_ok);
     
         ?>

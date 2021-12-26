@@ -40,12 +40,17 @@ $req = $link->query($sql_com);
 <!-- Modal ajout commentaire -->
 <?php
 ob_start();
-$id_user = $_SESSION["id_user"];
-$sql_canCom = "SELECT canComment FROM utilisateurs WHERE id_utilisateur= '$id_user'";
+if (isset($_SESSION["id_user"])){
+    $id_user = $_SESSION["id_user"];
+    $sql_canCom = "SELECT canComment FROM utilisateurs WHERE id_utilisateur= '$id_user'";
 $req = $link->query($sql_canCom);
 $res = $req->fetch(PDO::FETCH_ASSOC);
 $canCom = $res["canComment"];
 var_dump($canCom);
+}else{
+    $canCom = "0";
+}
+
 if ($canCom =="1"){
 ?>
 <div class="BGmodal">

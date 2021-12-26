@@ -10,7 +10,7 @@ $mdp = password_hash($mdp, PASSWORD_DEFAULT);
 $sql = "INSERT INTO `utilisateurs` (`id_utilisateur`, `pseudo`, `login`, `mdp`,user_check,verificationKey) VALUES (NULL, '$pseudo', '$mail', '$mdp','0','$key')";
 $req = $link->prepare($sql);
 //faire des bindValue ici
-controlHTML($sql);
+htmlspecialchars($sql);
 $req->execute();
 mailverification($mail, $pseudo, $link);
 
