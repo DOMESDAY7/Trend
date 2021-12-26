@@ -1,5 +1,6 @@
 <?php
-require './db_connect/detetction.php';
+require './db_connect/detection.php';
+require "./model/inscription.php";
 $pseudo = $_POST["pseudo"];
 $pseudo = strtolower($pseudo);
 $mail = $_POST["mail"];
@@ -14,4 +15,4 @@ $req->execute();
 mailverification($mail, $pseudo, $link);
 
 
-require './model.php';
+

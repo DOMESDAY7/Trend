@@ -27,7 +27,7 @@ function mailverification($email,$pseudo,$link){
     $message = str_replace("&lt;","<",$message);
     $message = str_replace("&gt;",">",$message);
     $message = str_replace("&amp;","&",$message);
-    $text = str_replace("\n.", "\n..", $text);
+    // $text = str_replace("\n.", "\n..", $text);
     $emailFrom="hello@trend.fr";
     $nom="Trend team";
     $headers  = 'MIME-Version: 1.0' . "\r\n";
