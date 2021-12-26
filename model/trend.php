@@ -21,13 +21,15 @@ $req = $link->query($sql_com);
         // $date=$data["post_date"];
     ?>
         <div class="userComment" id=com<?php echo $data["id_commentaire"]; ?>>
-            <span id="hashtag2"><a href="?com=show#com<?= $data["id_commentaire"]; ?>"> #</a></span>
+            <span id="hashtag2"><a href="?com=show#com<?= $data["id_commentaire"]; ?>"> #</a></span> <button class="deleteBtn"><img src="./public/img/bin.svg" alt=""></button>
             <div class="User">
                 <div class="ppUser"></div>
                 <p class="pseudoUser"> <?php echo $data["pseudo"]; ?> </p>
             </div>
             <p class="comment"> <?php echo $data["content"]; ?></p>
+           
             <p class="dateUser"> <?php echo $data["post_date"]; ?> </p>
+            
         </div>
     <?php } ?>
 
