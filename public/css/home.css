@@ -14,9 +14,8 @@ main{
     display: grid;
     grid-template: 
     "titleTrends hello" 10vh
-    "trends hello" 1fr/ 1fr 0.75fr;
-  
-    height: 100vh;
+    "trends hello" 1fr/ 1fr .8fr;
+    height: auto;
 }
 
 
@@ -28,20 +27,16 @@ main{
     grid-area: trends;
     display: flex;
     align-items: space-around;
-     justify-self: end; 
-     align-self: baseline;
-     border: #FF0000 solid; 
+    justify-self: end; 
 }
 
 .containerHello{
     grid-area: hello;
-    justify-self: center;
-    align-self: center;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    border: gold solid;
+    /* border: gold solid; */
 }
 
 
@@ -58,7 +53,7 @@ main{
     align-self: flex-end;
     justify-self: end;
     position: relative;
-    border: green solid;
+    /* border: green solid; */
 }
 
 /* Touche pas à ces deux positionnements, c'est pour le trait
@@ -233,6 +228,16 @@ problème. */
     }
 }
 
+@media screen and (max-width: 1435px) {
+    main{
+        display: grid;
+        grid-template: 
+        "titleTrends hello" 10vh
+        "trends hello" 1fr/ 1fr 1fr;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .hello{
         font-size: 4rem;
@@ -241,15 +246,11 @@ problème. */
 
 @media screen and (max-width: 1000px) {
     main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        /* grid-template:  */
-        /* "titleTrends" 1fr */
-        /* "trends" 1fr; */
-        /* gap: 1vh; */
-        height: auto;
+        display: grid;
+        grid-template: 
+        "titleTrends" 1fr
+        "trends" 1fr;
+        max-height: 100vh;
     }
     .titleTrends{
         justify-self: center;
@@ -257,7 +258,6 @@ problème. */
     }
     .lasTrends{
         justify-self: center;
-        height: auto;
     }
     .containerLT{
         height: 100vh;

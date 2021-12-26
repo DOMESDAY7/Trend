@@ -15,9 +15,8 @@
                     <?= lastThree(); ?>
                         <a href="?page=archives" class="more">I want to see more</a>
                 </div>
-                
         </div>
-        
+
         <div class="containerHello">
             <p class="hello">Hello <?php echo $pseudo ?></p>
         </div>
